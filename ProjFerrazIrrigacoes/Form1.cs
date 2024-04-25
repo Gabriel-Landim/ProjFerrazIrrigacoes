@@ -21,7 +21,7 @@ namespace ProjFerrazIrrigacoes
         {
             int a;
             a = 1;
-           
+            string tr;
         }
     }
 }
