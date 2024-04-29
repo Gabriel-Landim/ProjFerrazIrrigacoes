@@ -44,6 +44,11 @@
     <Compile Include="Class1.cs" />
     <Compile Include="modCaixa.cs" />
     <Compile Include="modCategoriasTipos.cs" />
+    <Compile Include="modCidade.cs" />
+    <Compile Include="modEmpresa.cs" />
+    <Compile Include="modFormaDePagamento.cs" />
+    <Compile Include="modItensOrcamento.cs" />
+    <Compile Include="modItensVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
