@@ -49,6 +49,11 @@
     <Compile Include="modFormaDePagamento.cs" />
     <Compile Include="modItensOrcamento.cs" />
     <Compile Include="modItensVenda.cs" />
+    <Compile Include="modMarca.cs" />
+    <Compile Include="modProduto.cs" />
+    <Compile Include="modUnidadeMedidaTipos.cs" />
+    <Compile Include="modUsuario.cs" />
+    <Compile Include="modVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
