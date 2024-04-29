@@ -45,6 +45,7 @@
     <Compile Include="modCaixa.cs" />
     <Compile Include="modCategoriasTipos.cs" />
     <Compile Include="modCidade.cs" />
+    <Compile Include="modCliente.cs" />
     <Compile Include="modEmpresa.cs" />
     <Compile Include="modFormaDePagamento.cs" />
     <Compile Include="modItensOrcamento.cs" />
