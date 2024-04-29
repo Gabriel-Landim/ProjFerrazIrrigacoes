@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class Dados
+    public class Dados
     {
+        public static string StringDeConexao
+        {
+            get
+            {
+                return "server=PPR0561026W10-1;database=biblioteca;user=sa;pwd=Senac111";
+            }
+        }
     }
 }
+
+
