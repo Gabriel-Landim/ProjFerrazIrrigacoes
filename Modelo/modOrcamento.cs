@@ -6,7 +6,7 @@ public class modOrcamento
     public decimal Valor { get; set; }
     public DateTime DataOrcamento { get; set; }
     public int ClienteId { get; set; }
-    public int VendaId { get; set; }
+    public int VendaId { get; set; }    
 
 }
 
