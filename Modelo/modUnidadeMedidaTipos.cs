@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class modUnidadeMedidaTipos
+    public class modUnidadeMedidaTipos
     {
+        public int Id { get; set; }
+        public string NomeMedida { get; set;}
     }
 }

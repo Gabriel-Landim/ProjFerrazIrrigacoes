@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class modUsuario
+    public class modUsuario
     {
+        public int Id { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class modFormaDePagamento
+    public class modFormaDePagamento
     {
+        public int Id { get; set; }
+        public string Descricao { get; set; }
     }
 }

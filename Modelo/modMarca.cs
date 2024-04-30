@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class modMarca
+    public class modMarca
     {
+        public int Id { get; set; }
+        public string NomeMarca { get; set; }
     }
 }

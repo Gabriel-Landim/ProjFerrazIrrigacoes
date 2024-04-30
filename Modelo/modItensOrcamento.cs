@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class modItensOrcamento
+    public class modItensOrcamento
     {
+        public int Id { get; set; }
+        public double ValorProduto { get; set; }
+        public int Quantidade { get; set; }
+        public int IdOrcamento { get; set;}
+        public int IdProduto { get; set; }
     }
 }
