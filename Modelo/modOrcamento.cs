@@ -7,6 +7,5 @@ public class modOrcamento
     public DateTime DataOrcamento { get; set; }
     public int ClienteId { get; set; }
     public int VendaId { get; set; }
-
 }
 
