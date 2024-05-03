@@ -10,5 +10,6 @@ namespace Modelo
     {
         public int Id { get; set; }
         public string CategoriaNome { get; set;}
+        public object Nome { get; set; }
     }
 }

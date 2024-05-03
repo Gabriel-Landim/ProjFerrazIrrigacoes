@@ -43,7 +43,15 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Dados.cs" />
+    <Compile Include="dalCaixa.cs" />
+    <Compile Include="dalCategoriasTipo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{a43dfc2e-08b7-4f73-8fdc-63fe82e552f3}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
