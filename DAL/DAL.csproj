@@ -47,6 +47,7 @@
     <Compile Include="dalCategoriasTipo.cs" />
     <Compile Include="dalCidade.cs" />
     <Compile Include="dalCliente.cs" />
+    <Compile Include="dalFormaDePagamento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
