@@ -20,7 +20,7 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = " SELECT ID, NOME FROM CATEGORIASTIPO " +
-                                  " order by nome ";
+                                  " ORDER BY NOME ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
 
@@ -78,11 +78,11 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO (NOME)" +  //comando que eu quero
-                                  " VALUES (@CATEGORIATIPOS) ";
+                cmd.CommandText = " INSERT INTO CATEGORIASTIPO (NOME)" +  //comando que eu quero
+                                  " VALUES (@NOME) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@CATEGORIATIPOS", objDados.Nome);
+                cmd.Parameters.AddWithValue("@NOME", objDados.Nome);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -115,12 +115,12 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE CATEGORIATIPOS SET NOME = @NOME" +  //comando que eu quero
+                cmd.CommandText = " UPDATE CATEGORIASTIPO SET NOME = @NOME" +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@ID", objDados.Id);
                 cmd.Parameters.AddWithValue("@NOME", objDados.Nome);
-                cmd.Parameters.AddWithValue("ID", objDados.Id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -154,11 +154,11 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " DELETE FROM CATEGORIATIPOS " +  //comando que eu quero
+                cmd.CommandText = " DELETE FROM CATEGORIASTIPO " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("ID", id);
+                cmd.Parameters.AddWithValue("@ID", id);
 
                 cmd.Connection = cn;
                 cn.Open();

@@ -11,7 +11,7 @@ namespace Modelo
         public int Id { get; set; }
         public double TotalFinal { get; set; }
         public double TotalInicial { get; set; }
-        public DateTime DataAbertuta { get; set; }
+        public DateTime DataAbertura { get; set; }
         public DateTime DataFechamento { get; set; }
         public int UsuarioId { get; set; }
         public object Nome { get; set; }
