@@ -51,7 +51,6 @@
     <Compile Include="modItensOrcamento.cs" />
     <Compile Include="modItensVenda.cs" />
     <Compile Include="modMarca.cs" />
-    <Compile Include="modOrcamento.cs" />
     <Compile Include="modProduto.cs" />
     <Compile Include="modUnidadeMedidaTipos.cs" />
     <Compile Include="modUsuario.cs" />

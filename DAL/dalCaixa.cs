@@ -72,6 +72,7 @@ namespace DAL
             }
 
         }
+
         public void Inserir(modCaixa objDados)
         {
             //Variavel de Conexao
