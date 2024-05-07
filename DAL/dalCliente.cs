@@ -10,6 +10,72 @@ namespace DAL
 {
     public class dalCliente
     {
+        public List<modCliente> CarregarCliente()
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ID, NOME, CPF, TELEFONE, EMAIL, RUA, BAIRRO, CEP, NUMERO, COMPLEMENTO, CIDADE FROM EMPRESA" +
+                                  " ORDER BY NOMEFANTASIA ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaCliente = new List<modCliente>();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ListaCliente.Add(new modCliente()
+                        {
+                            Id = Convert.ToInt32(registro["Id"]),
+                            NomeCliente = Convert.ToString(registro["Nome"]),
+                            Cpf = Convert.ToString(registro["Cpf"]),
+                            TelefoneCliente = Convert.ToString(registro["Telefone"]),
+                            Email = Convert.ToString(registro["Email"]),
+                            Rua = Convert.ToString(registro["Rua"]),
+                            Bairro = Convert.ToString(registro["Bairro"]),
+                            Cep = Convert.ToString(registro["Cep"]),
+                            NumeroEndereco = Convert.ToString(registro["Numero"]),
+                            Complemento = Convert.ToString(registro["Complemento"]),
+                            IdCidade = Convert.ToInt32(registro["Cidade"]),
+
+                        });
+                    }
+                }
+
+
+                return ListaCliente;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public void Insere(modCliente objDados)
         {
             //Variavel de Conexao

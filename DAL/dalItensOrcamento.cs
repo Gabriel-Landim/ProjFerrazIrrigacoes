@@ -1,16 +1,16 @@
-﻿using Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo;
 
 namespace DAL
 {
-    public class dalMarca
+    public class dalItensOrcamento
     {
-        public List<modMarca> CarregarMarca()
+        public List<modItensOrcamento> CarregarItensOrcamento()
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -19,8 +19,8 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, NOME FROM MARCA" +
-                                  " ORDER BY NOME ";
+                cmd.CommandText = " SELECT ID, VALORPRODUTO, ORCAMENTO, PRODUTO, QUANTIDADE, FROM ITENSORCAMENTO " +
+                                  " ORDER BY ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
 
@@ -32,23 +32,28 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma lista para armazenar os dados.
-                var ListaMarca = new List<modMarca>();
+                var ListaItensOrcamento = new List<modItensOrcamento>();
+                modItensOrcamento objDados = new modItensOrcamento();
 
 
                 if (registro.HasRows)
                 {
                     while (registro.Read())
                     {
-                        ListaMarca.Add(new modMarca()
+                        ListaItensOrcamento.Add(new modItensOrcamento()
                         {
                             Id = Convert.ToInt32(registro["Id"]),
-                            NomeMarca = Convert.ToString(registro["Nome"]),
+                            ValorProduto = Convert.ToDouble(registro["ValorProduto"]),
+                            IdOrcamento = Convert.ToInt32(registro["Orcamento"]),
+                            IdProduto = Convert.ToInt32(registro["Produto"]),
+                            Quantidade = Convert.ToInt32(registro["Quantidade"]),
+
                         });
                     }
                 }
 
 
-                return ListaMarca;
+                return ListaItensOrcamento;
 
             }
             catch (SqlException ex)
@@ -66,7 +71,7 @@ namespace DAL
             }
 
         }
-        public void Insere(modMarca objDados)
+        public void Inserir(modItensOrcamento objDados)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -75,11 +80,14 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO NOME FROM MARCA" +  //comando que eu quero
-                                  " VALUES (@NOME) ";
+                cmd.CommandText = " INSERT INTO ITENSORCAMENTO (VALORPRODUTO, ORCAMENTO, PRODUTO, QUANTIDADE) " +  //comando que eu quero
+                                  " VALUES (@USUARIO, @VALORPRODUTO, @ORCAMENTO @PRODUTO, @QUANTIDADE) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@NOME", objDados.NomeMarca);
+                cmd.Parameters.AddWithValue("@VALORPRODUTO", objDados.ValorProduto);
+                cmd.Parameters.AddWithValue("@ORCAMENTO", objDados.IdOrcamento);
+                cmd.Parameters.AddWithValue("@PRODUTO", objDados.IdProduto);
+                cmd.Parameters.AddWithValue("@QUANTIDADE", objDados.Quantidade);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -103,22 +111,25 @@ namespace DAL
             }
 
         }
-        public void Alterar(modMarca objDados)
+        public void Alterar(modItensOrcamento objDados)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
+                //cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE MARCA SET NOME = @NOME " +  //comando que eu quero
+                cmd.CommandText = " UPDATE ITENSORCAMENTO SET VALORPRODUTO = @VALORPRODUTO, ORCAMENTO = @ORCAMENTO, " +
+                                  " PRODUTO = @PRODUTO, QUANTIDADE = @QUANTIDADE, " + //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@ID", objDados.Id);
-                cmd.Parameters.AddWithValue("@NOME", objDados.NomeMarca);
-
+                cmd.Parameters.AddWithValue("@VALORPRODUTO", objDados.ValorProduto);
+                cmd.Parameters.AddWithValue("@ORCAMENTO", objDados.IdOrcamento);
+                cmd.Parameters.AddWithValue("@PRODUTO", objDados.IdProduto);
+                cmd.Parameters.AddWithValue("@QUANTIDADE", objDados.Quantidade);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -152,7 +163,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " DELETE FROM MARCA " +  //comando que eu quero
+                cmd.CommandText = " DELETE FROM ITENSORCAMENTO " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
