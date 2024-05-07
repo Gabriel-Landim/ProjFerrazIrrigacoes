@@ -77,10 +77,10 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " INSERT INTO CIDADE (NOME)" +  //comando que eu quero
-                                  " VALUES (@CIDADE) ";
+                                  " VALUES (@NOME) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@CIDADE", objDados.Nome);
+                cmd.Parameters.AddWithValue("@NOME", objDados.CidadeNome);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -117,8 +117,8 @@ namespace DAL
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@NOME", objDados.Nome);
-                cmd.Parameters.AddWithValue("ID", objDados.Id);
+                cmd.Parameters.AddWithValue("@ID", objDados.Id);
+                cmd.Parameters.AddWithValue("@NOME", objDados.CidadeNome);
 
                 cmd.Connection = cn;
                 cn.Open();
