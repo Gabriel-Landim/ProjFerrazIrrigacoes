@@ -47,7 +47,15 @@
     <Compile Include="dalCategoriasTipo.cs" />
     <Compile Include="dalCidade.cs" />
     <Compile Include="dalCliente.cs" />
+    <Compile Include="dalEmpresa.cs" />
     <Compile Include="dalFormaDePagamento.cs" />
+    <Compile Include="dalItensVenda.cs" />
+    <Compile Include="dalMarca.cs" />
+    <Compile Include="dalOrcamento.cs" />
+    <Compile Include="dalProduto.cs" />
+    <Compile Include="dalUnidadeMedidaTipos.cs" />
+    <Compile Include="dalUsuario.cs" />
+    <Compile Include="dalVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
