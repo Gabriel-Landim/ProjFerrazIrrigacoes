@@ -119,7 +119,7 @@ namespace DAL
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@ID", objDados.Id);
                 cmd.Parameters.AddWithValue("@DESCRICAO", objDados.Descricao);
-                
+
 
                 cmd.Connection = cn;
                 cn.Open();
