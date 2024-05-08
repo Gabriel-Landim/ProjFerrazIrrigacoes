@@ -12,6 +12,6 @@ namespace Modelo
         public double Valor { get; set; }
         public DateTime DataOrcamento { get; set; }
         public int IdCliente { get; set; }
-        public int IdOrcamento { get; set; }
+        public int IdVenda { get; set; }
     }
 }
