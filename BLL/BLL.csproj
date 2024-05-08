@@ -41,6 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bllCaixa.cs" />
+    <Compile Include="bllCategoriasTipo.cs" />
+    <Compile Include="bllCidade.cs" />
+    <Compile Include="bllCliente.cs" />
+    <Compile Include="bllEmpresa.cs" />
+    <Compile Include="bllFormaDePagamento.cs" />
+    <Compile Include="bllItemOrcamento.cs" />
+    <Compile Include="bllItensVenda.cs" />
+    <Compile Include="bllMarca.cs" />
+    <Compile Include="bllOrcamento.cs" />
+    <Compile Include="bllProduto.cs" />
     <Compile Include="bllUnidadeMedidaTipos.cs" />
     <Compile Include="bllUsuario.cs" />
     <Compile Include="bllVenda.cs" />
