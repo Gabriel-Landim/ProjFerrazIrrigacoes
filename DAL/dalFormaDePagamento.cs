@@ -10,6 +10,63 @@ namespace DAL
 {
     public class dalFormaDePagamento
     {
+        public List<modFormaDePagamento> CarregarFormadePagamento()
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ID, DESCRICAO FROM FORMADEPAGAMENTO" +
+                                  " ORDER BY DESCRICAO ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaFormadePag = new List<modFormaDePagamento>();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ListaFormadePag.Add(new modFormaDePagamento()
+                        {
+                            Id = Convert.ToInt32(registro["Id"]),
+                            Descricao = Convert.ToString(registro["Descricao"]),
+
+                        });
+                    }
+                }
+
+
+                return ListaFormadePag;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public void Insere(modFormaDePagamento objDados)
         {
             //Variavel de Conexao
