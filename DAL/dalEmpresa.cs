@@ -19,7 +19,8 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, NOME FROM EMPRESA" +
+                cmd.CommandText = " SELECT ID, NOMEFANTASIA, RAZAOSOCIAL, CNPJ, TELEFONE, RUA, BAIRRO, " +
+                                  " CEP, NUMERO, COMPLEMENTO, CIDADE FROM EMPRESA" +
                                   " ORDER BY NOME ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -42,8 +43,16 @@ namespace DAL
                         ListaEmpresa.Add(new modEmpresa()
                         {
                             Id = Convert.ToInt32(registro["Id"]),
-                            Cidade = Convert.ToString(registro["Nome"]),
-
+                            NomeFantasia = Convert.ToString(registro["NomeFantasia"]),
+                            RazaoSocial = Convert.ToString(registro["RazaoSocial"]),
+                            Cnpj = Convert.ToString(registro["Cnpj"]),
+                            Telefone = Convert.ToString(registro["Telefone"]),
+                            Rua = Convert.ToString(registro["Rua"]),
+                            Bairro = Convert.ToString(registro["Bairro"]),
+                            Cep = Convert.ToString(registro["Cep"]),
+                            NumeroEndereco = Convert.ToString(registro["Numero"]),
+                            Complemento = Convert.ToString(registro["Complemento"]),
+                            Cidade = Convert.ToString(registro["Cidade"]),
                         });
                     }
                 }
