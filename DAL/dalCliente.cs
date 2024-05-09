@@ -19,7 +19,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT CLIENTE.NOME, CLIENTE.CPF, CLIENTE.TELEFONE, " +
+                cmd.CommandText = " SELECT CLIENTE.ID, CLIENTE.NOME, CLIENTE.CPF, CLIENTE.TELEFONE, " +
                                   " CLIENTE.EMAIL, CIDADE.NOME AS CIDADE " +
                                   " FROM CLIENTE " +
                                   " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +

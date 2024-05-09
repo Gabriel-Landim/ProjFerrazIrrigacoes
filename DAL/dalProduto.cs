@@ -19,14 +19,14 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT PRODUTO.NOME, CLIENTE.DESCRICAO, CLIENTE.ESTOQUE, " +
+                cmd.CommandText = " SELECT PRODUTO.ID,PRODUTO.NOME, CLIENTE.DESCRICAO, CLIENTE.ESTOQUE, " +
                                   " CLIENTE.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, " +
-                                  " MARCA.NOME AS MARCA, " +
+                                  " MARCA.NOME AS MARCA, CATEGORIASTIPO.NOME AS CATEGORIA" +
                                   " FROM CLIENTE " +
-                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
-                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
-                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
-                                  " WHERE CLIENTE.NOME LIKE @PRODUTO ";
+                                  " LEFT OUTER JOIN UNIDADEMEDIDATIPOS ON PRODUTO.UNIDADEMEDIDATIPOS = UNIDADEMEDIDATIPOS.ID " +
+                                  " LEFT OUTER JOIN MARCA ON PRODUTO.MARCA = MARCA.ID " +
+                                  " LEFT OUTER JOIN CATEGORIASTIPO ON PRODUTO.CATEGORIASTIPO = CATEGORIASTIPO.ID " +
+                                  " WHERE PRODUTO.NOME LIKE @PRODUTO ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@PRODUTO", nome + "%");
@@ -38,28 +38,30 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma lista para armazenar os dados.
-                var ListaCliente = new List<modCliente>();
-                modCliente objDados = new modCliente();
+                var ListaProduto = new List<modProduto>();
+                modProduto objDados = new modProduto();
 
 
                 if (registro.HasRows)
                 {
                     while (registro.Read())
                     {
-                        ListaCliente.Add(new modCliente()
+                        ListaProduto.Add(new modProduto()
                         {
                             Id = Convert.ToInt32(registro["ID"]),
-                            IdCidade = Convert.ToInt32(registro["CIDADE"]),
-                            NomeCliente = Convert.ToString(registro["NOME"]),
-                            Cpf = Convert.ToString(registro["CPF"]),
-                            TelefoneCliente = Convert.ToString(registro["TELEFONE"]),
-                            Email = Convert.ToString(registro["EMAIL"]),
+                            IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDADEMEDIDATIPOS"]),
+                            IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIASTIPO"]),
+                            IdMarca = Convert.ToInt32(registro["MARCA"]),
+                            NomeProduto = Convert.ToString(registro["NOME"]),
+                            DescricaoProduto = Convert.ToString(registro["DESCRICAO"]),
+                            Estoque = Convert.ToInt32(registro["ESTOQUE"]),
+                            ValorProduto = Convert.ToDouble(registro["VALOR"]),
                         });
                     }
                 }
 
 
-                return ListaCliente;
+                return ListaProduto;
 
             }
             catch (SqlException ex)
