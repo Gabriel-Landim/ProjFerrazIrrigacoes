@@ -167,7 +167,7 @@ namespace DAL
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("ID", id);
+                cmd.Parameters.AddWithValue("@ID", id);
 
                 cmd.Connection = cn;
                 cn.Open();
