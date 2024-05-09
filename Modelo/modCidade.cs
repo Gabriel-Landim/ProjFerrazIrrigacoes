@@ -8,7 +8,6 @@ namespace Modelo
 {
     public class modCidade
     {
-        
         public int Id { get; set; }
         public string CidadeNome { get; set; }
         public object Nome { get; set; }
