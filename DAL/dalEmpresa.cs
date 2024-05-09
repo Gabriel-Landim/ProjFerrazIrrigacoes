@@ -98,7 +98,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CEP", objDados.Cep);
                 cmd.Parameters.AddWithValue("@NUMEROENDERECO", objDados.NumeroEndereco);
                 cmd.Parameters.AddWithValue("@COMPLEMENTO", objDados.Complemento);
-                cmd.Parameters.AddWithValue("@CIDADE", objDados.Cidade);
+                cmd.Parameters.AddWithValue("@CIDADE", objDados.IdCidade);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -149,7 +149,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CEP", objDados.Cep);
                 cmd.Parameters.AddWithValue("@NUMEROENDERECO", objDados.NumeroEndereco);
                 cmd.Parameters.AddWithValue("@COMPLEMENTO", objDados.Complemento);
-                cmd.Parameters.AddWithValue("@CIDADE", objDados.Cidade);
+                cmd.Parameters.AddWithValue("@CIDADE", objDados.IdCidade);
 
                 cmd.Connection = cn;
                 cn.Open();
