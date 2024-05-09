@@ -52,7 +52,7 @@ namespace DAL
                             Cep = Convert.ToString(registro["Cep"]),
                             NumeroEndereco = Convert.ToString(registro["Numero"]),
                             Complemento = Convert.ToString(registro["Complemento"]),
-                            Cidade = Convert.ToString(registro["Cidade"]),
+                            IdCidade = Convert.ToInt32(registro["Cidade"]),
                         });
                     }
                 }

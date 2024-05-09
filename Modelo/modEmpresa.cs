@@ -18,6 +18,6 @@ namespace Modelo
         public string Cep { get; set;}
         public string NumeroEndereco { get; set;}
         public string Complemento { get; set;}
-        public string Cidade { get; set;}
+        public int IdCidade { get; set;}
     }
 }
