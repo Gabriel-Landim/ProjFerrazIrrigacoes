@@ -10,6 +10,73 @@ namespace DAL
 {
     public class dalProduto
     {
+        public List<modProduto> SelecionaPorNome(string nome)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT PRODUTO.NOME, CLIENTE.DESCRICAO, CLIENTE.ESTOQUE, " +
+                                  " CLIENTE.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, " +
+                                  " MARCA.NOME AS MARCA, " +
+                                  " FROM CLIENTE " +
+                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
+                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
+                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
+                                  " WHERE CLIENTE.NOME LIKE @PRODUTO ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@PRODUTO", nome + "%");
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaCliente = new List<modCliente>();
+                modCliente objDados = new modCliente();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ListaCliente.Add(new modCliente()
+                        {
+                            Id = Convert.ToInt32(registro["ID"]),
+                            IdCidade = Convert.ToInt32(registro["CIDADE"]),
+                            NomeCliente = Convert.ToString(registro["NOME"]),
+                            Cpf = Convert.ToString(registro["CPF"]),
+                            TelefoneCliente = Convert.ToString(registro["TELEFONE"]),
+                            Email = Convert.ToString(registro["EMAIL"]),
+                        });
+                    }
+                }
+
+
+                return ListaCliente;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public List<modProduto> CarregarProduto()
         {
             //Variavel de Conexao
