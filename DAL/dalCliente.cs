@@ -10,6 +10,70 @@ namespace DAL
 {
     public class dalCliente
     {
+        public List<modCliente> SelecionaPorNome(string nome)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT CLIENTE.NOME, CLIENTE.CPF, CLIENTE.TELEFONE, " +
+                                  " CLIENTE.EMAIL, CIDADE.NOME AS CIDADE " +
+                                  " FROM CLIENTE " +
+                                  " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
+                                  " WHERE CLIENTE.NOME LIKE @CLIENTE ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@CLIENTE", nome + "%");
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaCliente = new List<modCliente>();
+                modCliente objDados = new modCliente();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ListaCliente.Add(new modCliente()
+                        {
+                            Id = Convert.ToInt32(registro["ID"]),
+                            IdCidade = Convert.ToInt32(registro["CIDADE"]),
+                            NomeCliente = Convert.ToString(registro["NOME"]),
+                            Cpf = Convert.ToString(registro["CPF"]),
+                            TelefoneCliente = Convert.ToString(registro["TELEFONE"]),
+                            Email = Convert.ToString(registro["EMAIL"]),
+                        });
+                    }
+                }
+
+
+                return ListaCliente;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public List<modCliente> CarregarCliente()
         {
             //Variavel de Conexao
