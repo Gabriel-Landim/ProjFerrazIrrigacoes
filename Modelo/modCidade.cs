@@ -10,7 +10,9 @@ namespace Modelo
     {
         public int Id { get; set; }
         public string CidadeNome { get; set; }
-        public object Nome { get; set; }
+        public string CodIbge { get; set; }
+        public string CodUf { get; set;}
+        public string CodPais { get; set; }
     }
     
 }
