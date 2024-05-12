@@ -30,7 +30,7 @@ namespace ProjFerrazIrrigacoes
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
             PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "DashBoard";
             this.PanelCarregar.Controls.Clear();
@@ -107,6 +107,11 @@ namespace ProjFerrazIrrigacoes
         private void BtnOrdemDeServico_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
