@@ -27,6 +27,17 @@ namespace ProjFerrazIrrigacoes
         {
             InitializeComponent();
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            PainelNav.Height = BtnDashboard.Height;
+            PainelNav.Top = BtnDashboard.Top;
+            PainelNav.Left = BtnDashboard.Left;
+            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+
+            TituloDashboard.Text = "DashBoard";
+            this.PanelCarregar.Controls.Clear();
+            frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
+            frmDashboard_Vrb.Show();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -37,12 +48,21 @@ namespace ProjFerrazIrrigacoes
 
         private void BtnCadastro_Click(object sender, EventArgs e)
         {
+            PainelNav.Height = BtnDashboard.Height;
+            PainelNav.Top = BtnDashboard.Top;
+            PainelNav.Left = BtnDashboard.Left;
+            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+
+            TituloDashboard.Text = "Cadastro";
+            this.PanelCarregar.Controls.Clear();
+            frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
+            FrmCadastro_Vrb.Show();
 
         }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            int Teste;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +76,35 @@ namespace ProjFerrazIrrigacoes
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            PainelNav.Height = BtnDashboard.Height;
+            PainelNav.Top = BtnDashboard.Top;
+            PainelNav.Left = BtnDashboard.Left;
+            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+
+            TituloDashboard.Text = "DashBoard";
+            this.PanelCarregar.Controls.Clear();
+            frmDashboard FrmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmDashboard_Vrb);
+            FrmDashboard_Vrb.Show();
+        }
+        private void BtnProdutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnOrdemDeServico_Click(object sender, EventArgs e)
         {
 
         }
