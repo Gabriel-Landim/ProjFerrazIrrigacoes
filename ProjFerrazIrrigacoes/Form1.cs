@@ -51,7 +51,7 @@ namespace ProjFerrazIrrigacoes
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
             PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "Cadastro";
             this.PanelCarregar.Controls.Clear();
@@ -85,7 +85,7 @@ namespace ProjFerrazIrrigacoes
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
             PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(255, 255, 255);
+            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "DashBoard";
             this.PanelCarregar.Controls.Clear();
@@ -96,12 +96,32 @@ namespace ProjFerrazIrrigacoes
         }
         private void BtnProdutos_Click(object sender, EventArgs e)
         {
+            PainelNav.Height = BtnDashboard.Height;
+            PainelNav.Top = BtnDashboard.Top;
+            PainelNav.Left = BtnDashboard.Left;
+            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
+            TituloDashboard.Text = "Produtos";
+            this.PanelCarregar.Controls.Clear();
+            frmProdutos FrmProdutos_Vrb = new frmProdutos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmProdutos_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmProdutos_Vrb);
+            FrmProdutos_Vrb.Show();
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            PainelNav.Height = BtnDashboard.Height;
+            PainelNav.Top = BtnDashboard.Top;
+            PainelNav.Left = BtnDashboard.Left;
+            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
+            TituloDashboard.Text = "Buscar";
+            this.PanelCarregar.Controls.Clear();
+            frmBuscar FrmBuscar_Vrb = new frmBuscar() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmBuscar_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmBuscar_Vrb);
+            FrmBuscar_Vrb.Show();
         }
 
         private void BtnOrdemDeServico_Click(object sender, EventArgs e)

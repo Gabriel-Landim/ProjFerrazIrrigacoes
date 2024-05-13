@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.TituloDashboard = new System.Windows.Forms.Label();
-            this.PainelNav = new System.Windows.Forms.Panel();
-            this.PanelCarregar = new System.Windows.Forms.Panel();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.BtnOrdemDeServico = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnProdutos = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.BtnCadastro = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TituloDashboard = new System.Windows.Forms.Label();
+            this.PainelNav = new System.Windows.Forms.Panel();
+            this.PanelCarregar = new System.Windows.Forms.Panel();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -61,43 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(201, 577);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 144);
-            this.panel2.TabIndex = 0;
-            // 
-            // TituloDashboard
-            // 
-            this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
-            this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TituloDashboard.Location = new System.Drawing.Point(229, 34);
-            this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(165, 35);
-            this.TituloDashboard.TabIndex = 1;
-            this.TituloDashboard.Text = "Dashboard";
-            // 
-            // PainelNav
-            // 
-            this.PainelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.PainelNav.Location = new System.Drawing.Point(0, 193);
-            this.PainelNav.Name = "PainelNav";
-            this.PainelNav.Size = new System.Drawing.Size(3, 100);
-            this.PainelNav.TabIndex = 2;
-            // 
-            // PanelCarregar
-            // 
-            this.PanelCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.PanelCarregar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelCarregar.Location = new System.Drawing.Point(201, 100);
-            this.PanelCarregar.Name = "PanelCarregar";
-            this.PanelCarregar.Size = new System.Drawing.Size(750, 477);
-            this.PanelCarregar.TabIndex = 7;
             // 
             // BtnOrdemDeServico
             // 
@@ -178,6 +141,15 @@
             this.BtnCadastro.UseVisualStyleBackColor = true;
             this.BtnCadastro.Click += new System.EventHandler(this.BtnCadastro_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(201, 144);
+            this.panel2.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
@@ -187,6 +159,34 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // TituloDashboard
+            // 
+            this.TituloDashboard.AutoSize = true;
+            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
+            this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TituloDashboard.Location = new System.Drawing.Point(229, 34);
+            this.TituloDashboard.Name = "TituloDashboard";
+            this.TituloDashboard.Size = new System.Drawing.Size(165, 35);
+            this.TituloDashboard.TabIndex = 1;
+            this.TituloDashboard.Text = "Dashboard";
+            // 
+            // PainelNav
+            // 
+            this.PainelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.PainelNav.Location = new System.Drawing.Point(0, 193);
+            this.PainelNav.Name = "PainelNav";
+            this.PainelNav.Size = new System.Drawing.Size(3, 100);
+            this.PainelNav.TabIndex = 2;
+            // 
+            // PanelCarregar
+            // 
+            this.PanelCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.PanelCarregar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelCarregar.Location = new System.Drawing.Point(201, 100);
+            this.PanelCarregar.Name = "PanelCarregar";
+            this.PanelCarregar.Size = new System.Drawing.Size(750, 477);
+            this.PanelCarregar.TabIndex = 7;
             // 
             // textBox1
             // 

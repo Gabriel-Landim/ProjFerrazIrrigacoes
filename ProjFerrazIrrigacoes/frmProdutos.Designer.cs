@@ -1,6 +1,6 @@
 ﻿namespace ProjFerrazIrrigacoes
 {
-    partial class frmCadastro
+    partial class frmProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,40 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.TituloDashboard = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Produtos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TituloDashboard
+            // Produtos
             // 
-            this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TituloDashboard.Location = new System.Drawing.Point(26, 18);
-            this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(141, 18);
-            this.TituloDashboard.TabIndex = 2;
-            this.TituloDashboard.Text = "Area de Cadastros";
+            this.Produtos.AutoSize = true;
+            this.Produtos.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Produtos.ForeColor = System.Drawing.Color.White;
+            this.Produtos.Location = new System.Drawing.Point(102, 63);
+            this.Produtos.Name = "Produtos";
+            this.Produtos.Size = new System.Drawing.Size(83, 21);
+            this.Produtos.TabIndex = 0;
+            this.Produtos.Text = "Produtos";
             // 
-            // textBox1
+            // frmProdutos
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // frmCadastro
-            // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.TituloDashboard);
+            this.Controls.Add(this.Produtos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadastro";
-            this.Text = "frmCadastro";
+            this.Name = "frmProdutos";
+            this.Text = "frmProdutos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,8 +60,6 @@
 
         #endregion
 
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Label TituloDashboard;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label Produtos;
     }
 }
