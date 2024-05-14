@@ -147,5 +147,15 @@
   <ItemGroup>
     <None Include="Resources\Money.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{952d69ba-37a0-466c-bf06-ce7feb5f75dd}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{a43dfc2e-08b7-4f73-8fdc-63fe82e552f3}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
