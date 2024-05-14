@@ -12,7 +12,7 @@ namespace DAL
         {
             get
             {
-                return "server=PPR0561026W10-1;database=biblioteca;user=sa;pwd=Senac111";
+                return "server=PPR0561026W10-1;database=sakita;user=sa;pwd=Senac111";
             }
         }
     }

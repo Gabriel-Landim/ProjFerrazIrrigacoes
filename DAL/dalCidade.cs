@@ -19,7 +19,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, CIDADENOME, CIDADECODIBGE, CIDADECODUF, CIDADECODPAIS " +
+                cmd.CommandText = " SELECT ID, CIDADENOME, CIDADECODIBGE, CIDADEUF, CIDADECODPAIS " +
                                   " FROM CIDADE " +
                                   " WHERE CIDADENOME LIKE @CIDADE ";
 
@@ -46,7 +46,7 @@ namespace DAL
                             Id = Convert.ToInt32(registro["ID"]),
                             CidadeNome = Convert.ToString(registro["CIDADENOME"]),
                             CodIbge = Convert.ToString(registro["CIDADECODIBGE"]),
-                            CodUf = Convert.ToString(registro["CIDADECODUF"]),
+                            CodUf = Convert.ToString(registro["CIDADEUF"]),
                             CodPais = Convert.ToString(registro["CIDADECODPAIS"]),
                         });
                     }
@@ -80,7 +80,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, CIDADENOME, CIDADECODIBGE, CIDADECODUF, CIDADECODPAIS FROM CIDADE " +
+                cmd.CommandText = " SELECT ID, CIDADENOME + '-' + CIDADEUF AS CIDADENOME  , CIDADECODIBGE, CIDADEUF, CIDADECODPAIS FROM CIDADE " +
                                   " ORDER BY CIDADENOME ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -105,7 +105,7 @@ namespace DAL
                             Id = Convert.ToInt32(registro["ID"]),
                             CidadeNome = Convert.ToString(registro["CIDADENOME"]),
                             CodIbge = Convert.ToString(registro["CIDADECODIBGE"]),
-                            CodUf = Convert.ToString(registro["CIDADECODUF"]),
+                            CodUf = Convert.ToString(registro["CIDADEUF"]),
                             CodPais = Convert.ToString(registro["CIDADECODPAIS"]),
                         });
                     }
@@ -139,13 +139,13 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO CIDADE (CIDADENOME, CIDADECODIBGE, CIDADECODUF, CIDADECODPAIS) " +  //comando que eu quero
-                                  " VALUES (@CIDADENOME, @CIDADECODIBGE, @CIDADECODUF, @CIDADECODPAIS ) ";
+                cmd.CommandText = " INSERT INTO CIDADE (CIDADENOME, CIDADECODIBGE, CIDADEUF, CIDADECODPAIS) " +  //comando que eu quero
+                                  " VALUES (@CIDADENOME, @CIDADECODIBGE, @CIDADEUF, @CIDADECODPAIS ) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@CIDADENOME", objDados.CidadeNome);
                 cmd.Parameters.AddWithValue("@CIDADECODIBGE", objDados.CodIbge);
-                cmd.Parameters.AddWithValue("@CIDADECODUF", objDados.CodUf);
+                cmd.Parameters.AddWithValue("@CIDADEUF", objDados.CodUf);
                 cmd.Parameters.AddWithValue("@CIDADECODPAIS", objDados.CodPais);
                 cmd.Connection = cn;
                 cn.Open();
@@ -180,14 +180,14 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE CIDADE SET CIDADENOME = @CIDADENOME, CIDADECODIBGE = @CIDADECODIBGE, " +
-                                  " CIDADECODUF = @CIDADECODUF, CIDADECODPAIS = @CIDADECODPAIS " +  //comando que eu quero
+                                  " CIDADEUF = @CIDADEUF, CIDADECODPAIS = @CIDADECODPAIS " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@ID", objDados.Id);
                 cmd.Parameters.AddWithValue("@CIDADENOME", objDados.CidadeNome);
                 cmd.Parameters.AddWithValue("@CIDADECODIBGE", objDados.CodIbge);
-                cmd.Parameters.AddWithValue("@CIDADECODUF", objDados.CodUf);
+                cmd.Parameters.AddWithValue("@CIDADEUF", objDados.CodUf);
                 cmd.Parameters.AddWithValue("@CIDADECODPAIS", objDados.CodPais);
 
                 cmd.Connection = cn;
