@@ -45,14 +45,14 @@
             this.tbCep = new System.Windows.Forms.TextBox();
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbCidade = new System.Windows.Forms.ComboBox();
+            this.tbComplemento = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbBairro = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tbNumero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbBairro = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbComplemento = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cbCidade = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.tbNomeFantasia.Name = "tbNomeFantasia";
             this.tbNomeFantasia.Size = new System.Drawing.Size(232, 23);
             this.tbNomeFantasia.TabIndex = 3;
+            this.tbNomeFantasia.TextChanged += new System.EventHandler(this.tbNomeFantasia_TextChanged);
             // 
             // label1
             // 
@@ -198,6 +199,7 @@
             // BtnCadastrar
             // 
             this.BtnCadastrar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.BtnCadastrar.Location = new System.Drawing.Point(151, 338);
             this.BtnCadastrar.Name = "BtnCadastrar";
             this.BtnCadastrar.Size = new System.Drawing.Size(131, 34);
@@ -226,6 +228,56 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 341);
             this.panel1.TabIndex = 18;
+            // 
+            // cbCidade
+            // 
+            this.cbCidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCidade.FormattingEnabled = true;
+            this.cbCidade.Location = new System.Drawing.Point(27, 240);
+            this.cbCidade.Name = "cbCidade";
+            this.cbCidade.Size = new System.Drawing.Size(232, 21);
+            this.cbCidade.TabIndex = 26;
+            // 
+            // tbComplemento
+            // 
+            this.tbComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbComplemento.Location = new System.Drawing.Point(27, 130);
+            this.tbComplemento.Name = "tbComplemento";
+            this.tbComplemento.Size = new System.Drawing.Size(193, 23);
+            this.tbComplemento.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.label11.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(24, 109);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 18);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Complemento";
+            // 
+            // tbBairro
+            // 
+            this.tbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbBairro.Location = new System.Drawing.Point(27, 183);
+            this.tbBairro.Name = "tbBairro";
+            this.tbBairro.Size = new System.Drawing.Size(232, 23);
+            this.tbBairro.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.label10.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(24, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 18);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Bairro";
             // 
             // tbNumero
             // 
@@ -258,56 +310,6 @@
             this.label8.Size = new System.Drawing.Size(130, 26);
             this.label8.TabIndex = 19;
             this.label8.Text = "Localização";
-            // 
-            // tbBairro
-            // 
-            this.tbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbBairro.Location = new System.Drawing.Point(27, 183);
-            this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(232, 23);
-            this.tbBairro.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.label10.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(24, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 18);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Bairro";
-            // 
-            // tbComplemento
-            // 
-            this.tbComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbComplemento.Location = new System.Drawing.Point(27, 130);
-            this.tbComplemento.Name = "tbComplemento";
-            this.tbComplemento.Size = new System.Drawing.Size(193, 23);
-            this.tbComplemento.TabIndex = 24;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.label11.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(24, 109);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 18);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Complemento";
-            // 
-            // cbCidade
-            // 
-            this.cbCidade.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCidade.FormattingEnabled = true;
-            this.cbCidade.Location = new System.Drawing.Point(27, 240);
-            this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(232, 21);
-            this.cbCidade.TabIndex = 26;
             // 
             // frmCadastro
             // 

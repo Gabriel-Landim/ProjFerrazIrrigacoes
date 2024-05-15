@@ -36,10 +36,10 @@ namespace ProjFerrazIrrigacoes
 
             TituloDashboard.Text = "DashBoard";
             this.PanelCarregar.Controls.Clear();
-            //frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
-            //this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
-            //frmDashboard_Vrb.Show();
+            frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
+            frmDashboard_Vrb.Show();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -58,11 +58,6 @@ namespace ProjFerrazIrrigacoes
             BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "Cadastro";
-            this.PanelCarregar.Controls.Clear();
-            //frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
-            //this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
-            //FrmCadastro_Vrb.Show();
 
         }
 
@@ -130,5 +125,24 @@ namespace ProjFerrazIrrigacoes
             }
         }
 
+        private void BtnCadastroEmpresa_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Cadastro";
+            this.PanelCarregar.Controls.Clear();
+            frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
+            FrmCadastro_Vrb.Show();
+        }
+
+        private void BtnCadastroCliente_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Cadastro";
+            this.PanelCarregar.Controls.Clear();
+            frmCadastroCliente FrmCadastroCriente_Vrb = new frmCadastroCliente() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmCadastroCriente_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmCadastroCriente_Vrb);
+            FrmCadastroCriente_Vrb.Show();
+        }
     }
 }
