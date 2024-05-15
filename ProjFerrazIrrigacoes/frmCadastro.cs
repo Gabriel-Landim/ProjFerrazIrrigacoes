@@ -72,5 +72,10 @@ namespace ProjFerrazIrrigacoes
 
             MessageBox.Show("Empresa Cadastrada com Sucesso!");
         }
+
+        private void tbNomeFantasia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
