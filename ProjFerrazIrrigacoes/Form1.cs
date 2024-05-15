@@ -23,9 +23,11 @@ namespace ProjFerrazIrrigacoes
             int nWidthEllipse,
             int nHeightEllipse
             );
+        private Boolean ShowPanel = false;
         public Form1()
         {
             InitializeComponent();
+            SubPanel();
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
@@ -34,10 +36,10 @@ namespace ProjFerrazIrrigacoes
 
             TituloDashboard.Text = "DashBoard";
             this.PanelCarregar.Controls.Clear();
-            frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
-            frmDashboard_Vrb.Show();
+            //frmDashboard frmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //frmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+            //this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
+            //frmDashboard_Vrb.Show();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -46,8 +48,10 @@ namespace ProjFerrazIrrigacoes
             //string tr;
         }
 
-        private void BtnCadastro_Click(object sender, EventArgs e)
+        private void BtnCadastro_Click_1(object sender, EventArgs e)
         {
+            ShowPanel = !ShowPanel;
+            SubPanel();
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
             PainelNav.Left = BtnDashboard.Left;
@@ -55,32 +59,14 @@ namespace ProjFerrazIrrigacoes
 
             TituloDashboard.Text = "Cadastro";
             this.PanelCarregar.Controls.Clear();
-            frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
-            FrmCadastro_Vrb.Show();
-
-        }
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            //frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
+            //this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
+            //FrmCadastro_Vrb.Show();
 
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click_1(object sender, EventArgs e)
         {
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
@@ -94,7 +80,7 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
         }
-        private void BtnProdutos_Click(object sender, EventArgs e)
+        private void BtnProdutos_Click_1(object sender, EventArgs e)
         {
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
@@ -109,7 +95,7 @@ namespace ProjFerrazIrrigacoes
             FrmProdutos_Vrb.Show();
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnBuscar_Click_1(object sender, EventArgs e)
         {
             PainelNav.Height = BtnDashboard.Height;
             PainelNav.Top = BtnDashboard.Top;
@@ -124,7 +110,7 @@ namespace ProjFerrazIrrigacoes
             FrmBuscar_Vrb.Show();
         }
 
-        private void BtnOrdemDeServico_Click(object sender, EventArgs e)
+        private void BtnOrdemDeServico_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -133,5 +119,16 @@ namespace ProjFerrazIrrigacoes
         {
             Application.Exit();
         }
+
+        private void SubPanel() {
+            if (ShowPanel)
+            {
+                PanelCadastro.Height = 90;
+            }
+            else {
+                PanelCadastro.Height = 0;
+            }
+        }
+
     }
 }
