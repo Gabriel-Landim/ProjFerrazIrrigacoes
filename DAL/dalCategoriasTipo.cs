@@ -10,7 +10,7 @@ namespace DAL
 {
     public class dalCategoriasTipo
     {
-        public List<modCategoriasTipos> CarregaCategoria()
+        public List<modCategoriasTipos> CarregarCategoria()
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();

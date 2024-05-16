@@ -19,10 +19,10 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT PRODUTO.ID,PRODUTO.NOME, CLIENTE.DESCRICAO, CLIENTE.ESTOQUE, " +
-                                  " CLIENTE.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, " +
-                                  " MARCA.NOME AS MARCA, CATEGORIASTIPO.NOME AS CATEGORIA" +
-                                  " FROM CLIENTE " +
+                cmd.CommandText = " SELECT PRODUTO.ID ,PRODUTO.NOME , PRODUTO.DESCRICAO , PRODUTO.ESTOQUE , " +
+                                  " PRODUTO.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, UNIDADEMEDIDATIPOS.id as UnidadeId, Marca.id as MarcaId, CategoriasTipo.id as CategoriaId, " +
+                                  " MARCA.NOME AS MARCA, CATEGORIASTIPO.NOME AS CATEGORIA " +
+                                  " FROM PRODUTO " +
                                   " LEFT OUTER JOIN UNIDADEMEDIDATIPOS ON PRODUTO.UNIDADEMEDIDATIPOS = UNIDADEMEDIDATIPOS.ID " +
                                   " LEFT OUTER JOIN MARCA ON PRODUTO.MARCA = MARCA.ID " +
                                   " LEFT OUTER JOIN CATEGORIASTIPO ON PRODUTO.CATEGORIASTIPO = CATEGORIASTIPO.ID " +
@@ -49,9 +49,9 @@ namespace DAL
                         ListaProduto.Add(new modProduto()
                         {
                             Id = Convert.ToInt32(registro["ID"]),
-                            IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDADEMEDIDATIPOS"]),
-                            IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIASTIPO"]),
-                            IdMarca = Convert.ToInt32(registro["MARCA"]),
+                            IdUnidadeMedidaTipos = Convert.ToInt32(registro["UnidadeId"]),
+                            IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIAID"]),
+                            IdMarca = Convert.ToInt32(registro["MARCAID"]),
                             NomeProduto = Convert.ToString(registro["NOME"]),
                             DescricaoProduto = Convert.ToString(registro["DESCRICAO"]),
                             Estoque = Convert.ToInt32(registro["ESTOQUE"]),
@@ -196,7 +196,7 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE PRODUTO SET NOME = @NOME, DESCRICAO = @DESCRICAO, ESTOQUE = @ESTOQUE, " +
-                                  " MARCA = @MARCA, CATEGORIASTIPO = @CATEGORIASTIPO, UNIDADEMEDIDASTIPOS = @UNIDADEMEDIDATIPOS " +  //comando que eu quero
+                                  " MARCA = @MARCA, CATEGORIASTIPO = @CATEGORIASTIPO, UNIDADEMEDIDATIPOS = @UNIDADEMEDIDATIPOS " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -253,6 +253,69 @@ namespace DAL
                 //Executando o comando e armazenando o resultado em registro
                 cmd.ExecuteNonQuery();  //execução do comando
                 cmd.Dispose();
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
+        public modProduto BuscaPorCodigo(int id)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ID, NOME, DESCRICAO, ESTOQUE, VALOR, MARCA, CATEGORIASTIPO, UNIDADEMEDIDATIPOS FROM PRODUTO " +
+                                  " WHERE ID = @ID ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@ID", id );
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                
+                modProduto objDados = new modProduto();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+
+
+                        objDados.Id = Convert.ToInt32(registro["ID"]);
+                        objDados.IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDADEMEDIDATIPOS"]);
+                        objDados.IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIASTIPO"]);
+                        objDados.IdMarca = Convert.ToInt32(registro["MARCA"]);
+                        objDados.NomeProduto = Convert.ToString(registro["NOME"]);
+                        objDados.DescricaoProduto = Convert.ToString(registro["DESCRICAO"]);
+                        objDados.Estoque = Convert.ToInt32(registro["ESTOQUE"]);
+                        objDados.ValorProduto = Convert.ToDouble(registro["VALOR"]);
+                        
+                    }
+                }
+
+
+                return objDados;
 
             }
             catch (SqlException ex)
