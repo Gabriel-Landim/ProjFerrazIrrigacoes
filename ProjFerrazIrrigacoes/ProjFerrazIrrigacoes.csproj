@@ -166,5 +166,11 @@
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuariopanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioBoi.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.TituloDashboard = new System.Windows.Forms.Label();
             this.tbNomeFantasia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,17 +54,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TituloDashboard
-            // 
-            this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
-            this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TituloDashboard.Location = new System.Drawing.Point(98, 26);
-            this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(137, 35);
-            this.TituloDashboard.TabIndex = 2;
-            this.TituloDashboard.Text = "Empresa";
             // 
             // tbNomeFantasia
             // 
@@ -224,7 +212,7 @@
             this.panel1.Controls.Add(this.tbCep);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(371, 31);
+            this.panel1.Location = new System.Drawing.Point(373, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 341);
             this.panel1.TabIndex = 18;
@@ -326,7 +314,6 @@
             this.Controls.Add(this.tbRazaoSocial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbNomeFantasia);
-            this.Controls.Add(this.TituloDashboard);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastro";
@@ -342,7 +329,6 @@
         #endregion
 
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Label TituloDashboard;
         private System.Windows.Forms.TextBox tbNomeFantasia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

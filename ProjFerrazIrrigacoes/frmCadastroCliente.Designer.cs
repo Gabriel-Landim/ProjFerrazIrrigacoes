@@ -46,7 +46,6 @@
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.TituloDashboard = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbNomeFantasia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -245,17 +244,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Cidade";
             // 
-            // TituloDashboard
-            // 
-            this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
-            this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TituloDashboard.Location = new System.Drawing.Point(42, 9);
-            this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(108, 35);
-            this.TituloDashboard.TabIndex = 19;
-            this.TituloDashboard.Text = "Cliente";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -297,7 +285,6 @@
             this.Controls.Add(this.tbTelefone);
             this.Controls.Add(this.tbCnpj);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TituloDashboard);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbNomeFantasia);
             this.Controls.Add(this.label1);
@@ -332,7 +319,6 @@
         private System.Windows.Forms.TextBox tbCep;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label TituloDashboard;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbNomeFantasia;
         private System.Windows.Forms.Label label1;
