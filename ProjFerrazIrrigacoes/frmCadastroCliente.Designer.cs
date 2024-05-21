@@ -31,7 +31,7 @@
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbTelefone = new System.Windows.Forms.TextBox();
-            this.tbCnpj = new System.Windows.Forms.TextBox();
+            this.tbCpf = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.tbComplemento = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbNomeFantasia = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.BtnCadastrar.TabIndex = 28;
             this.BtnCadastrar.Text = "Cadastrar";
             this.BtnCadastrar.UseVisualStyleBackColor = true;
+            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // label4
             // 
@@ -81,13 +82,13 @@
             this.tbTelefone.Size = new System.Drawing.Size(232, 23);
             this.tbTelefone.TabIndex = 26;
             // 
-            // tbCnpj
+            // tbCpf
             // 
-            this.tbCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbCnpj.Location = new System.Drawing.Point(82, 181);
-            this.tbCnpj.Name = "tbCnpj";
-            this.tbCnpj.Size = new System.Drawing.Size(232, 23);
-            this.tbCnpj.TabIndex = 24;
+            this.tbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbCpf.Location = new System.Drawing.Point(82, 181);
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(232, 23);
+            this.tbCpf.TabIndex = 24;
             // 
             // panel1
             // 
@@ -255,13 +256,13 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "CPF";
             // 
-            // tbNomeFantasia
+            // tbNome
             // 
-            this.tbNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbNomeFantasia.Location = new System.Drawing.Point(82, 129);
-            this.tbNomeFantasia.Name = "tbNomeFantasia";
-            this.tbNomeFantasia.Size = new System.Drawing.Size(232, 23);
-            this.tbNomeFantasia.TabIndex = 20;
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbNome.Location = new System.Drawing.Point(82, 129);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(232, 23);
+            this.tbNome.TabIndex = 20;
             // 
             // label1
             // 
@@ -283,10 +284,10 @@
             this.Controls.Add(this.BtnCadastrar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbTelefone);
-            this.Controls.Add(this.tbCnpj);
+            this.Controls.Add(this.tbCpf);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbNomeFantasia);
+            this.Controls.Add(this.tbNome);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -304,7 +305,7 @@
         private System.Windows.Forms.Button BtnCadastrar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbTelefone;
-        private System.Windows.Forms.TextBox tbCnpj;
+        private System.Windows.Forms.TextBox tbCpf;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.TextBox tbComplemento;
@@ -320,7 +321,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbNomeFantasia;
+        private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label label1;
     }
 }
