@@ -74,7 +74,7 @@ namespace DAL
             }
 
         }
-        public List<modCliente> CarregarCliente()
+        public List<modCliente> CarregarCliente(string nome)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
