@@ -10,12 +10,7 @@ namespace BLL
 {
     public class bllCliente
     {
-        public List<modCliente> CarregarCliente(string nome)
-        {
-            dalCliente objdados = new dalCliente();
-            return objdados.CarregarCliente(nome);
-        }
-
+        //Gravar
         public void Inserir(modCliente objdados)
         {
             if ((objdados.NomeCliente.Trim() != "") && (objdados.Cpf.Trim() != ""))
@@ -24,25 +19,22 @@ namespace BLL
                 objInserir.Insere(objdados);
             }
         }
-
         public void Alterar(modCliente objdados)
         {
             if ((objdados.NomeCliente.Trim() != "") && (objdados.Id != 0))
             {
-                dalCliente objAlterar = new dalCliente();
-                objAlterar.Alterar(objdados);
+                dalCliente objInserir = new dalCliente();
+                objInserir.Alterar(objdados);
             }
         }
-
-        public void Excluir(int Id)
+        public void Excluir(int id)
         {
-            if (Id != 0)
+            if (id != 0)
             {
-                dalEmpresa objExcluir = new dalEmpresa();
-                objExcluir.Excluir(Id);
+                dalCliente objExcluir = new dalCliente();
+                objExcluir.Excluir(id);
             }
         }
-
         public modEmpresa CarregarDadosEmpresa()
         {
             dalEmpresa objdados = new dalEmpresa();
