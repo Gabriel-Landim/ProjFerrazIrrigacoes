@@ -65,5 +65,10 @@ namespace ProjFerrazIrrigacoes
 
             MessageBox.Show("Cliente cadastrado com Sucesso!");
         }
+
+        private void frmCadastroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,10 +35,10 @@ namespace BLL
                 objExcluir.Excluir(id);
             }
         }
-        public modEmpresa CarregarDadosEmpresa()
+        public modCliente CarregarDadosCliente()
         {
-            dalEmpresa objdados = new dalEmpresa();
-            return objdados.CarregarDadosEmpresa();
+            dalCliente objdados = new dalCliente();
+            return objdados.CarregarCliente();
         }
     }
 }
