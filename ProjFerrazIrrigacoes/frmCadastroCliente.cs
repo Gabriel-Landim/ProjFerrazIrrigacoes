@@ -40,6 +40,7 @@ namespace ProjFerrazIrrigacoes
             tbComplemento.Text = objDados.Complemento;
             tbNumero.Text = objDados.NumeroEndereco;
             tbTelefone.Text = objDados.TelefoneCliente;
+            tbEmail.Text = objDados.Email;
             cbCidade.SelectedValue = objDados.IdCidade;
             tbRua.Text = objDados.Rua;
 
@@ -49,18 +50,18 @@ namespace ProjFerrazIrrigacoes
             bllCliente objcadastrar = new bllCliente();
             modCliente objdados = new modCliente();
 
-            objdados.Id = 1;
-            tbNome.Text = objdados.NomeCliente;
-            tbCep.Text = objdados.Cep;
-            tbBairro.Text = objdados.Bairro;
-            tbCpf.Text = objdados.Cpf;
-            tbComplemento.Text = objdados.Complemento;
-            tbNumero.Text = objdados.NumeroEndereco;
-            tbTelefone.Text = objdados.TelefoneCliente;
-            cbCidade.SelectedValue = objdados.IdCidade;
-            tbRua.Text = objdados.Rua;
+            objdados.NomeCliente = tbNome.Text;
+            objdados.Cep = tbCep.Text;
+            objdados.Bairro = tbBairro.Text;
+            objdados.Cpf = tbCpf.Text;
+            objdados.Complemento = tbComplemento.Text;
+            objdados.NumeroEndereco = tbNumero.Text;
+            objdados.TelefoneCliente = tbTelefone.Text;
+            objdados.Email = tbEmail.Text;
+            objdados.IdCidade = Convert.ToInt32(cbCidade.SelectedValue);
+            objdados.Rua = tbRua.Text;
 
-            objcadastrar.Alterar(objdados);
+            objcadastrar.Inserir(objdados);
 
             MessageBox.Show("Cliente cadastrado com Sucesso!");
         }

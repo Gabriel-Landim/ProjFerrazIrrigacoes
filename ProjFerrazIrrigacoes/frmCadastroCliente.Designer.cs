@@ -49,13 +49,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCadastrar
             // 
             this.BtnCadastrar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCadastrar.Location = new System.Drawing.Point(129, 300);
+            this.BtnCadastrar.Location = new System.Drawing.Point(128, 326);
             this.BtnCadastrar.Name = "BtnCadastrar";
             this.BtnCadastrar.Size = new System.Drawing.Size(131, 34);
             this.BtnCadastrar.TabIndex = 28;
@@ -275,12 +277,33 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Nome ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(79, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Email";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbEmail.Location = new System.Drawing.Point(82, 286);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(232, 23);
+            this.tbEmail.TabIndex = 30;
+            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(717, 438);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.BtnCadastrar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbTelefone);
@@ -323,5 +346,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbEmail;
     }
 }

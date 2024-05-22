@@ -149,15 +149,14 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO cliente (NOME, CPF, TELEFONE, EMAIL, SENHA, RUA, BAIRRO, CEP, NUMERO, COMPLEMENTO, CIDADE ) " +  //comando que eu quero
-                                  " VALUES (@NOME, @CPF, @TELEFONE, @EMAIL, @SENHA, @RUA, @BAIRRO, @CEP, @NUMERO, @COMPLEMENTO, @CIDADE) ";
+                cmd.CommandText = " INSERT INTO cliente (NOME, CPF, TELEFONE, EMAIL, RUA, BAIRRO, CEP, NUMERO, COMPLEMENTO, CIDADE ) " +  //comando que eu quero
+                                  " VALUES (@NOME, @CPF, @TELEFONE, @EMAIL, @RUA, @BAIRRO, @CEP, @NUMERO, @COMPLEMENTO, @CIDADE) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@NOME", objDados.NomeCliente);
                 cmd.Parameters.AddWithValue("@CPF", objDados.Cpf);
                 cmd.Parameters.AddWithValue("@TELEFONE", objDados.TelefoneCliente);
                 cmd.Parameters.AddWithValue("@EMAIL", objDados.Email);
-                cmd.Parameters.AddWithValue("@SENHA", objDados.Senha);
                 cmd.Parameters.AddWithValue("@RUA", objDados.Rua);
                 cmd.Parameters.AddWithValue("@BAIRRO", objDados.Bairro);
                 cmd.Parameters.AddWithValue("@CEP", objDados.Cep);
