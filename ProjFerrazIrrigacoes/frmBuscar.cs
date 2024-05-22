@@ -45,7 +45,6 @@ namespace ProjFerrazIrrigacoes
             tbEmail.Text = objDados.Email;
             cbCidade.SelectedValue = objDados.IdCidade;
             tbRua.Text = objDados.Rua;
-
         }
         //btnAlterar
 
@@ -109,6 +108,11 @@ namespace ProjFerrazIrrigacoes
             tbTelefone.Enabled = true;
             tbEmail.Enabled = true;
             MessageBox.Show("Alteração Efetuada!");
+        }
+
+        private void frmBuscar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,10 +41,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.BtnProdutos = new System.Windows.Forms.Button();
+            this.BtnEmpresa = new System.Windows.Forms.Button();
             this.PanelCadastro = new System.Windows.Forms.Panel();
             this.BtnCadastroCliente = new System.Windows.Forms.Button();
-            this.BtnCadastroEmpresa = new System.Windows.Forms.Button();
+            this.BtnCadastroProdutos = new System.Windows.Forms.Button();
             this.BtnCadastro = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -127,7 +127,7 @@
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.BtnBuscar);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.BtnProdutos);
+            this.panel1.Controls.Add(this.BtnEmpresa);
             this.panel1.Controls.Add(this.PanelCadastro);
             this.panel1.Controls.Add(this.BtnCadastro);
             this.panel1.Controls.Add(this.BtnDashboard);
@@ -205,30 +205,30 @@
             this.panel5.Size = new System.Drawing.Size(201, 20);
             this.panel5.TabIndex = 6;
             // 
-            // BtnProdutos
+            // BtnEmpresa
             // 
-            this.BtnProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnProdutos.FlatAppearance.BorderSize = 0;
-            this.BtnProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnProdutos.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
-            this.BtnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnProdutos.Location = new System.Drawing.Point(0, 331);
-            this.BtnProdutos.Name = "BtnProdutos";
-            this.BtnProdutos.Size = new System.Drawing.Size(201, 45);
-            this.BtnProdutos.TabIndex = 5;
-            this.BtnProdutos.Text = "Produtos";
-            this.BtnProdutos.UseVisualStyleBackColor = true;
-            this.BtnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click_1);
+            this.BtnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEmpresa.FlatAppearance.BorderSize = 0;
+            this.BtnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnEmpresa.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
+            this.BtnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEmpresa.Location = new System.Drawing.Point(0, 331);
+            this.BtnEmpresa.Name = "BtnEmpresa";
+            this.BtnEmpresa.Size = new System.Drawing.Size(201, 45);
+            this.BtnEmpresa.TabIndex = 5;
+            this.BtnEmpresa.Text = "Empresa";
+            this.BtnEmpresa.UseVisualStyleBackColor = true;
+            this.BtnEmpresa.Click += new System.EventHandler(this.BtnEmpresa_Click);
             // 
             // PanelCadastro
             // 
             this.PanelCadastro.BackColor = System.Drawing.Color.Transparent;
             this.PanelCadastro.Controls.Add(this.BtnCadastroCliente);
-            this.PanelCadastro.Controls.Add(this.BtnCadastroEmpresa);
+            this.PanelCadastro.Controls.Add(this.BtnCadastroProdutos);
             this.PanelCadastro.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelCadastro.Location = new System.Drawing.Point(0, 234);
             this.PanelCadastro.Name = "PanelCadastro";
@@ -253,23 +253,23 @@
             this.BtnCadastroCliente.UseVisualStyleBackColor = false;
             this.BtnCadastroCliente.Click += new System.EventHandler(this.BtnCadastroCliente_Click);
             // 
-            // BtnCadastroEmpresa
+            // BtnCadastroProdutos
             // 
-            this.BtnCadastroEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
-            this.BtnCadastroEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCadastroEmpresa.FlatAppearance.BorderSize = 0;
-            this.BtnCadastroEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnCadastroEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnCadastroEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastroEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnCadastroEmpresa.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnCadastroEmpresa.Location = new System.Drawing.Point(0, 0);
-            this.BtnCadastroEmpresa.Name = "BtnCadastroEmpresa";
-            this.BtnCadastroEmpresa.Size = new System.Drawing.Size(201, 45);
-            this.BtnCadastroEmpresa.TabIndex = 4;
-            this.BtnCadastroEmpresa.Text = "Empresa";
-            this.BtnCadastroEmpresa.UseVisualStyleBackColor = false;
-            this.BtnCadastroEmpresa.Click += new System.EventHandler(this.BtnCadastroEmpresa_Click);
+            this.BtnCadastroProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.BtnCadastroProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCadastroProdutos.FlatAppearance.BorderSize = 0;
+            this.BtnCadastroProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnCadastroProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnCadastroProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastroProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnCadastroProdutos.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnCadastroProdutos.Location = new System.Drawing.Point(0, 0);
+            this.BtnCadastroProdutos.Name = "BtnCadastroProdutos";
+            this.BtnCadastroProdutos.Size = new System.Drawing.Size(201, 45);
+            this.BtnCadastroProdutos.TabIndex = 4;
+            this.BtnCadastroProdutos.Text = "Produtos";
+            this.BtnCadastroProdutos.UseVisualStyleBackColor = false;
+            this.BtnCadastroProdutos.Click += new System.EventHandler(this.BtnCadastroProdutos_Click);
             // 
             // BtnCadastro
             // 
@@ -398,10 +398,10 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button BtnProdutos;
+        private System.Windows.Forms.Button BtnEmpresa;
         private System.Windows.Forms.Panel PanelCadastro;
         private System.Windows.Forms.Button BtnCadastroCliente;
-        private System.Windows.Forms.Button BtnCadastroEmpresa;
+        private System.Windows.Forms.Button BtnCadastroProdutos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;

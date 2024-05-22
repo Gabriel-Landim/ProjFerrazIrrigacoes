@@ -30,7 +30,6 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbBuscaNome = new System.Windows.Forms.TextBox();
             this.tbCpf = new System.Windows.Forms.TextBox();
             this.btGravar = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbNomeCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.cbProcuraNome = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
             this.pProcurarCliente.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,13 +85,6 @@
             this.label3.Size = new System.Drawing.Size(58, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome";
-            // 
-            // tbBuscaNome
-            // 
-            this.tbBuscaNome.Location = new System.Drawing.Point(4, 4);
-            this.tbBuscaNome.Name = "tbBuscaNome";
-            this.tbBuscaNome.Size = new System.Drawing.Size(232, 20);
-            this.tbBuscaNome.TabIndex = 3;
             // 
             // tbCpf
             // 
@@ -159,8 +152,8 @@
             // pProcurarCliente
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.pProcurarCliente.Controls.Add(this.cbProcuraNome);
             this.pProcurarCliente.Controls.Add(this.gvBuscaNome);
-            this.pProcurarCliente.Controls.Add(this.tbBuscaNome);
             this.pProcurarCliente.Location = new System.Drawing.Point(92, 40);
             this.pProcurarCliente.Name = "pProcurarCliente";
             this.pProcurarCliente.Size = new System.Drawing.Size(240, 146);
@@ -381,6 +374,14 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Cliente";
             // 
+            // cbProcuraNome
+            // 
+            this.cbProcuraNome.FormattingEnabled = true;
+            this.cbProcuraNome.Location = new System.Drawing.Point(4, 0);
+            this.cbProcuraNome.Name = "cbProcuraNome";
+            this.cbProcuraNome.Size = new System.Drawing.Size(231, 21);
+            this.cbProcuraNome.TabIndex = 21;
+            // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,9 +408,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscar";
             this.Text = "frmBuscar";
+            this.Load += new System.EventHandler(this.frmBuscar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).EndInit();
             this.pProcurarCliente.ResumeLayout(false);
-            this.pProcurarCliente.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -420,7 +421,6 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbBuscaNome;
         private System.Windows.Forms.TextBox tbCpf;
         private System.Windows.Forms.Button btGravar;
         private System.Windows.Forms.Button btAlterar;
@@ -449,5 +449,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbNomeCliente;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbProcuraNome;
     }
 }
