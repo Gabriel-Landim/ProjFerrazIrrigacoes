@@ -8,11 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Drawing.Drawing2D;
+
 
 namespace ProjFerrazIrrigacoes
 {
     public partial class Form1 : Form
     {
+        public Color ColorTop { get; set; }
+        public Color ColorBottom { get; set; }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            LinearGradientBrush lgb = new LinearGradientBrush(this.ClientRectangle, this.ColorTop, this.ColorBottom, 90F);
+            Graphics g = e.Graphics;
+            g.FillRectangle(lgb, this.ClientRectangle);
+            base.OnPaint(e);
+        }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr GetProcAddress(
             int nLeftRect,
@@ -144,5 +156,21 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(FrmCadastroCriente_Vrb);
             FrmCadastroCriente_Vrb.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            LinearGradientBrush br = new LinearGradientBrush(this.ClientRectangle, Color.Black, Color.Black, 0, false);
+            ColorBlend cb = new ColorBlend();
+            cb.Positions = new[] { 0, 1 / 6f, 2 / 6f, 3 / 6f, 4 / 6f, 5 / 6f, 1 };
+            cb.Colors = new[] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet };
+            br.InterpolationColors = cb;
+            // rotate
+            br.RotateTransform(45);
+            // paint
+            e.Graphics.FillRectangle(br, this.ClientRectangle);
+        }
+
+
     }
-}
+    }
+
