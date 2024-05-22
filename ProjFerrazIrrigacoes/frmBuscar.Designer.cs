@@ -30,14 +30,14 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.tbBuscaNome = new System.Windows.Forms.TextBox();
+            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.btGravar = new System.Windows.Forms.Button();
+            this.btAlterar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.gvBuscaNome = new System.Windows.Forms.DataGridView();
+            this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.tbComplemento = new System.Windows.Forms.TextBox();
@@ -51,8 +51,16 @@
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.tbTelefone = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbNomeCliente = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
+            this.pProcurarCliente.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(91, 235);
+            this.label2.Location = new System.Drawing.Point(91, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 21);
             this.label2.TabIndex = 1;
@@ -72,47 +80,49 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(88, 62);
+            this.label3.Location = new System.Drawing.Point(88, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome";
             // 
-            // textBox1
+            // tbBuscaNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbBuscaNome.Location = new System.Drawing.Point(4, 4);
+            this.tbBuscaNome.Name = "tbBuscaNome";
+            this.tbBuscaNome.Size = new System.Drawing.Size(232, 20);
+            this.tbBuscaNome.TabIndex = 3;
             // 
-            // textBox2
+            // tbCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 259);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbCpf.Location = new System.Drawing.Point(95, 213);
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(232, 20);
+            this.tbCpf.TabIndex = 4;
             // 
-            // button1
+            // btGravar
             // 
-            this.button1.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.button1.Location = new System.Drawing.Point(131, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 34);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Gravar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btGravar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btGravar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btGravar.Location = new System.Drawing.Point(131, 364);
+            this.btGravar.Name = "btGravar";
+            this.btGravar.Size = new System.Drawing.Size(106, 34);
+            this.btGravar.TabIndex = 13;
+            this.btGravar.Text = "Gravar";
+            this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
-            // button5
+            // btAlterar
             // 
-            this.button5.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.button5.Location = new System.Drawing.Point(258, 364);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 34);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Alterar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btAlterar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btAlterar.Location = new System.Drawing.Point(258, 364);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(106, 34);
+            this.btAlterar.TabIndex = 17;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // button2
             // 
@@ -136,25 +146,25 @@
             this.button3.Text = "Voltar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // gvBuscaNome
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(232, 118);
-            this.dataGridView1.TabIndex = 20;
+            this.gvBuscaNome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.gvBuscaNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvBuscaNome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvBuscaNome.Location = new System.Drawing.Point(4, 23);
+            this.gvBuscaNome.Name = "gvBuscaNome";
+            this.gvBuscaNome.Size = new System.Drawing.Size(232, 118);
+            this.gvBuscaNome.TabIndex = 20;
             // 
-            // panel1
+            // pProcurarCliente
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(92, 86);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 146);
-            this.panel1.TabIndex = 21;
+            this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.pProcurarCliente.Controls.Add(this.gvBuscaNome);
+            this.pProcurarCliente.Controls.Add(this.tbBuscaNome);
+            this.pProcurarCliente.Location = new System.Drawing.Point(92, 40);
+            this.pProcurarCliente.Name = "pProcurarCliente";
+            this.pProcurarCliente.Size = new System.Drawing.Size(240, 146);
+            this.pProcurarCliente.TabIndex = 21;
             // 
             // panel2
             // 
@@ -299,27 +309,107 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Cidade";
             // 
+            // tbTelefone
+            // 
+            this.tbTelefone.Location = new System.Drawing.Point(96, 265);
+            this.tbTelefone.Name = "tbTelefone";
+            this.tbTelefone.Size = new System.Drawing.Size(232, 20);
+            this.tbTelefone.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(92, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Telefone";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(95, 313);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(232, 20);
+            this.tbEmail.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(91, 289);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 21);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Email";
+            // 
+            // tbId
+            // 
+            this.tbId.Location = new System.Drawing.Point(60, 428);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(232, 20);
+            this.tbId.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(74, 451);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 21);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Id";
+            // 
+            // tbNomeCliente
+            // 
+            this.tbNomeCliente.Location = new System.Drawing.Point(354, 428);
+            this.tbNomeCliente.Name = "tbNomeCliente";
+            this.tbNomeCliente.Size = new System.Drawing.Size(232, 20);
+            this.tbNomeCliente.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(443, 451);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 21);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Cliente";
+            // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.tbNomeCliente);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.tbId);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbTelefone);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pProcurarCliente);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btAlterar);
+            this.Controls.Add(this.btGravar);
+            this.Controls.Add(this.tbCpf);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscar";
             this.Text = "frmBuscar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).EndInit();
+            this.pProcurarCliente.ResumeLayout(false);
+            this.pProcurarCliente.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -330,14 +420,14 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox tbBuscaNome;
+        private System.Windows.Forms.TextBox tbCpf;
+        private System.Windows.Forms.Button btGravar;
+        private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView gvBuscaNome;
+        private System.Windows.Forms.Panel pProcurarCliente;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.TextBox tbComplemento;
@@ -351,5 +441,13 @@
         private System.Windows.Forms.TextBox tbCep;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbTelefone;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbNomeCliente;
+        private System.Windows.Forms.Label label12;
     }
 }
