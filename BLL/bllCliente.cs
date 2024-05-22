@@ -18,7 +18,7 @@ namespace BLL
 
         public void Inserir(modCliente objdados)
         {
-            if ((objdados.NomeCliente.Trim() != "") && (objdados.Cpf.Trim() != ""))
+            if (objdados.NomeCliente.Trim() != "")
             {
                 dalCliente objInserir = new dalCliente();
                 objInserir.Insere(objdados);
