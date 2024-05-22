@@ -14,6 +14,7 @@ namespace ProjFerrazIrrigacoes
 {
     public partial class frmProdutos : Form
     {
+        int i;
         string operacao;
         public frmProdutos()
         {
