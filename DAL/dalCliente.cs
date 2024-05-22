@@ -74,7 +74,7 @@ namespace DAL
             }
 
         }
-        public modCliente CarregarCliente(string nome)
+        public modCliente CarregarCliente()
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -97,27 +97,26 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma lista para armazenar os dados.
-                var ListaCliente = new List<modCliente>();
+                var ListaCliente = new modCliente();
 
 
                 if (registro.HasRows)
                 {
                     while (registro.Read())
                     {
-                        ListaCliente.Add(new modCliente()
-                        {
-                            Id = Convert.ToInt32(registro["Id"]),
-                            NomeCliente = Convert.ToString(registro["Nome"]),
-                            Cpf = Convert.ToString(registro["Cpf"]),
-                            TelefoneCliente = Convert.ToString(registro["Telefone"]),
-                            Email = Convert.ToString(registro["Email"]),
-                            Rua = Convert.ToString(registro["Rua"]),
-                            Bairro = Convert.ToString(registro["Bairro"]),
-                            Cep = Convert.ToString(registro["Cep"]),
-                            NumeroEndereco = Convert.ToString(registro["Numero"]),
-                            Complemento = Convert.ToString(registro["Complemento"]),
-                            IdCidade = Convert.ToInt32(registro["Cidade"]),
-                        });
+
+                        ListaCliente.Id = Convert.ToInt32(registro["Id"]);
+                        ListaCliente.NomeCliente = Convert.ToString(registro["Nome"]);
+                        ListaCliente.Cpf = Convert.ToString(registro["Cpf"]);
+                        ListaCliente.TelefoneCliente = Convert.ToString(registro["Telefone"]);
+                        ListaCliente.Email = Convert.ToString(registro["Email"]);
+                        ListaCliente.Rua = Convert.ToString(registro["Rua"]);
+                        ListaCliente.Bairro = Convert.ToString(registro["Bairro"]);
+                        ListaCliente.Cep = Convert.ToString(registro["Cep"]);
+                        ListaCliente.NumeroEndereco = Convert.ToString(registro["Numero"]);
+                        ListaCliente.Complemento = Convert.ToString(registro["Complemento"]);
+                        ListaCliente.IdCidade = Convert.ToInt32(registro["Cidade"]);
+                        
                     }
                 }
 

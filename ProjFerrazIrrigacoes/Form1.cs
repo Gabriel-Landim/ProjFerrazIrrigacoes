@@ -87,20 +87,7 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
         }
-        private void BtnProdutos_Click_1(object sender, EventArgs e)
-        {
-            PainelNav.Height = BtnDashboard.Height;
-            PainelNav.Top = BtnDashboard.Top;
-            PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
-
-            TituloDashboard.Text = "Produtos";
-            this.PanelCarregar.Controls.Clear();
-            frmProdutos FrmProdutos_Vrb = new frmProdutos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmProdutos_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(FrmProdutos_Vrb);
-            FrmProdutos_Vrb.Show();
-        }
+       
 
         private void BtnBuscar_Click_1(object sender, EventArgs e)
         {
@@ -137,15 +124,7 @@ namespace ProjFerrazIrrigacoes
             }
         }
 
-        private void BtnCadastroEmpresa_Click(object sender, EventArgs e)
-        {
-            TituloDashboard.Text = "Cadastro";
-            this.PanelCarregar.Controls.Clear();
-            frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
-            FrmCadastro_Vrb.Show();
-        }
+        
 
         private void BtnCadastroCliente_Click(object sender, EventArgs e)
         {
@@ -159,18 +138,36 @@ namespace ProjFerrazIrrigacoes
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            LinearGradientBrush br = new LinearGradientBrush(this.ClientRectangle, Color.Black, Color.Black, 0, false);
-            ColorBlend cb = new ColorBlend();
-            cb.Positions = new[] { 0, 1 / 6f, 2 / 6f, 3 / 6f, 4 / 6f, 5 / 6f, 1 };
-            cb.Colors = new[] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet };
-            br.InterpolationColors = cb;
-            // rotate
-            br.RotateTransform(45);
-            // paint
-            e.Graphics.FillRectangle(br, this.ClientRectangle);
+            //LinearGradientBrush br = new LinearGradientBrush(this.ClientRectangle, Color.Black, Color.Black, 0, false);
+            //ColorBlend cb = new ColorBlend();
+            //cb.Positions = new[] { 0, 1 / 6f, 2 / 6f, 3 / 6f, 4 / 6f, 5 / 6f, 1 };
+            //cb.Colors = new[] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet };
+            //br.InterpolationColors = cb;
+            //// rotate
+            //br.RotateTransform(45);
+            //// paint
+            //e.Graphics.FillRectangle(br, this.ClientRectangle);
         }
 
+        private void BtnCadastroProdutos_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Cadastro Produto";
+            this.PanelCarregar.Controls.Clear();
+            frmProdutos FrmProdutos_Vrb = new frmProdutos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmProdutos_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmProdutos_Vrb);
+            FrmProdutos_Vrb.Show();
+        }
 
+        private void BtnEmpresa_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Cadastro Empresa";
+            this.PanelCarregar.Controls.Clear();
+            frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmCadastro_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmCadastro_Vrb);
+            FrmCadastro_Vrb.Show();
+        }
     }
     }
 
