@@ -33,7 +33,7 @@
             this.tbCpf = new System.Windows.Forms.TextBox();
             this.btGravar = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btDeletar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.gvBuscaNome = new System.Windows.Forms.DataGridView();
             this.pProcurarCliente = new System.Windows.Forms.Panel();
@@ -58,7 +58,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbNomeCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cbProcuraNome = new System.Windows.Forms.ComboBox();
+            this.tbBuscaCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
             this.pProcurarCliente.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,9 +82,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(88, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nome";
+            this.label3.Text = "Cliente";
             // 
             // tbCpf
             // 
@@ -117,16 +117,16 @@
             this.btAlterar.UseVisualStyleBackColor = true;
             this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
-            // button2
+            // btDeletar
             // 
-            this.button2.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.button2.Location = new System.Drawing.Point(383, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 34);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btDeletar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btDeletar.Location = new System.Drawing.Point(383, 364);
+            this.btDeletar.Name = "btDeletar";
+            this.btDeletar.Size = new System.Drawing.Size(106, 34);
+            this.btDeletar.TabIndex = 18;
+            this.btDeletar.Text = "Deletar";
+            this.btDeletar.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -148,11 +148,12 @@
             this.gvBuscaNome.Name = "gvBuscaNome";
             this.gvBuscaNome.Size = new System.Drawing.Size(232, 118);
             this.gvBuscaNome.TabIndex = 20;
+            this.gvBuscaNome.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBuscaNome_CellDoubleClick);
             // 
             // pProcurarCliente
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.pProcurarCliente.Controls.Add(this.cbProcuraNome);
+            this.pProcurarCliente.Controls.Add(this.tbBuscaCliente);
             this.pProcurarCliente.Controls.Add(this.gvBuscaNome);
             this.pProcurarCliente.Location = new System.Drawing.Point(92, 40);
             this.pProcurarCliente.Name = "pProcurarCliente";
@@ -374,13 +375,14 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Cliente";
             // 
-            // cbProcuraNome
+            // tbBuscaCliente
             // 
-            this.cbProcuraNome.FormattingEnabled = true;
-            this.cbProcuraNome.Location = new System.Drawing.Point(4, 0);
-            this.cbProcuraNome.Name = "cbProcuraNome";
-            this.cbProcuraNome.Size = new System.Drawing.Size(231, 21);
-            this.cbProcuraNome.TabIndex = 21;
+            this.tbBuscaCliente.Location = new System.Drawing.Point(4, 3);
+            this.tbBuscaCliente.Name = "tbBuscaCliente";
+            this.tbBuscaCliente.Size = new System.Drawing.Size(232, 20);
+            this.tbBuscaCliente.TabIndex = 31;
+            this.tbBuscaCliente.Text = "Busque pelo Nome";
+            this.tbBuscaCliente.TextChanged += new System.EventHandler(this.tbBuscaCliente_TextChanged);
             // 
             // frmBuscar
             // 
@@ -399,7 +401,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pProcurarCliente);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btDeletar);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btGravar);
             this.Controls.Add(this.tbCpf);
@@ -411,6 +413,7 @@
             this.Load += new System.EventHandler(this.frmBuscar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).EndInit();
             this.pProcurarCliente.ResumeLayout(false);
+            this.pProcurarCliente.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -424,7 +427,7 @@
         private System.Windows.Forms.TextBox tbCpf;
         private System.Windows.Forms.Button btGravar;
         private System.Windows.Forms.Button btAlterar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btDeletar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView gvBuscaNome;
         private System.Windows.Forms.Panel pProcurarCliente;
@@ -449,6 +452,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbNomeCliente;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbProcuraNome;
+        private System.Windows.Forms.TextBox tbBuscaCliente;
     }
 }

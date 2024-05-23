@@ -20,7 +20,8 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = " SELECT CLIENTE.ID, CLIENTE.NOME, CLIENTE.CPF, CLIENTE.TELEFONE, " +
-                                  " CLIENTE.EMAIL, CIDADE.NOME AS CIDADE " +
+                                  " CLIENTE.EMAIL, CLIENTE.BAIRRO, CLIENTE.RUA, CLIENTE.CEP, CLIENTE.NUMERO, " +
+                                  " CLIENTE.COMPLEMENTO, CIDADE.CIDADENOME AS CIDADE, CIDADE.ID AS CIDADEID " +
                                   " FROM CLIENTE " +
                                   " LEFT OUTER JOIN CIDADE ON CLIENTE.CIDADE = CIDADE.ID " +
                                   " WHERE CLIENTE.NOME LIKE @CLIENTE ";
@@ -46,11 +47,17 @@ namespace DAL
                         ListaCliente.Add(new modCliente()
                         {
                             Id = Convert.ToInt32(registro["ID"]),
-                            IdCidade = Convert.ToInt32(registro["CIDADE"]),
+                            IdCidade = Convert.ToInt32(registro["CIDADEID"]),
                             NomeCliente = Convert.ToString(registro["NOME"]),
                             Cpf = Convert.ToString(registro["CPF"]),
                             TelefoneCliente = Convert.ToString(registro["TELEFONE"]),
                             Email = Convert.ToString(registro["EMAIL"]),
+                            Bairro = Convert.ToString(registro["BAIRRO"]),
+                            Rua = Convert.ToString(registro["RUA"]),
+                            Cep = Convert.ToString(registro["CEP"]),
+                            NumeroEndereco = Convert.ToString(registro["NUMERO"]),
+                            Complemento = Convert.ToString(registro["COMPLEMENTO"]),
+                            CidadeNome = Convert.ToString(registro["CIDADE"])
                         });
                     }
                 }
@@ -195,7 +202,7 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE CLIENTE SET NOME = @NOME, CPF = @CPF, TELEFONE = @TELEFONE, EMAIL = @EMAIL, " +
-                                  " SENHA = @SENHA, RUA = @RUA, BAIRRO = @BAIRRO, CEP = @CEP, NUMERO = @NUMERO, " +
+                                  " RUA = @RUA, BAIRRO = @BAIRRO, CEP = @CEP, NUMERO = @NUMERO, " +
                                   " COMPLEMENTO = @COMPLEMENTO, CIDADE = @CIDADE " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
@@ -205,7 +212,6 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@CPF", objDados.Cpf);
                 cmd.Parameters.AddWithValue("@TELEFONE", objDados.TelefoneCliente);
                 cmd.Parameters.AddWithValue("@EMAIL", objDados.Email);
-                cmd.Parameters.AddWithValue("@SENHA", objDados.Senha);
                 cmd.Parameters.AddWithValue("@RUA", objDados.Rua);
                 cmd.Parameters.AddWithValue("@BAIRRO", objDados.Bairro);
                 cmd.Parameters.AddWithValue("@CEP", objDados.Cep);
@@ -274,5 +280,6 @@ namespace DAL
             }
 
         }
+
     }
 }
