@@ -13,7 +13,7 @@ namespace BLL
         public List<modCategoriasTipos> CarregarCategoria()
         {
             dalCategoriasTipo objdados = new dalCategoriasTipo();
-            return objdados.CarregarCategoria();
+            return objdados.CarregaCategoria();
         }
     }
 }
