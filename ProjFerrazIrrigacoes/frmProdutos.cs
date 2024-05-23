@@ -15,15 +15,11 @@ namespace ProjFerrazIrrigacoes
 {
     public partial class frmProdutos : Form
     {
+        string operacao;
         public frmProdutos()
         {
             InitializeComponent();
         }
-
-        int i;
-        string operacao;
-       
- 
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -56,33 +52,30 @@ namespace ProjFerrazIrrigacoes
         private void CarregarUnidadeMedida()
         {
             bllUnidadeMedidaTipos objBusca = new bllUnidadeMedidaTipos();
-            tbUnidadeMedida.DataSource = objBusca.CarregarUnidadeMedida();
-            tbUnidadeMedida.ValueMember = "Id";
-            tbUnidadeMedida.DisplayMember = "Nome";
+            cbUnidadeMedida.DataSource = objBusca.CarregarUnidadeMedida();
+            cbUnidadeMedida.ValueMember = "Id";
+            cbUnidadeMedida.DisplayMember = "Nome";
         }
 
         private void gvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             bllProduto objBusca = new bllProduto();
             modProduto objDados = new modProduto();
-            objDados = objBusca.BuscaPorCodigo(Convert.ToInt32(gvProduto.Rows[e.RowIndex].Cells["Id"].Value));
-            tbDescricao.Text = gvProduto.Rows[e.RowIndex].Cells["Descricao"].Value.ToString();
-            tbEstoque.Text = gvProduto.Rows[e.RowIndex].Cells["Estoque"].Value.ToString();
-            tbValor.Text = gvProduto.Rows[e.RowIndex].Cells["Valor"].Value.ToString();
-            tbProdutoNome.Text = gvProduto.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
+            objDados = objBusca.BuscaPorCodigo(Convert.ToInt32(gvProdutos.Rows[e.RowIndex].Cells["Id"].Value));
+            gvProdutos.Text = gvProdutos.Rows[e.RowIndex].Cells["Descricao"].Value.ToString();
+            tbEstoque.Text = gvProdutos.Rows[e.RowIndex].Cells["Estoque"].Value.ToString();
+            tbValor.Text = gvProdutos.Rows[e.RowIndex].Cells["Valor"].Value.ToString();
+            tbProdutoNome.Text = gvProdutos.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
             operacao = "A";
         }
 
         private void tbBuscaProduto_TextChanged(object sender, EventArgs e)
         {
             bllProduto objbusca = new bllProduto();
-            gvProduto.DataSource = objbusca.SelecionarPorNome(tbBuscaProduto.Text);
+            gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBusca.Text);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -90,6 +83,11 @@ namespace ProjFerrazIrrigacoes
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

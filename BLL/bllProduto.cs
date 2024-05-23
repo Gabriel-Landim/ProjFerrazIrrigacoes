@@ -2,6 +2,7 @@
 using Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,8 @@ namespace BLL
         public modProduto BuscaPorCodigo(int id)
         {
             dalProduto objBusca = new dalProduto();
-            return objBusca.BuscaPorCodigo(id);
+            return objBusca.BuscarPorCodigo(id);
         }
-
         public List<modProduto> CarregarProduto()
         {
             dalProduto objdados = new dalProduto();

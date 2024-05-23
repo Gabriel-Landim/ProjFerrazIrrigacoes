@@ -142,6 +142,64 @@ namespace DAL
             }
 
         }
+        public modProduto BuscarPorCodigo(int ProdutoId)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT  PRODUTO.NOME, PRODUTO.ID " +
+                                  " FROM CLIENTE" +
+                "LEFT OUTER JOIN LIVRO ON PRODUTO.UNIDADEMEDIDATIPOS = UNIDADEMEDIDATIPOS.ID " +
+                " WHERE  PRODUTO.NOME LIKE @PRODUTO ";
+
+                cmd.Parameters.AddWithValue("@ID", ProdutoId);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaProduto = new List<modProduto>();
+                modProduto objdados = new modProduto();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        //ListaProduto.Add(new modProduto()
+                        //{
+                        objdados.Id = Convert.ToInt32(registro["Id"]);
+                        objdados.NomeProduto = Convert.ToString(registro["NomeProduto"]);
+                        //});
+                    }
+                }
+
+                return objdados;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public void Insere(modProduto objDados)
         {
             //Variavel de Conexao
