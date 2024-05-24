@@ -128,7 +128,7 @@ namespace ProjFerrazIrrigacoes
 
         private void BtnCadastroCliente_Click(object sender, EventArgs e)
         {
-            TituloDashboard.Text = "Cadastro";
+            TituloDashboard.Text = "Cadastro Cliente";
             this.PanelCarregar.Controls.Clear();
             frmCadastroCliente FrmCadastroCriente_Vrb = new frmCadastroCliente() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmCadastroCriente_Vrb.FormBorderStyle = FormBorderStyle.None;
@@ -151,7 +151,7 @@ namespace ProjFerrazIrrigacoes
 
         private void BtnCadastroProdutos_Click(object sender, EventArgs e)
         {
-            TituloDashboard.Text = "Cadastro Produto";
+            TituloDashboard.Text = "Buscar Produto";
             this.PanelCarregar.Controls.Clear();
             frmProdutos FrmProdutos_Vrb = new frmProdutos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmProdutos_Vrb.FormBorderStyle = FormBorderStyle.None;
