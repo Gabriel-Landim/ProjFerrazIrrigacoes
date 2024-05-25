@@ -53,6 +53,10 @@
             this.cbUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.tbCategoria = new System.Windows.Forms.ComboBox();
             this.tbMarca = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).BeginInit();
             this.SuspendLayout();
@@ -307,6 +311,43 @@
             this.tbMarca.Size = new System.Drawing.Size(231, 21);
             this.tbMarca.TabIndex = 27;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(368, 311);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Id";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(371, 335);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(35, 20);
+            this.textBox2.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(455, 309);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 20);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Descrição";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(458, 333);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(232, 52);
+            this.textBox3.TabIndex = 30;
+            // 
             // frmProdutos
             // 
             this.AllowDrop = true;
@@ -314,6 +355,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.tbCategoria);
             this.Controls.Add(this.cbUnidadeMedida);
@@ -374,5 +419,9 @@
         private System.Windows.Forms.ComboBox cbUnidadeMedida;
         private System.Windows.Forms.ComboBox tbCategoria;
         private System.Windows.Forms.ComboBox tbMarca;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

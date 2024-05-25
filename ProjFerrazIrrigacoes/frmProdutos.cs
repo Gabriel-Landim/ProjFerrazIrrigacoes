@@ -75,8 +75,6 @@ namespace ProjFerrazIrrigacoes
             gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBusca.Text);
         }
 
-
-
         private void button2_Click(object sender, EventArgs e)
         {
 
