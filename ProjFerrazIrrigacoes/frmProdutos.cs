@@ -67,6 +67,11 @@ namespace ProjFerrazIrrigacoes
             tbValor.Text = gvProdutos.Rows[e.RowIndex].Cells["Valor"].Value.ToString();
             tbProdutoNome.Text = gvProdutos.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
             operacao = "A";
+
+            pCategoria.Visible = false;
+            pMarca.Visible = false;
+            pUniMedida.Visible = false;
+
         }
 
         private void tbBuscaProduto_TextChanged(object sender, EventArgs e)
@@ -88,6 +93,34 @@ namespace ProjFerrazIrrigacoes
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnMarcasAdd_Click(object sender, EventArgs e)
+        {
+            pMarca.Visible = true;
+            pMarca.Location = new Point(24, 51);
+        }
+
+        private void BtnCategoriasAdd_Click(object sender, EventArgs e)
+        {
+            pCategoria.Visible = true;
+            pCategoria.Location = new Point(24, 97);
+        }
+
+        private void BtnUniMedidasAdd_Click(object sender, EventArgs e)
+        {
+            pUniMedida.Visible = true;
+            pUniMedida.Location = new Point(24, 144);
         }
     }
 }
