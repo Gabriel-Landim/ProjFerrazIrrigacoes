@@ -78,5 +78,20 @@ namespace ProjFerrazIrrigacoes
 
             MessageBox.Show("Produto cadastrado com Sucesso!");
         }
+
+        private void BtnMarcasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCategoriasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnUniMedidasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
