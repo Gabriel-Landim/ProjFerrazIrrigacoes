@@ -20,8 +20,8 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = " SELECT PRODUTO.ID, PRODUTO.NOME, PRODUTO.DESCRICAO, PRODUTO.ESTOQUE, " +
-                                  " PRODUTO.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, " +
-                                  " MARCA.NOME AS MARCA, CATEGORIASTIPO.NOME AS CATEGORIA" +
+                                  " PRODUTO.VALOR, UNIDADEMEDIDATIPOS.NOME AS UNIDMEDIDA, UNIDADEMEDIDATIPOS.ID AS UNIDMEDIDAID, " +
+                                  " MARCA.NOME AS MARCA, MARCA.ID AS MARCAID, CATEGORIASTIPO.NOME AS CATEGORIA, CATEGORIASTIPO.ID AS CATEGORIAID  " +
                                   " FROM PRODUTO " +
                                   " LEFT OUTER JOIN UNIDADEMEDIDATIPOS ON PRODUTO.UNIDADEMEDIDATIPOS = UNIDADEMEDIDATIPOS.ID " +
                                   " LEFT OUTER JOIN MARCA ON PRODUTO.MARCA = MARCA.ID " +
@@ -49,13 +49,16 @@ namespace DAL
                         ListaProduto.Add(new modProduto()
                         {
                             Id = Convert.ToInt32(registro["ID"]),
-                            IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDADMEDIDA"]),
-                            IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIA"]),
-                            IdMarca = Convert.ToInt32(registro["MARCA"]),
+                            MedidaNome = Convert.ToString(registro["UNIDMEDIDA"]),
+                            CategoriaNome = Convert.ToString(registro["CATEGORIA"]),
+                            MarcaNome = Convert.ToString(registro["MARCA"]),
                             NomeProduto = Convert.ToString(registro["NOME"]),
                             DescricaoProduto = Convert.ToString(registro["DESCRICAO"]),
                             Estoque = Convert.ToInt32(registro["ESTOQUE"]),
                             ValorProduto = Convert.ToDouble(registro["VALOR"]),
+                            IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIAID"]),
+                            IdMarca = Convert.ToInt32(registro["MARCAID"]),
+                            IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDMEDIDAID"]),
                         });
                     }
                 }

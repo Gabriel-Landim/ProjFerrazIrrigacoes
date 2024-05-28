@@ -68,7 +68,6 @@ namespace DAL
             }
 
         }
-
         public void Inserir(modCategoriasTipos objDados)
         {
             //Variavel de Conexao
