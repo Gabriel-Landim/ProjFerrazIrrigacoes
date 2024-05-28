@@ -182,5 +182,58 @@ namespace DAL
             }
 
         }
+        public int Logar(string email, string senha)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ID FROM USUARIO " +
+                                  " WHERE  EMAIL = @EMAIL AND SENHA = @SENHA ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@EMAIL", email);
+                cmd.Parameters.AddWithValue("@SENHA", senha);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma variável.
+                int Codigo = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        Codigo = Convert.ToInt32(registro["id"]);
+                    }
+                }
+
+                return Codigo;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
     }
 }

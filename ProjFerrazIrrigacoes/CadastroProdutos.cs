@@ -61,7 +61,24 @@ namespace ProjFerrazIrrigacoes
             cbUnidadeMedida.ValueMember = "Id";
             cbUnidadeMedida.DisplayMember = "NomeMedida";
         }
-        private void BtnCadastrar_Click(object sender, EventArgs e)
+       
+
+        private void BtnMarcasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCategoriasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnUniMedidasAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
             bllProduto objcadastrar = new bllProduto();
             modProduto objdados = new modProduto();
@@ -79,19 +96,15 @@ namespace ProjFerrazIrrigacoes
             MessageBox.Show("Produto cadastrado com Sucesso!");
         }
 
-        private void BtnMarcasAdd_Click(object sender, EventArgs e)
+        private void gvProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void BtnCategoriasAdd_Click(object sender, EventArgs e)
+        private void tbBusca_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void BtnUniMedidasAdd_Click(object sender, EventArgs e)
-        {
-
+            bllProduto objbusca = new bllProduto();
+            gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBusca.Text);
         }
     }
 }

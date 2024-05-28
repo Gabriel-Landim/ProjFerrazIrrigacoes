@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbProduto = new System.Windows.Forms.TextBox();
-            this.btnGravar = new System.Windows.Forms.Button();
             this.tbDescricao = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.LBBuscar = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnMarcasAdd = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).BeginInit();
             this.panel1.SuspendLayout();
             this.pUniMedida.SuspendLayout();
@@ -181,17 +181,6 @@
             this.tbProduto.Size = new System.Drawing.Size(232, 20);
             this.tbProduto.TabIndex = 43;
             // 
-            // btnGravar
-            // 
-            this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnGravar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btnGravar.Location = new System.Drawing.Point(92, 371);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(106, 34);
-            this.btnGravar.TabIndex = 44;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = true;
-            // 
             // tbDescricao
             // 
             this.tbDescricao.Location = new System.Drawing.Point(32, 141);
@@ -232,6 +221,7 @@
             this.gvProdutos.Name = "gvProdutos";
             this.gvProdutos.Size = new System.Drawing.Size(232, 167);
             this.gvProdutos.TabIndex = 1;
+            this.gvProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProdutos_CellDoubleClick);
             // 
             // tbBusca
             // 
@@ -239,6 +229,7 @@
             this.tbBusca.Name = "tbBusca";
             this.tbBusca.Size = new System.Drawing.Size(232, 20);
             this.tbBusca.TabIndex = 0;
+            this.tbBusca.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
             // 
             // panel1
             // 
@@ -307,22 +298,22 @@
             // 
             // textBox9
             // 
-            this.textBox9.Font = new System.Drawing.Font("RBNo3.1 Light", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textBox9.Location = new System.Drawing.Point(5, 24);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(212, 22);
+            this.textBox9.Size = new System.Drawing.Size(212, 20);
             this.textBox9.TabIndex = 35;
             this.textBox9.Text = "Exemplo: METRO-M";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("RBNo3.1 Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Location = new System.Drawing.Point(2, 6);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 18);
+            this.label14.Size = new System.Drawing.Size(148, 17);
             this.label14.TabIndex = 32;
             this.label14.Text = "Unidade de Medida";
             // 
@@ -353,22 +344,22 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("RBNo3.1 Light", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textBox5.Location = new System.Drawing.Point(5, 22);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(212, 22);
+            this.textBox5.Size = new System.Drawing.Size(212, 20);
             this.textBox5.TabIndex = 37;
             this.textBox5.Text = "Exemplo: TUBULAÇÃO";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("RBNo3.1 Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(2, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 18);
+            this.label12.Size = new System.Drawing.Size(149, 17);
             this.label12.TabIndex = 32;
             this.label12.Text = "Adicionar categoria";
             // 
@@ -399,22 +390,22 @@
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("RBNo3.1 Light", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textBox4.Location = new System.Drawing.Point(5, 23);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 22);
+            this.textBox4.Size = new System.Drawing.Size(212, 20);
             this.textBox4.TabIndex = 36;
             this.textBox4.Text = "Exemplo: KRONA";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("RBNo3.1 Light", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(3, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 18);
+            this.label9.Size = new System.Drawing.Size(125, 17);
             this.label9.TabIndex = 32;
             this.label9.Text = "Adicionar marca";
             // 
@@ -433,11 +424,22 @@
             this.BtnMarcasAdd.UseVisualStyleBackColor = false;
             this.BtnMarcasAdd.Click += new System.EventHandler(this.BtnMarcasAdd_Click);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(72, 370);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(116, 34);
+            this.btnCadastrar.TabIndex = 55;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // CadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.BtnUniMedidasAdd);
             this.Controls.Add(this.BtnCategoriasAdd);
             this.Controls.Add(this.pUniMedida);
@@ -448,7 +450,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbDescricao);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.tbProduto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbCategoria);
@@ -492,7 +493,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbProduto;
-        private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LBBuscar;
@@ -514,5 +514,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnMarcasAdd;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

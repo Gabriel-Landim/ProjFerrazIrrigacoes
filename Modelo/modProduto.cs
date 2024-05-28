@@ -16,5 +16,8 @@ namespace Modelo
         public int IdMarca { get; set; }
         public int IdCategoriasTipo { get; set; }
         public int IdUnidadeMedidaTipos { get; set; }
+        public string MedidaNome { get; set; }
+        public string MarcaNome { get; set; }
+        public string CategoriaNome { get; set; }
     }
 }

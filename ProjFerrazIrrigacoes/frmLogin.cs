@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace ProjFerrazIrrigacoes
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbEditar_Click(object sender, EventArgs e)
+        {
+            bllUsuario objLogar = new bllUsuario();
+
+            if (objLogar.Logar(tbEmail.Text, tbSenha.Text) != 0)
+            {
+                Form1 tela = new Form1();
+                tela.ShowDialog();
+                tela.Dispose();
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Email ou Senha inválido!");
+            }
         }
     }
 }
