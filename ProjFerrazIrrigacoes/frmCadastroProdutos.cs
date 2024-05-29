@@ -12,9 +12,9 @@ using Modelo;
 
 namespace ProjFerrazIrrigacoes
 {
-    public partial class CadastroProdutos : Form
+    public partial class frmCadastroProdutos : Form
     {
-        public CadastroProdutos()
+        public frmCadastroProdutos()
         {
             InitializeComponent();
             
@@ -26,6 +26,7 @@ namespace ProjFerrazIrrigacoes
             CarregarMarca();
             CarregarUnidadeMedida();
             CarregarProduto();
+            tbProduto.Focus();
         }
         private void CarregarProduto()
         {
@@ -60,22 +61,24 @@ namespace ProjFerrazIrrigacoes
             cbUnidadeMedida.DataSource = objBusca.CarregarUnidadeMedida();
             cbUnidadeMedida.ValueMember = "Id";
             cbUnidadeMedida.DisplayMember = "NomeMedida";
+            cbUnidadeMedida.Text = "";
         }
        
 
         private void BtnMarcasAdd_Click(object sender, EventArgs e)
         {
+            pMarca.Visible = true;
 
         }
 
         private void BtnCategoriasAdd_Click(object sender, EventArgs e)
         {
-
+            pCategoria.Visible = true;
         }
 
         private void BtnUniMedidasAdd_Click(object sender, EventArgs e)
         {
-
+            pUniMedida.Visible = true;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -105,6 +108,52 @@ namespace ProjFerrazIrrigacoes
         {
             bllProduto objbusca = new bllProduto();
             gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBusca.Text);
+        }
+
+        private void btnMarcaAdd_Click(object sender, EventArgs e)
+        {
+            bllMarca objcadastrar = new bllMarca();
+            modMarca objdados = new modMarca();
+
+            objdados.NomeMarca = tbMarca.Text;
+
+            objcadastrar.Inserir(objdados);
+
+            CarregarMarca();
+            MessageBox.Show("Marca cadastrada com Sucesso!");
+
+            pMarca.Visible = false;
+        }
+
+        private void btnCategoriaAdd_Click(object sender, EventArgs e)
+        {
+            bllCategoriasTipo objcadastrar = new bllCategoriasTipo();
+            modCategoriasTipos objdados = new modCategoriasTipos();
+
+            objdados.CategoriaNome = tbCategoria.Text;
+
+            objcadastrar.Inserir(objdados);
+
+            CarregarCategoria();
+            MessageBox.Show("Categoria cadastrada com Sucesso!");
+
+            pCategoria.Visible = false;
+
+        }
+
+        private void btnUniMedidaAdd_Click(object sender, EventArgs e)
+        {
+            bllUnidadeMedidaTipos objcadastrar = new bllUnidadeMedidaTipos();
+            modUnidadeMedidaTipos objdados = new modUnidadeMedidaTipos();
+
+            objdados.NomeMedida = tbUnidMedida.Text;
+
+            objcadastrar.Inserir(objdados);
+
+            CarregarUnidadeMedida();
+            MessageBox.Show("Unidade de Medida cadastrada com Sucesso!");
+
+            pUniMedida.Visible = false;
         }
     }
 }

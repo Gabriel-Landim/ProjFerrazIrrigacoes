@@ -1,6 +1,6 @@
 ﻿namespace ProjFerrazIrrigacoes
 {
-    partial class CadastroProdutos
+    partial class frmCadastroProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -50,15 +50,15 @@
             this.BtnCategoriasAdd = new System.Windows.Forms.Button();
             this.pUniMedida = new System.Windows.Forms.Panel();
             this.btnUniMedidaAdd = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbUnidMedida = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.pCategoria = new System.Windows.Forms.Panel();
             this.btnCategoriaAdd = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbCategoria = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pMarca = new System.Windows.Forms.Panel();
             this.btnMarcaAdd = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbMarca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnMarcasAdd = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             // cbMarca
             // 
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(314, 70);
+            this.cbMarca.Location = new System.Drawing.Point(269, 74);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(231, 21);
             this.cbMarca.TabIndex = 28;
@@ -80,7 +80,7 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(315, 117);
+            this.cbCategoria.Location = new System.Drawing.Point(270, 121);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(231, 21);
             this.cbCategoria.TabIndex = 40;
@@ -88,14 +88,14 @@
             // cbUnidadeMedida
             // 
             this.cbUnidadeMedida.FormattingEnabled = true;
-            this.cbUnidadeMedida.Location = new System.Drawing.Point(315, 163);
+            this.cbUnidadeMedida.Location = new System.Drawing.Point(270, 167);
             this.cbUnidadeMedida.Name = "cbUnidadeMedida";
             this.cbUnidadeMedida.Size = new System.Drawing.Size(231, 21);
             this.cbUnidadeMedida.TabIndex = 39;
             // 
             // tbEstoque
             // 
-            this.tbEstoque.Location = new System.Drawing.Point(30, 320);
+            this.tbEstoque.Location = new System.Drawing.Point(13, 322);
             this.tbEstoque.Name = "tbEstoque";
             this.tbEstoque.Size = new System.Drawing.Size(232, 20);
             this.tbEstoque.TabIndex = 35;
@@ -103,28 +103,28 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(28, 296);
+            this.label5.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(11, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(75, 21);
             this.label5.TabIndex = 34;
             this.label5.Text = "Estoque";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(27, 250);
+            this.label4.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(10, 252);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 33;
             this.label4.Text = "Valor";
             // 
             // tbValor
             // 
-            this.tbValor.Location = new System.Drawing.Point(30, 274);
+            this.tbValor.Location = new System.Drawing.Point(13, 276);
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(232, 20);
             this.tbValor.TabIndex = 32;
@@ -132,58 +132,58 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(311, 139);
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(266, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(139, 21);
             this.label1.TabIndex = 31;
             this.label1.Text = "Unidade Medida";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(311, 94);
+            this.label3.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(266, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 30;
             this.label3.Text = "Categoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(310, 49);
+            this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(265, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 29;
             this.label2.Text = "Marca";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(26, 50);
+            this.label6.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(9, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.Size = new System.Drawing.Size(74, 21);
             this.label6.TabIndex = 42;
             this.label6.Tag = "";
             this.label6.Text = "Produto";
             // 
             // tbProduto
             // 
-            this.tbProduto.Location = new System.Drawing.Point(31, 73);
+            this.tbProduto.Location = new System.Drawing.Point(14, 75);
             this.tbProduto.Name = "tbProduto";
             this.tbProduto.Size = new System.Drawing.Size(232, 20);
             this.tbProduto.TabIndex = 43;
             // 
             // tbDescricao
             // 
-            this.tbDescricao.Location = new System.Drawing.Point(32, 141);
+            this.tbDescricao.Location = new System.Drawing.Point(15, 143);
             this.tbDescricao.Multiline = true;
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(232, 94);
@@ -192,11 +192,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(27, 118);
+            this.label7.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(10, 120);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.Size = new System.Drawing.Size(90, 21);
             this.label7.TabIndex = 45;
             this.label7.Tag = "";
             this.label7.Text = "Descrição";
@@ -204,11 +204,11 @@
             // LBBuscar
             // 
             this.LBBuscar.AutoSize = true;
-            this.LBBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.LBBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LBBuscar.Location = new System.Drawing.Point(311, 212);
+            this.LBBuscar.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.LBBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.LBBuscar.Location = new System.Drawing.Point(271, 203);
             this.LBBuscar.Name = "LBBuscar";
-            this.LBBuscar.Size = new System.Drawing.Size(133, 20);
+            this.LBBuscar.Size = new System.Drawing.Size(134, 21);
             this.LBBuscar.TabIndex = 47;
             this.LBBuscar.Text = "Buscar Produto";
             // 
@@ -236,7 +236,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.gvProdutos);
             this.panel1.Controls.Add(this.tbBusca);
-            this.panel1.Location = new System.Drawing.Point(314, 235);
+            this.panel1.Location = new System.Drawing.Point(269, 225);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 203);
             this.panel1.TabIndex = 48;
@@ -249,7 +249,7 @@
             this.BtnUniMedidasAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnUniMedidasAdd.ForeColor = System.Drawing.Color.White;
             this.BtnUniMedidasAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar;
-            this.BtnUniMedidasAdd.Location = new System.Drawing.Point(550, 160);
+            this.BtnUniMedidasAdd.Location = new System.Drawing.Point(506, 164);
             this.BtnUniMedidasAdd.Name = "BtnUniMedidasAdd";
             this.BtnUniMedidasAdd.Size = new System.Drawing.Size(19, 22);
             this.BtnUniMedidasAdd.TabIndex = 54;
@@ -264,7 +264,7 @@
             this.BtnCategoriasAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCategoriasAdd.ForeColor = System.Drawing.Color.White;
             this.BtnCategoriasAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar;
-            this.BtnCategoriasAdd.Location = new System.Drawing.Point(551, 114);
+            this.BtnCategoriasAdd.Location = new System.Drawing.Point(506, 118);
             this.BtnCategoriasAdd.Name = "BtnCategoriasAdd";
             this.BtnCategoriasAdd.Size = new System.Drawing.Size(19, 22);
             this.BtnCategoriasAdd.TabIndex = 53;
@@ -275,12 +275,13 @@
             // 
             this.pUniMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pUniMedida.Controls.Add(this.btnUniMedidaAdd);
-            this.pUniMedida.Controls.Add(this.textBox9);
+            this.pUniMedida.Controls.Add(this.tbUnidMedida);
             this.pUniMedida.Controls.Add(this.label14);
-            this.pUniMedida.Location = new System.Drawing.Point(560, 291);
+            this.pUniMedida.Location = new System.Drawing.Point(264, 143);
             this.pUniMedida.Name = "pUniMedida";
             this.pUniMedida.Size = new System.Drawing.Size(243, 48);
             this.pUniMedida.TabIndex = 52;
+            this.pUniMedida.Visible = false;
             // 
             // btnUniMedidaAdd
             // 
@@ -295,16 +296,17 @@
             this.btnUniMedidaAdd.Size = new System.Drawing.Size(19, 22);
             this.btnUniMedidaAdd.TabIndex = 41;
             this.btnUniMedidaAdd.UseVisualStyleBackColor = false;
+            this.btnUniMedidaAdd.Click += new System.EventHandler(this.btnUniMedidaAdd_Click);
             // 
-            // textBox9
+            // tbUnidMedida
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox9.Location = new System.Drawing.Point(5, 24);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(212, 20);
-            this.textBox9.TabIndex = 35;
-            this.textBox9.Text = "Exemplo: METRO-M";
+            this.tbUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUnidMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbUnidMedida.Location = new System.Drawing.Point(5, 24);
+            this.tbUnidMedida.Name = "tbUnidMedida";
+            this.tbUnidMedida.Size = new System.Drawing.Size(212, 20);
+            this.tbUnidMedida.TabIndex = 35;
+            this.tbUnidMedida.Text = "Exemplo: METRO-M";
             // 
             // label14
             // 
@@ -321,12 +323,13 @@
             // 
             this.pCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pCategoria.Controls.Add(this.btnCategoriaAdd);
-            this.pCategoria.Controls.Add(this.textBox5);
+            this.pCategoria.Controls.Add(this.tbCategoria);
             this.pCategoria.Controls.Add(this.label12);
-            this.pCategoria.Location = new System.Drawing.Point(560, 244);
+            this.pCategoria.Location = new System.Drawing.Point(264, 97);
             this.pCategoria.Name = "pCategoria";
             this.pCategoria.Size = new System.Drawing.Size(243, 48);
             this.pCategoria.TabIndex = 51;
+            this.pCategoria.Visible = false;
             // 
             // btnCategoriaAdd
             // 
@@ -341,16 +344,17 @@
             this.btnCategoriaAdd.Size = new System.Drawing.Size(19, 22);
             this.btnCategoriaAdd.TabIndex = 40;
             this.btnCategoriaAdd.UseVisualStyleBackColor = false;
+            this.btnCategoriaAdd.Click += new System.EventHandler(this.btnCategoriaAdd_Click);
             // 
-            // textBox5
+            // tbCategoria
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox5.Location = new System.Drawing.Point(5, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(212, 20);
-            this.textBox5.TabIndex = 37;
-            this.textBox5.Text = "Exemplo: TUBULAÇÃO";
+            this.tbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbCategoria.Location = new System.Drawing.Point(5, 22);
+            this.tbCategoria.Name = "tbCategoria";
+            this.tbCategoria.Size = new System.Drawing.Size(212, 20);
+            this.tbCategoria.TabIndex = 37;
+            this.tbCategoria.Text = "Exemplo: TUBULAÇÃO";
             // 
             // label12
             // 
@@ -367,12 +371,13 @@
             // 
             this.pMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pMarca.Controls.Add(this.btnMarcaAdd);
-            this.pMarca.Controls.Add(this.textBox4);
+            this.pMarca.Controls.Add(this.tbMarca);
             this.pMarca.Controls.Add(this.label9);
-            this.pMarca.Location = new System.Drawing.Point(560, 198);
+            this.pMarca.Location = new System.Drawing.Point(264, 51);
             this.pMarca.Name = "pMarca";
             this.pMarca.Size = new System.Drawing.Size(243, 48);
             this.pMarca.TabIndex = 49;
+            this.pMarca.Visible = false;
             // 
             // btnMarcaAdd
             // 
@@ -387,16 +392,17 @@
             this.btnMarcaAdd.Size = new System.Drawing.Size(19, 22);
             this.btnMarcaAdd.TabIndex = 39;
             this.btnMarcaAdd.UseVisualStyleBackColor = false;
+            this.btnMarcaAdd.Click += new System.EventHandler(this.btnMarcaAdd_Click);
             // 
-            // textBox4
+            // tbMarca
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox4.Location = new System.Drawing.Point(5, 23);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 20);
-            this.textBox4.TabIndex = 36;
-            this.textBox4.Text = "Exemplo: KRONA";
+            this.tbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbMarca.Location = new System.Drawing.Point(5, 23);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(212, 20);
+            this.tbMarca.TabIndex = 36;
+            this.tbMarca.Text = "Exemplo: KRONA";
             // 
             // label9
             // 
@@ -417,7 +423,7 @@
             this.BtnMarcasAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnMarcasAdd.ForeColor = System.Drawing.Color.White;
             this.BtnMarcasAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar;
-            this.BtnMarcasAdd.Location = new System.Drawing.Point(551, 70);
+            this.BtnMarcasAdd.Location = new System.Drawing.Point(506, 74);
             this.BtnMarcasAdd.Name = "BtnMarcasAdd";
             this.BtnMarcasAdd.Size = new System.Drawing.Size(19, 22);
             this.BtnMarcasAdd.TabIndex = 50;
@@ -426,7 +432,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(72, 370);
+            this.btnCadastrar.Location = new System.Drawing.Point(55, 372);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(116, 34);
             this.btnCadastrar.TabIndex = 55;
@@ -434,11 +440,12 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // CadastroProdutos
+            // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.ClientSize = new System.Drawing.Size(733, 477);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.BtnUniMedidasAdd);
             this.Controls.Add(this.BtnCategoriasAdd);
@@ -462,7 +469,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbMarca);
-            this.Name = "CadastroProdutos";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmCadastroProdutos";
             this.Text = "CadastroProdutos";
             this.Load += new System.EventHandler(this.CadastroProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).EndInit();
@@ -503,15 +511,15 @@
         private System.Windows.Forms.Button BtnCategoriasAdd;
         private System.Windows.Forms.Panel pUniMedida;
         private System.Windows.Forms.Button btnUniMedidaAdd;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbUnidMedida;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel pCategoria;
         private System.Windows.Forms.Button btnCategoriaAdd;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbCategoria;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel pMarca;
         private System.Windows.Forms.Button btnMarcaAdd;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbMarca;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnMarcasAdd;
         private System.Windows.Forms.Button btnCadastrar;

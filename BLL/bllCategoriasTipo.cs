@@ -15,5 +15,14 @@ namespace BLL
             dalCategoriasTipo objdados = new dalCategoriasTipo();
             return objdados.CarregaCategoria();
         }
+
+        public void Inserir(modCategoriasTipos objdados)
+        {
+            if (objdados.CategoriaNome.Trim() != "")
+            {
+                dalCategoriasTipo objInserir = new dalCategoriasTipo();
+                objInserir.Inserir(objdados);
+            }
+        }
     }
 }

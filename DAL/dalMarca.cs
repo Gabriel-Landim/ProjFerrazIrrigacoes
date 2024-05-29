@@ -75,7 +75,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO NOME FROM MARCA" +  //comando que eu quero
+                cmd.CommandText = " INSERT INTO MARCA (NOME) " +  //comando que eu quero
                                   " VALUES (@NOME) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
