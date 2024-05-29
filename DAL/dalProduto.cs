@@ -256,8 +256,8 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE PRODUTO SET NOME = @NOME, DESCRICAO = @DESCRICAO, ESTOQUE = @ESTOQUE, " +
-                                  " MARCA = @MARCA, CATEGORIASTIPO = @CATEGORIASTIPO, UNIDADEMEDIDASTIPOS = @UNIDADEMEDIDATIPOS " +  //comando que eu quero
+                cmd.CommandText = " UPDATE PRODUTO SET NOME = @NOME, DESCRICAO = @DESCRICAO, ESTOQUE = @ESTOQUE, VALOR = @VALOR, "  +
+                                  " MARCA = @MARCA, CATEGORIASTIPO = @CATEGORIASTIPO, UNIDADEMEDIDATIPOS = @UNIDADEMEDIDATIPOS " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha

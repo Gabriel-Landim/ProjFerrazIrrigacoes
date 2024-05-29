@@ -122,17 +122,20 @@ namespace ProjFerrazIrrigacoes
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-        //    operacao = "I";
-        //    tbNomeCliente.Enabled = true;
-        //    tbCpf.Enabled = true;
-        //    tbCep.Enabled = true;
-        //    cbCidade.Enabled = true;
-        //    tbRua.Enabled = true;
-        //    tbBairro.Enabled = true;
-        //    tbNumero.Enabled = true;
-        //    tbComplemento.Enabled = true;
-        //    tbTelefone.Enabled = true;
-        //    tbEmail.Enabled = true;
+            operacao = "I";
+            tbNomeCliente.Enabled = true;
+            tbCpf.Enabled = true;
+            tbCep.Enabled = true;
+            cbCidade.Enabled = true;
+            tbRua.Enabled = true;
+            tbBairro.Enabled = true;
+            tbNumero.Enabled = true;
+            tbComplemento.Enabled = true;
+            tbTelefone.Enabled = true;
+            tbEmail.Enabled = true;
+
+            btDeletar.Enabled = true;
+            btGravar.Enabled = true;
         }
         private void tbBuscaCliente_TextChanged(object sender, EventArgs e)
         {
@@ -155,20 +158,20 @@ namespace ProjFerrazIrrigacoes
             cbCidade.SelectedValue = gvBuscaNome.Rows[e.RowIndex].Cells["IdCidade"].Value;
             operacao = "A";
 
-            btGravar.Enabled = true;
-            btDeletar.Enabled = true;
-            tbNomeCliente.Enabled = true;
-            tbCpf.Enabled = true;
-            tbCep.Enabled = true;
-            cbCidade.Enabled = true;
-            tbRua.Enabled = true;
-            tbBairro.Enabled = true;
-            tbNumero.Enabled = true;
-            tbComplemento.Enabled = true;
-            tbTelefone.Enabled = true;
-            tbEmail.Enabled = true;
-            btGravar.Enabled = true;
-            btDeletar.Enabled = true;
+            //btGravar.Enabled = true;
+            //btDeletar.Enabled = true;
+            //tbNomeCliente.Enabled = true;
+            //tbCpf.Enabled = true;
+            //tbCep.Enabled = true;
+            //cbCidade.Enabled = true;
+            //tbRua.Enabled = true;
+            //tbBairro.Enabled = true;
+            //tbNumero.Enabled = true;
+            //tbComplemento.Enabled = true;
+            //tbTelefone.Enabled = true;
+            //tbEmail.Enabled = true;
+            //btGravar.Enabled = true;
+            //btDeletar.Enabled = true;
             pProcurarCliente.Visible = false;
 
             //Qual campo o cursor vai parar

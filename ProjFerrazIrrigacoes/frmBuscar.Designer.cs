@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.gvBuscaNome = new System.Windows.Forms.DataGridView();
             this.pProcurarCliente = new System.Windows.Forms.Panel();
+            this.tbBuscaCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.tbComplemento = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbNomeCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.tbBuscaCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
             this.pProcurarCliente.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,6 +95,7 @@
             // 
             // btGravar
             // 
+            this.btGravar.Enabled = false;
             this.btGravar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
             this.btGravar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.btGravar.Location = new System.Drawing.Point(131, 364);
@@ -119,6 +120,7 @@
             // 
             // btDeletar
             // 
+            this.btDeletar.Enabled = false;
             this.btDeletar.Font = new System.Drawing.Font("RBNo3.1 Light", 11.25F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.btDeletar.Location = new System.Drawing.Point(383, 364);
@@ -127,6 +129,7 @@
             this.btDeletar.TabIndex = 18;
             this.btDeletar.Text = "Deletar";
             this.btDeletar.UseVisualStyleBackColor = true;
+            this.btDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // button3
             // 
@@ -159,6 +162,15 @@
             this.pProcurarCliente.Name = "pProcurarCliente";
             this.pProcurarCliente.Size = new System.Drawing.Size(240, 146);
             this.pProcurarCliente.TabIndex = 21;
+            // 
+            // tbBuscaCliente
+            // 
+            this.tbBuscaCliente.Location = new System.Drawing.Point(4, 3);
+            this.tbBuscaCliente.Name = "tbBuscaCliente";
+            this.tbBuscaCliente.Size = new System.Drawing.Size(232, 20);
+            this.tbBuscaCliente.TabIndex = 31;
+            this.tbBuscaCliente.Text = "Busque pelo Nome";
+            this.tbBuscaCliente.TextChanged += new System.EventHandler(this.tbBuscaCliente_TextChanged);
             // 
             // panel2
             // 
@@ -374,15 +386,6 @@
             this.label12.Size = new System.Drawing.Size(64, 21);
             this.label12.TabIndex = 29;
             this.label12.Text = "Cliente";
-            // 
-            // tbBuscaCliente
-            // 
-            this.tbBuscaCliente.Location = new System.Drawing.Point(4, 3);
-            this.tbBuscaCliente.Name = "tbBuscaCliente";
-            this.tbBuscaCliente.Size = new System.Drawing.Size(232, 20);
-            this.tbBuscaCliente.TabIndex = 31;
-            this.tbBuscaCliente.Text = "Busque pelo Nome";
-            this.tbBuscaCliente.TextChanged += new System.EventHandler(this.tbBuscaCliente_TextChanged);
             // 
             // frmBuscar
             // 

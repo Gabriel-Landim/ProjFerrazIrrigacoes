@@ -15,5 +15,14 @@ namespace BLL
             dalMarca objdados = new dalMarca();
             return objdados.CarregarMarca();
         }
+
+        public void Inserir(modMarca objdados)
+        {
+            if (objdados.NomeMarca.Trim() != "")
+            {
+                dalMarca objInserir = new dalMarca();
+                objInserir.Insere(objdados);
+            }
+        }
     }
 }

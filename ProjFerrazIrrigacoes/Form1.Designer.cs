@@ -38,7 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.BtnOrdemDeServico = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.PanelBuscar = new System.Windows.Forms.Panel();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BtnEmpresa = new System.Windows.Forms.Button();
@@ -51,9 +51,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscarProdutos = new System.Windows.Forms.Button();
+            this.BtnBuscarCliente = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.PanelBuscar.SuspendLayout();
             this.PanelCadastro.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -124,7 +127,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.BtnOrdemDeServico);
-            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.PanelBuscar);
             this.panel1.Controls.Add(this.BtnBuscar);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.BtnEmpresa);
@@ -144,7 +147,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 506);
+            this.panel7.Location = new System.Drawing.Point(0, 578);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(201, 20);
             this.panel7.TabIndex = 10;
@@ -160,7 +163,7 @@
             this.BtnOrdemDeServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
             this.BtnOrdemDeServico.Image = global::ProjFerrazIrrigacoes.Properties.Resources.OrdemDeServico;
             this.BtnOrdemDeServico.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 461);
+            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 533);
             this.BtnOrdemDeServico.Name = "BtnOrdemDeServico";
             this.BtnOrdemDeServico.Size = new System.Drawing.Size(201, 45);
             this.BtnOrdemDeServico.TabIndex = 9;
@@ -168,14 +171,16 @@
             this.BtnOrdemDeServico.UseVisualStyleBackColor = true;
             this.BtnOrdemDeServico.Click += new System.EventHandler(this.BtnOrdemDeServico_Click_1);
             // 
-            // panel6
+            // PanelBuscar
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 441);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(201, 20);
-            this.panel6.TabIndex = 8;
+            this.PanelBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.PanelBuscar.Controls.Add(this.BtnBuscarCliente);
+            this.PanelBuscar.Controls.Add(this.BtnBuscarProdutos);
+            this.PanelBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelBuscar.Location = new System.Drawing.Point(0, 441);
+            this.PanelBuscar.Name = "PanelBuscar";
+            this.PanelBuscar.Size = new System.Drawing.Size(201, 92);
+            this.PanelBuscar.TabIndex = 8;
             // 
             // BtnBuscar
             // 
@@ -353,6 +358,42 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Administrador";
             // 
+            // BtnBuscarProdutos
+            // 
+            this.BtnBuscarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.BtnBuscarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscarProdutos.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscarProdutos.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnBuscarProdutos.Location = new System.Drawing.Point(0, 0);
+            this.BtnBuscarProdutos.Name = "BtnBuscarProdutos";
+            this.BtnBuscarProdutos.Size = new System.Drawing.Size(201, 45);
+            this.BtnBuscarProdutos.TabIndex = 5;
+            this.BtnBuscarProdutos.Text = "Produtos";
+            this.BtnBuscarProdutos.UseVisualStyleBackColor = false;
+            this.BtnBuscarProdutos.Click += new System.EventHandler(this.BtnBuscarProdutos_Click);
+            // 
+            // BtnBuscarCliente
+            // 
+            this.BtnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.BtnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarCliente.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(0, 45);
+            this.BtnBuscarCliente.Name = "BtnBuscarCliente";
+            this.BtnBuscarCliente.Size = new System.Drawing.Size(201, 45);
+            this.BtnBuscarCliente.TabIndex = 6;
+            this.BtnBuscarCliente.Text = "Cliente";
+            this.BtnBuscarCliente.UseVisualStyleBackColor = false;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +414,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.PanelBuscar.ResumeLayout(false);
             this.PanelCadastro.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -395,7 +437,7 @@
         private System.Windows.Forms.Button BtnCadastro;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button BtnOrdemDeServico;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel PanelBuscar;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button BtnEmpresa;
@@ -406,6 +448,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnBuscarProdutos;
+        private System.Windows.Forms.Button BtnBuscarCliente;
     }
 }
 

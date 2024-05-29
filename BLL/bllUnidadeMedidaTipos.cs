@@ -15,5 +15,14 @@ namespace BLL
             dalUnidadeMedidaTipos objdados = new dalUnidadeMedidaTipos();
             return objdados.CarregarUnidadeMedida();
         }
+
+        public void Inserir(modUnidadeMedidaTipos objdados)
+        {
+            if (objdados.NomeMedida.Trim() != "")
+            {
+                dalUnidadeMedidaTipos objInserir = new dalUnidadeMedidaTipos();
+                objInserir.Insere(objdados);
+            }
+        }
     }
 }

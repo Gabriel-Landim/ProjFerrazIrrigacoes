@@ -40,5 +40,10 @@ namespace ProjFerrazIrrigacoes
                 MessageBox.Show("Email ou Senha inválido!");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

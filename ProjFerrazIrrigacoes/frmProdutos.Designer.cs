@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btExcluir = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.LBBuscar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -84,17 +84,20 @@
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btExcluir
+            // btnExcluir
             // 
-            this.btExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btExcluir.Location = new System.Drawing.Point(389, 437);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(106, 34);
-            this.btExcluir.TabIndex = 3;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnExcluir.Location = new System.Drawing.Point(389, 437);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(106, 34);
+            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // LBBuscar
             // 
@@ -197,6 +200,7 @@
             // 
             // btnGravar
             // 
+            this.btnGravar.Enabled = false;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.btnGravar.Location = new System.Drawing.Point(273, 437);
@@ -205,6 +209,7 @@
             this.btnGravar.TabIndex = 16;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnVoltar
             // 
@@ -309,6 +314,7 @@
             this.pMarca.Name = "pMarca";
             this.pMarca.Size = new System.Drawing.Size(243, 48);
             this.pMarca.TabIndex = 8;
+            this.pMarca.Visible = false;
             // 
             // btnMarcaAdd
             // 
@@ -355,6 +361,7 @@
             this.pCategoria.Name = "pCategoria";
             this.pCategoria.Size = new System.Drawing.Size(243, 48);
             this.pCategoria.TabIndex = 35;
+            this.pCategoria.Visible = false;
             // 
             // btnCategoriaAdd
             // 
@@ -401,6 +408,7 @@
             this.pUniMedida.Name = "pUniMedida";
             this.pUniMedida.Size = new System.Drawing.Size(243, 48);
             this.pUniMedida.TabIndex = 36;
+            this.pUniMedida.Visible = false;
             // 
             // btnUniMedidaAdd
             // 
@@ -525,7 +533,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LBBuscar);
-            this.Controls.Add(this.btExcluir);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProdutos";
@@ -547,7 +555,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label LBBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

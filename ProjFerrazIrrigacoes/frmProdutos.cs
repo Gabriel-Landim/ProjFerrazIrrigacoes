@@ -27,6 +27,8 @@ namespace ProjFerrazIrrigacoes
             CarregarCategoria();
             CarregarUnidadeMedida();
             CarregarProduto();
+            BloqueiaTela();
+            tbProdutoNome.Focus();
         }
 
         private void CarregarMarca()
@@ -68,6 +70,20 @@ namespace ProjFerrazIrrigacoes
             cbCategoria.SelectedValue = objDados.IdCategoriasTipo;
             cbMarca.SelectedValue = objDados.IdMarca;
             cbMarca.SelectedValue = objDados.IdMarca;
+        }
+        private void BloqueiaTela()
+        {
+            cbCategoria.Enabled = false;
+            cbMarca.Enabled = false;
+            cbUnidadeMedida.Enabled = false;
+            tbValor.Enabled = false;
+            tbEstoque.Enabled = false;
+            tbId.Enabled = false;
+            tbProdutoNome.Enabled = false;
+            tbDescricao.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnGravar.Enabled = false;
+            btnEditar.Enabled = true;
         }
 
         //private void gvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -151,10 +167,60 @@ namespace ProjFerrazIrrigacoes
 
         private void frmProdutos_Shown(object sender, EventArgs e)
         {
-            CarregarProduto();
-            CarregarMarca();
-            CarregarCategoria();
-            CarregarUnidadeMedida();
+            //CarregarProduto();
+            //CarregarMarca();
+            //CarregarCategoria();
+            //CarregarUnidadeMedida();
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            tbValor.Enabled = true;
+            tbEstoque.Enabled = true;
+            tbDescricao.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnGravar.Enabled = true;
+            btnEditar.Enabled = false;
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            bllProduto objgravar = new bllProduto();
+            modProduto objdados = new modProduto();
+
+            if (operacao == "I")
+            {
+                objdados.NomeProduto = tbProdutoNome.Text;
+                objgravar.Inserir(objdados);
+            }
+
+            else
+            {
+                objdados.Id = Convert.ToInt32(tbId.Text);
+                objdados.NomeProduto = Convert.ToString(tbProdutoNome.Text);
+                objdados.ValorProduto = Convert.ToDouble(tbValor.Text);
+                objdados.Estoque = Convert.ToInt32(tbEstoque.Text);
+                objdados.IdCategoriasTipo = Convert.ToInt32(cbCategoria.SelectedValue);
+                objdados.IdMarca = Convert.ToInt32(cbMarca.SelectedValue);
+                objdados.IdUnidadeMedidaTipos = Convert.ToInt32(cbUnidadeMedida.SelectedValue);
+                objdados.DescricaoProduto = Convert.ToString(tbDescricao.Text);
+
+                objgravar.Alterar(objdados);
+            }
+            MessageBox.Show("Alteração Efetuada!");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Realmente deseja excluir?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                bllProduto objexcluir = new bllProduto();
+                objexcluir.Excluir(Convert.ToInt32(tbId.Text));
+                gvProdutos.DataSource = null;
+                MessageBox.Show("Exclusão realizada com sucesso!");
+            }
         }
     }
 }
