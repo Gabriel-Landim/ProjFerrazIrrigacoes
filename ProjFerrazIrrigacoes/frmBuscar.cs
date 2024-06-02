@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,9 @@ namespace ProjFerrazIrrigacoes
     {
         string operacao;
         public frmBuscar()
-        {
-            InitializeComponent();
+        {           
+            InitializeComponent();     
+            
         }
         private void frmBuscar_Load(object sender, EventArgs e)
         {
@@ -29,16 +31,15 @@ namespace ProjFerrazIrrigacoes
         private void CarregaCidade()
         {
             bllCidade objBusca = new bllCidade();
-            cbCidade.DataSource = objBusca.CarregaCidade();
+            //cbCidade.DataSource = objBusca.CarregaCidade();
             cbCidade.ValueMember = "Id";
             cbCidade.DisplayMember = "CidadeNome";
         }
         private void CarregaDados()
-        {
+        {            
             bllCliente objCarregar = new bllCliente();
             modCliente objDados = new modCliente();
-
-
+           
             tbNomeCliente.Text = objDados.NomeCliente;
             tbCep.Text = objDados.Cep;
             tbBairro.Text = objDados.Bairro;
@@ -49,6 +50,7 @@ namespace ProjFerrazIrrigacoes
             tbEmail.Text = objDados.Email;
             cbCidade.SelectedValue = objDados.IdCidade;
             tbRua.Text = objDados.Rua;
+
         }
         private void BloqueiaTela()
         {
@@ -176,6 +178,39 @@ namespace ProjFerrazIrrigacoes
 
             //Qual campo o cursor vai parar
             tbNomeCliente.Focus();
+        }
+
+        private void TextoVertical1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextoVertical1_Paint(object sender, PaintEventArgs e)
+        {
+            Font MinhaFonte = new Font("RBNo3.1 bold", 13);
+            Brush MeuBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            e.Graphics.TranslateTransform(30, 170);
+            e.Graphics.RotateTransform(-90);
+            e.Graphics.DrawString("Dados Pessoais", MinhaFonte, MeuBrush, 0, 0);
+        }
+
+        private void label12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TextoVertical2_Paint(object sender, PaintEventArgs e)
+        {
+            Font MinhaFonte = new Font("RBNo3.1 bold", 13);
+            Brush MeuBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            e.Graphics.TranslateTransform(30, 170);
+            e.Graphics.RotateTransform(-90);
+            e.Graphics.DrawString("Localização", MinhaFonte, MeuBrush, 0, 0);
+        }
+
+        private void tbCpf_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
