@@ -36,21 +36,21 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel7.Controls.Add(this.label8);
-            this.panel7.Location = new System.Drawing.Point(307, 382);
+            this.panel7.Location = new System.Drawing.Point(442, 458);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(408, 80);
             this.panel7.TabIndex = 12;
@@ -78,7 +78,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(307, 185);
+            this.panel6.Location = new System.Drawing.Point(442, 261);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(408, 191);
             this.panel6.TabIndex = 9;
@@ -98,7 +98,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(18, 185);
+            this.panel5.Location = new System.Drawing.Point(164, 261);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 277);
             this.panel5.TabIndex = 10;
@@ -132,20 +132,10 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(307, 14);
+            this.panel4.Location = new System.Drawing.Point(453, 90);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 138);
             this.panel4.TabIndex = 8;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // label4
             // 
@@ -187,20 +177,10 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(18, 14);
+            this.panel3.Location = new System.Drawing.Point(164, 90);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 138);
             this.panel3.TabIndex = 7;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -227,17 +207,37 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel8.Location = new System.Drawing.Point(592, 14);
+            this.panel8.Location = new System.Drawing.Point(727, 90);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(123, 138);
             this.panel8.TabIndex = 11;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 41);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 41);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(733, 477);
+            this.ClientSize = new System.Drawing.Size(977, 620);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -247,6 +247,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
             this.Text = "FrmDashboard";
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -255,9 +256,9 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

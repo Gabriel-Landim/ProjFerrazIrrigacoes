@@ -16,7 +16,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = Dados.StringDeConexao;
+                n.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = " SELECT ID, TOTALFINAL, TOTALINICAL, DATAABERTURA, DATAFECHAMENTO, USUARIO FROM CAIXA " +
@@ -119,7 +119,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                //cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
+                cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE CAIXA SET USUARIO = @USUARIO, DATAABERTURA = @DATAABERTURA, " +

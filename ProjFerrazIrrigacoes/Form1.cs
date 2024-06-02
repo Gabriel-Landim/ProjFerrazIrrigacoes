@@ -202,6 +202,11 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(FrmProdutos_Vrb);
             FrmProdutos_Vrb.Show();
         }
+
+        private void PanelCarregar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 

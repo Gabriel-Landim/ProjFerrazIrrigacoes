@@ -32,44 +32,44 @@
             this.PainelNav = new System.Windows.Forms.Panel();
             this.PanelCarregar = new System.Windows.Forms.Panel();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.BtnSair = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.BtnOrdemDeServico = new System.Windows.Forms.Button();
             this.PanelBuscar = new System.Windows.Forms.Panel();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnBuscarCliente = new System.Windows.Forms.Button();
+            this.BtnBuscarProdutos = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.BtnEmpresa = new System.Windows.Forms.Button();
             this.PanelCadastro = new System.Windows.Forms.Panel();
             this.BtnCadastroCliente = new System.Windows.Forms.Button();
             this.BtnCadastroProdutos = new System.Windows.Forms.Button();
-            this.BtnCadastro = new System.Windows.Forms.Button();
-            this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnBuscarProdutos = new System.Windows.Forms.Button();
-            this.BtnBuscarCliente = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnOrdemDeServico = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnEmpresa = new System.Windows.Forms.Button();
+            this.BtnCadastro = new System.Windows.Forms.Button();
+            this.BtnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelBuscar.SuspendLayout();
             this.PanelCadastro.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TituloDashboard
             // 
             this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
+            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 25F, System.Drawing.FontStyle.Bold);
             this.TituloDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TituloDashboard.Location = new System.Drawing.Point(229, 34);
+            this.TituloDashboard.Location = new System.Drawing.Point(268, 27);
             this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(165, 35);
+            this.TituloDashboard.Size = new System.Drawing.Size(209, 44);
             this.TituloDashboard.TabIndex = 1;
             this.TituloDashboard.Text = "Dashboard";
             // 
@@ -85,23 +85,11 @@
             // 
             this.PanelCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.PanelCarregar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelCarregar.Location = new System.Drawing.Point(201, 100);
+            this.PanelCarregar.Location = new System.Drawing.Point(258, 100);
             this.PanelCarregar.Name = "PanelCarregar";
-            this.PanelCarregar.Size = new System.Drawing.Size(750, 477);
+            this.PanelCarregar.Size = new System.Drawing.Size(944, 620);
             this.PanelCarregar.TabIndex = 7;
-            // 
-            // BtnSair
-            // 
-            this.BtnSair.FlatAppearance.BorderSize = 0;
-            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSair.ForeColor = System.Drawing.Color.White;
-            this.BtnSair.Location = new System.Drawing.Point(922, 3);
-            this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(25, 25);
-            this.BtnSair.TabIndex = 9;
-            this.BtnSair.Text = "X";
-            this.BtnSair.UseVisualStyleBackColor = true;
-            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            this.PanelCarregar.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCarregar_Paint);
             // 
             // panel2
             // 
@@ -109,18 +97,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 144);
+            this.panel2.Size = new System.Drawing.Size(258, 144);
             this.panel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -139,7 +117,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 577);
+            this.panel1.Size = new System.Drawing.Size(258, 720);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -147,29 +125,10 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 578);
+            this.panel7.Location = new System.Drawing.Point(0, 638);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(201, 20);
+            this.panel7.Size = new System.Drawing.Size(258, 20);
             this.panel7.TabIndex = 10;
-            // 
-            // BtnOrdemDeServico
-            // 
-            this.BtnOrdemDeServico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnOrdemDeServico.FlatAppearance.BorderSize = 0;
-            this.BtnOrdemDeServico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnOrdemDeServico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnOrdemDeServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOrdemDeServico.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnOrdemDeServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnOrdemDeServico.Image = global::ProjFerrazIrrigacoes.Properties.Resources.OrdemDeServico;
-            this.BtnOrdemDeServico.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 533);
-            this.BtnOrdemDeServico.Name = "BtnOrdemDeServico";
-            this.BtnOrdemDeServico.Size = new System.Drawing.Size(201, 45);
-            this.BtnOrdemDeServico.TabIndex = 9;
-            this.BtnOrdemDeServico.Text = "Ordem de Serviço";
-            this.BtnOrdemDeServico.UseVisualStyleBackColor = true;
-            this.BtnOrdemDeServico.Click += new System.EventHandler(this.BtnOrdemDeServico_Click_1);
             // 
             // PanelBuscar
             // 
@@ -177,57 +136,55 @@
             this.PanelBuscar.Controls.Add(this.BtnBuscarCliente);
             this.PanelBuscar.Controls.Add(this.BtnBuscarProdutos);
             this.PanelBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelBuscar.Location = new System.Drawing.Point(0, 441);
+            this.PanelBuscar.Location = new System.Drawing.Point(0, 489);
             this.PanelBuscar.Name = "PanelBuscar";
-            this.PanelBuscar.Size = new System.Drawing.Size(201, 92);
+            this.PanelBuscar.Size = new System.Drawing.Size(258, 92);
             this.PanelBuscar.TabIndex = 8;
             // 
-            // BtnBuscar
+            // BtnBuscarCliente
             // 
-            this.BtnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnBuscar.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Buscar;
-            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBuscar.Location = new System.Drawing.Point(0, 396);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(201, 45);
-            this.BtnBuscar.TabIndex = 7;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
+            this.BtnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.BtnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarCliente.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(0, 45);
+            this.BtnBuscarCliente.Name = "BtnBuscarCliente";
+            this.BtnBuscarCliente.Size = new System.Drawing.Size(258, 45);
+            this.BtnBuscarCliente.TabIndex = 6;
+            this.BtnBuscarCliente.Text = "Cliente";
+            this.BtnBuscarCliente.UseVisualStyleBackColor = false;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
+            // 
+            // BtnBuscarProdutos
+            // 
+            this.BtnBuscarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.BtnBuscarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscarProdutos.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscarProdutos.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnBuscarProdutos.Location = new System.Drawing.Point(0, 0);
+            this.BtnBuscarProdutos.Name = "BtnBuscarProdutos";
+            this.BtnBuscarProdutos.Size = new System.Drawing.Size(258, 45);
+            this.BtnBuscarProdutos.TabIndex = 5;
+            this.BtnBuscarProdutos.Text = "Produtos";
+            this.BtnBuscarProdutos.UseVisualStyleBackColor = false;
+            this.BtnBuscarProdutos.Click += new System.EventHandler(this.BtnBuscarProdutos_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 376);
+            this.panel5.Location = new System.Drawing.Point(0, 412);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(201, 20);
+            this.panel5.Size = new System.Drawing.Size(258, 20);
             this.panel5.TabIndex = 6;
-            // 
-            // BtnEmpresa
-            // 
-            this.BtnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEmpresa.FlatAppearance.BorderSize = 0;
-            this.BtnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnEmpresa.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
-            this.BtnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEmpresa.Location = new System.Drawing.Point(0, 331);
-            this.BtnEmpresa.Name = "BtnEmpresa";
-            this.BtnEmpresa.Size = new System.Drawing.Size(201, 45);
-            this.BtnEmpresa.TabIndex = 5;
-            this.BtnEmpresa.Text = "Empresa";
-            this.BtnEmpresa.UseVisualStyleBackColor = true;
-            this.BtnEmpresa.Click += new System.EventHandler(this.BtnEmpresa_Click);
             // 
             // PanelCadastro
             // 
@@ -235,9 +192,9 @@
             this.PanelCadastro.Controls.Add(this.BtnCadastroCliente);
             this.PanelCadastro.Controls.Add(this.BtnCadastroProdutos);
             this.PanelCadastro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelCadastro.Location = new System.Drawing.Point(0, 234);
+            this.PanelCadastro.Location = new System.Drawing.Point(0, 258);
             this.PanelCadastro.Name = "PanelCadastro";
-            this.PanelCadastro.Size = new System.Drawing.Size(201, 97);
+            this.PanelCadastro.Size = new System.Drawing.Size(258, 97);
             this.PanelCadastro.TabIndex = 4;
             // 
             // BtnCadastroCliente
@@ -248,11 +205,11 @@
             this.BtnCadastroCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.BtnCadastroCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.BtnCadastroCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastroCliente.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnCadastroCliente.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
             this.BtnCadastroCliente.ForeColor = System.Drawing.Color.White;
             this.BtnCadastroCliente.Location = new System.Drawing.Point(0, 45);
             this.BtnCadastroCliente.Name = "BtnCadastroCliente";
-            this.BtnCadastroCliente.Size = new System.Drawing.Size(201, 45);
+            this.BtnCadastroCliente.Size = new System.Drawing.Size(258, 45);
             this.BtnCadastroCliente.TabIndex = 5;
             this.BtnCadastroCliente.Text = "Cliente";
             this.BtnCadastroCliente.UseVisualStyleBackColor = false;
@@ -266,53 +223,15 @@
             this.BtnCadastroProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.BtnCadastroProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.BtnCadastroProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastroProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
+            this.BtnCadastroProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
             this.BtnCadastroProdutos.ForeColor = System.Drawing.Color.Transparent;
             this.BtnCadastroProdutos.Location = new System.Drawing.Point(0, 0);
             this.BtnCadastroProdutos.Name = "BtnCadastroProdutos";
-            this.BtnCadastroProdutos.Size = new System.Drawing.Size(201, 45);
+            this.BtnCadastroProdutos.Size = new System.Drawing.Size(258, 45);
             this.BtnCadastroProdutos.TabIndex = 4;
             this.BtnCadastroProdutos.Text = "Produtos";
             this.BtnCadastroProdutos.UseVisualStyleBackColor = false;
             this.BtnCadastroProdutos.Click += new System.EventHandler(this.BtnCadastroProdutos_Click);
-            // 
-            // BtnCadastro
-            // 
-            this.BtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCadastro.FlatAppearance.BorderSize = 0;
-            this.BtnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastro.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnCadastro.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Cadastro;
-            this.BtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCadastro.Location = new System.Drawing.Point(0, 189);
-            this.BtnCadastro.Name = "BtnCadastro";
-            this.BtnCadastro.Size = new System.Drawing.Size(201, 45);
-            this.BtnCadastro.TabIndex = 3;
-            this.BtnCadastro.Text = "Cadastro";
-            this.BtnCadastro.UseVisualStyleBackColor = true;
-            this.BtnCadastro.Click += new System.EventHandler(this.BtnCadastro_Click_1);
-            // 
-            // BtnDashboard
-            // 
-            this.BtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnDashboard.FlatAppearance.BorderSize = 0;
-            this.BtnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnDashboard.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Dashboard;
-            this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnDashboard.Location = new System.Drawing.Point(0, 144);
-            this.BtnDashboard.Name = "BtnDashboard";
-            this.BtnDashboard.Size = new System.Drawing.Size(201, 45);
-            this.BtnDashboard.TabIndex = 1;
-            this.BtnDashboard.Text = "Dados";
-            this.BtnDashboard.UseVisualStyleBackColor = true;
-            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click_1);
             // 
             // panel3
             // 
@@ -321,20 +240,10 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(681, 20);
+            this.panel3.Location = new System.Drawing.Point(750, 20);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(183, 61);
+            this.panel3.Size = new System.Drawing.Size(331, 61);
             this.panel3.TabIndex = 10;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.UsuarioBoi;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -358,41 +267,133 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Administrador";
             // 
-            // BtnBuscarProdutos
+            // pictureBox2
             // 
-            this.BtnBuscarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
-            this.BtnBuscarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnBuscarProdutos.FlatAppearance.BorderSize = 0;
-            this.BtnBuscarProdutos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscarProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarProdutos.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnBuscarProdutos.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnBuscarProdutos.Location = new System.Drawing.Point(0, 0);
-            this.BtnBuscarProdutos.Name = "BtnBuscarProdutos";
-            this.BtnBuscarProdutos.Size = new System.Drawing.Size(201, 45);
-            this.BtnBuscarProdutos.TabIndex = 5;
-            this.BtnBuscarProdutos.Text = "Produtos";
-            this.BtnBuscarProdutos.UseVisualStyleBackColor = false;
-            this.BtnBuscarProdutos.Click += new System.EventHandler(this.BtnBuscarProdutos_Click);
+            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.UsuarioBoi;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
-            // BtnBuscarCliente
+            // BtnSair
             // 
-            this.BtnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
-            this.BtnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnBuscarCliente.FlatAppearance.BorderSize = 0;
-            this.BtnBuscarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarCliente.Font = new System.Drawing.Font("RBNo3.1 Book", 11F, System.Drawing.FontStyle.Bold);
-            this.BtnBuscarCliente.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarCliente.Location = new System.Drawing.Point(0, 45);
-            this.BtnBuscarCliente.Name = "BtnBuscarCliente";
-            this.BtnBuscarCliente.Size = new System.Drawing.Size(201, 45);
-            this.BtnBuscarCliente.TabIndex = 6;
-            this.BtnBuscarCliente.Text = "Cliente";
-            this.BtnBuscarCliente.UseVisualStyleBackColor = false;
-            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
+            this.BtnSair.BackgroundImage = global::ProjFerrazIrrigacoes.Properties.Resources.exit1;
+            this.BtnSair.FlatAppearance.BorderSize = 0;
+            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSair.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnSair.Location = new System.Drawing.Point(1179, 5);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(15, 15);
+            this.BtnSair.TabIndex = 9;
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // BtnOrdemDeServico
+            // 
+            this.BtnOrdemDeServico.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnOrdemDeServico.FlatAppearance.BorderSize = 0;
+            this.BtnOrdemDeServico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnOrdemDeServico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnOrdemDeServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOrdemDeServico.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnOrdemDeServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnOrdemDeServico.Image = global::ProjFerrazIrrigacoes.Properties.Resources.OrdemDeServico;
+            this.BtnOrdemDeServico.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 581);
+            this.BtnOrdemDeServico.Name = "BtnOrdemDeServico";
+            this.BtnOrdemDeServico.Size = new System.Drawing.Size(258, 57);
+            this.BtnOrdemDeServico.TabIndex = 9;
+            this.BtnOrdemDeServico.Text = "Ordem de Serviço";
+            this.BtnOrdemDeServico.UseVisualStyleBackColor = true;
+            this.BtnOrdemDeServico.Click += new System.EventHandler(this.BtnOrdemDeServico_Click_1);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnBuscar.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Buscar;
+            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.Location = new System.Drawing.Point(0, 432);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(258, 57);
+            this.BtnBuscar.TabIndex = 7;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
+            // 
+            // BtnEmpresa
+            // 
+            this.BtnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEmpresa.FlatAppearance.BorderSize = 0;
+            this.BtnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnEmpresa.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
+            this.BtnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEmpresa.Location = new System.Drawing.Point(0, 355);
+            this.BtnEmpresa.Name = "BtnEmpresa";
+            this.BtnEmpresa.Size = new System.Drawing.Size(258, 57);
+            this.BtnEmpresa.TabIndex = 5;
+            this.BtnEmpresa.Text = "Empresa";
+            this.BtnEmpresa.UseVisualStyleBackColor = true;
+            this.BtnEmpresa.Click += new System.EventHandler(this.BtnEmpresa_Click);
+            // 
+            // BtnCadastro
+            // 
+            this.BtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCadastro.FlatAppearance.BorderSize = 0;
+            this.BtnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastro.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnCadastro.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Cadastro;
+            this.BtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCadastro.Location = new System.Drawing.Point(0, 201);
+            this.BtnCadastro.Name = "BtnCadastro";
+            this.BtnCadastro.Size = new System.Drawing.Size(258, 57);
+            this.BtnCadastro.TabIndex = 3;
+            this.BtnCadastro.Text = "Cadastro";
+            this.BtnCadastro.UseVisualStyleBackColor = true;
+            this.BtnCadastro.Click += new System.EventHandler(this.BtnCadastro_Click_1);
+            // 
+            // BtnDashboard
+            // 
+            this.BtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDashboard.FlatAppearance.BorderSize = 0;
+            this.BtnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnDashboard.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Dashboard;
+            this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDashboard.Location = new System.Drawing.Point(0, 144);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Size = new System.Drawing.Size(258, 57);
+            this.BtnDashboard.TabIndex = 1;
+            this.BtnDashboard.Text = "Dados";
+            this.BtnDashboard.UseVisualStyleBackColor = true;
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -400,7 +401,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(951, 577);
+            this.ClientSize = new System.Drawing.Size(1202, 720);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.PanelCarregar);
@@ -412,13 +413,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.PanelBuscar.ResumeLayout(false);
             this.PanelCadastro.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

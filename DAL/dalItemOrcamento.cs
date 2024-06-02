@@ -117,7 +117,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                //cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
+                cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE ITENSORCAMENTO SET VALORPRODUTO = @VALORPRODUTO, ORCAMENTO = @ORCAMENTO, " +
