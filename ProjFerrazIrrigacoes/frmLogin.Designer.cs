@@ -35,11 +35,11 @@
             this.tbEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbSenha = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,13 +128,21 @@
             this.panel2.Controls.Add(this.tbEmail);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnNovoUsuario);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(224, 261);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(349, 200);
             this.panel2.TabIndex = 16;
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tbSenha.Location = new System.Drawing.Point(53, 81);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(259, 26);
+            this.tbSenha.TabIndex = 16;
             // 
             // pictureBox2
             // 
@@ -154,18 +162,19 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnNovoUsuario
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(96, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 33);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Novo usuário";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.FlatAppearance.BorderSize = 0;
+            this.btnNovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoUsuario.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNovoUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnNovoUsuario.Location = new System.Drawing.Point(96, 113);
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.Size = new System.Drawing.Size(157, 33);
+            this.btnNovoUsuario.TabIndex = 18;
+            this.btnNovoUsuario.Text = "Novo usuário";
+            this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
             // 
             // label3
             // 
@@ -177,14 +186,6 @@
             this.label3.Size = new System.Drawing.Size(66, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Senha";
-            // 
-            // tbSenha
-            // 
-            this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tbSenha.Location = new System.Drawing.Point(53, 81);
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.Size = new System.Drawing.Size(259, 26);
-            this.tbSenha.TabIndex = 16;
             // 
             // pictureBox3
             // 
@@ -234,7 +235,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNovoUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.PictureBox pictureBox2;

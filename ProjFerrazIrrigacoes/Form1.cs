@@ -41,11 +41,7 @@ namespace ProjFerrazIrrigacoes
             InitializeComponent();
             SubPanel();
             SubPanelBuscar();
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            PainelNav.Height = BtnDashboard.Height;
-            PainelNav.Top = BtnDashboard.Top;
-            PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));          
 
             TituloDashboard.Text = "DashBoard";
             this.PanelCarregar.Controls.Clear();
@@ -54,6 +50,9 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
             frmDashboard_Vrb.Show();
         }
+
+    
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //int a;
@@ -65,10 +64,9 @@ namespace ProjFerrazIrrigacoes
         {
             ShowPanel = !ShowPanel;
             SubPanel();
-            PainelNav.Height = BtnDashboard.Height;
-            PainelNav.Top = BtnDashboard.Top;
-            PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
+            PainelNav.Height = BtnCadastro.Height;
+            PainelNav.Top = BtnCadastro.Top;
+            BtnCadastro.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "Cadastro";
 
@@ -94,11 +92,24 @@ namespace ProjFerrazIrrigacoes
         {
             ShowPanel = !ShowPanel;
             SubPanelBuscar();
+            PainelNav.Height = BtnEmpresa.Height;
+            PainelNav.Top = BtnEmpresa.Top;
+            BtnEmpresa.BackColor = Color.FromArgb(99, 115, 130);
         }
 
         private void BtnOrdemDeServico_Click_1(object sender, EventArgs e)
         {
+            ShowPanel = !ShowPanel;
+            PainelNav.Height = BtnOrdemDeServico.Height;
+            PainelNav.Top = BtnOrdemDeServico.Top;
+            BtnOrdemDeServico.BackColor = Color.FromArgb(99, 115, 130);
 
+            TituloDashboard.Text = "Ordem de Servico";
+            this.PanelCarregar.Controls.Clear();
+            frmOrdemdeServico FrmOrdemdeServico_Vrb = new frmOrdemdeServico() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmOrdemdeServico_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmOrdemdeServico_Vrb);
+            FrmOrdemdeServico_Vrb.Show();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -165,6 +176,11 @@ namespace ProjFerrazIrrigacoes
 
         private void BtnEmpresa_Click(object sender, EventArgs e)
         {
+            PainelNav.Height = BtnEmpresa.Height;
+            PainelNav.Top = BtnEmpresa.Top;
+            BtnEmpresa.BackColor = Color.FromArgb(99, 115, 130);
+
+
             TituloDashboard.Text = "Cadastro Empresa";
             this.PanelCarregar.Controls.Clear();
             frmCadastro FrmCadastro_Vrb = new frmCadastro() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -175,10 +191,6 @@ namespace ProjFerrazIrrigacoes
 
         private void BtnBuscarCliente_Click(object sender, EventArgs e)
         {
-            PainelNav.Height = BtnDashboard.Height;
-            PainelNav.Top = BtnDashboard.Top;
-            PainelNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(99, 115, 130);
 
             TituloDashboard.Text = "Buscar Cliente";
             this.PanelCarregar.Controls.Clear();
@@ -206,6 +218,36 @@ namespace ProjFerrazIrrigacoes
         private void PanelCarregar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void PainelNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnDashboard_Leave(object sender, EventArgs e)
+        {
+            BtnDashboard.BackColor = Color.FromArgb(33, 43, 53);
+        }
+
+        private void BtnOrdemDeServico_Leave(object sender, EventArgs e)
+        {
+            BtnOrdemDeServico.BackColor = Color.FromArgb(33, 43, 53);
+        }
+
+        private void BtnCadastro_Leave(object sender, EventArgs e)
+        {
+            BtnCadastro.BackColor = Color.FromArgb(33, 43, 53);
+        }
+
+        private void BtnEmpresa_Leave(object sender, EventArgs e)
+        {
+            BtnEmpresa.BackColor = Color.FromArgb(33, 43, 53);
+        }
+
+        private void BtnBuscar_Leave(object sender, EventArgs e)
+        {
+            BtnBuscar.BackColor = Color.FromArgb(33, 43, 53);
         }
     }
     }

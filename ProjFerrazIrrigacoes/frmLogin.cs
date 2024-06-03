@@ -45,5 +45,12 @@ namespace ProjFerrazIrrigacoes
         {
             Application.Exit();
         }
+
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            frmLoginCadastro telaCadastro = new frmLoginCadastro();
+            telaCadastro.ShowDialog();
+            telaCadastro.Dispose();
+        }
     }
 }

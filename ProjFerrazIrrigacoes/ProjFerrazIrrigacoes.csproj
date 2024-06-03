@@ -83,6 +83,18 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoginCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginCadastro.Designer.cs">
+      <DependentUpon>frmLoginCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdemdeServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdemdeServico.Designer.cs">
+      <DependentUpon>frmOrdemdeServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginCadastro.resx">
+      <DependentUpon>frmLoginCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdemdeServico.resx">
+      <DependentUpon>frmOrdemdeServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutos.resx">
       <DependentUpon>frmProdutos.cs</DependentUpon>
@@ -219,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
