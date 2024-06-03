@@ -16,7 +16,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                n.ConnectionString = Dados.StringDeConexao;
+                cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = " SELECT ID, TOTALFINAL, TOTALINICAL, DATAABERTURA, DATAFECHAMENTO, USUARIO FROM CAIXA " +
