@@ -81,7 +81,7 @@ namespace DAL
             }
 
         }
-        public modCliente CarregarCliente()
+        public List<modCliente> CarregarCliente()
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -90,8 +90,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, NOME, CPF, TELEFONE, EMAIL, RUA, BAIRRO, " +
-                                  " CEP, NUMERO, COMPLEMENTO, CIDADE FROM CLIENTE" +
+                cmd.CommandText = " SELECT ID, NOME, TELEFONE FROM CLIENTE" +
                                   " ORDER BY NOME ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -104,31 +103,93 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma lista para armazenar os dados.
-                var ListaCliente = new modCliente();
+                var ListaCliente = new List<modCliente>();
 
 
                 if (registro.HasRows)
                 {
                     while (registro.Read())
                     {
+                        ListaCliente.Add(new modCliente()
+                        {
+                            Id = Convert.ToInt32(registro["Id"]),
+                            NomeCliente = Convert.ToString(registro["Nome"]),
+                            TelefoneCliente = Convert.ToString(registro["Telefone"])
+                        });
+                    }
 
-                        ListaCliente.Id = Convert.ToInt32(registro["Id"]);
-                        ListaCliente.NomeCliente = Convert.ToString(registro["Nome"]);
-                        ListaCliente.Cpf = Convert.ToString(registro["Cpf"]);
-                        ListaCliente.TelefoneCliente = Convert.ToString(registro["Telefone"]);
-                        ListaCliente.Email = Convert.ToString(registro["Email"]);
-                        ListaCliente.Rua = Convert.ToString(registro["Rua"]);
-                        ListaCliente.Bairro = Convert.ToString(registro["Bairro"]);
-                        ListaCliente.Cep = Convert.ToString(registro["Cep"]);
-                        ListaCliente.NumeroEndereco = Convert.ToString(registro["Numero"]);
-                        ListaCliente.Complemento = Convert.ToString(registro["Complemento"]);
-                        ListaCliente.IdCidade = Convert.ToInt32(registro["Cidade"]);
-                        
+                    //ListaCliente.Cpf = Convert.ToString(registro["Cpf"]);
+
+                    //ListaCliente.Email = Convert.ToString(registro["Email"]);
+                    //ListaCliente.Rua = Convert.ToString(registro["Rua"]);
+                    //ListaCliente.Bairro = Convert.ToString(registro["Bairro"]);
+                    //ListaCliente.Cep = Convert.ToString(registro["Cep"]);
+                    //ListaCliente.NumeroEndereco = Convert.ToString(registro["Numero"]);
+                    //ListaCliente.Complemento = Convert.ToString(registro["Complemento"]);
+                    //ListaCliente.IdCidade = Convert.ToInt32(registro["Cidade"]);
+
+                    
+                }
+                return ListaCliente;
+            }
+
+
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
+        public modCliente BuscarPorCodigoCliente(int ClienteId)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT CLIENTE.NOME, CLIENTE.ID, CLIENTE.TELEFONE " +
+                                  " FROM CLIENTE " +
+                                  " WHERE CLIENTE.ID = @ID ";
+
+                cmd.Parameters.AddWithValue("@ID", ClienteId);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaIdCliente = new List<modCliente>();
+                modCliente objdados = new modCliente();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        // ListaIdProduto.Add(new modProduto()
+                        // {
+                        objdados.Id = Convert.ToInt32(registro["ID"]);
+                        objdados.NomeCliente = Convert.ToString(registro["NOME"]);
+                        objdados.TelefoneCliente = Convert.ToString(registro["TELEFONE"]);
+                        // });
                     }
                 }
 
-
-                return ListaCliente;
+                return objdados;
 
             }
             catch (SqlException ex)

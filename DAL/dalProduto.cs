@@ -154,10 +154,10 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT  PRODUTO.NOME, PRODUTO.ID " +
-                                  " FROM CLIENTE" +
-                "LEFT OUTER JOIN LIVRO ON PRODUTO.UNIDADEMEDIDATIPOS = UNIDADEMEDIDATIPOS.ID " +
-                " WHERE  PRODUTO.NOME LIKE @PRODUTO ";
+                cmd.CommandText = " SELECT PRODUTO.NOME, PRODUTO.ID, PRODUTO.MARCA, PRODUTO.CATEGORIASTIPO, PRODUTO.UNIDADEMEDIDATIPOS, " +
+                                  " PRODUTO.VALOR " +
+                                  " FROM PRODUTO " +
+                                  " WHERE PRODUTO.ID = @ID ";
 
                 cmd.Parameters.AddWithValue("@ID", ProdutoId);
 
@@ -169,7 +169,7 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma lista para armazenar os dados.
-                var ListaProduto = new List<modProduto>();
+                var ListaIdProduto = new List<modProduto>();
                 modProduto objdados = new modProduto();
 
 
@@ -177,11 +177,15 @@ namespace DAL
                 {
                     while (registro.Read())
                     {
-                        //ListaProduto.Add(new modProduto()
-                        //{
-                        objdados.Id = Convert.ToInt32(registro["Id"]);
-                        objdados.NomeProduto = Convert.ToString(registro["NomeProduto"]);
-                        //});
+                        // ListaIdProduto.Add(new modProduto()
+                        // {
+                        objdados.Id = Convert.ToInt32(registro["ID"]);
+                        objdados.NomeProduto = Convert.ToString(registro["NOME"]);
+                        objdados.ValorProduto = Convert.ToDouble(registro["VALOR"]);
+                        objdados.IdCategoriasTipo = Convert.ToInt32(registro["CATEGORIASTIPO"]);
+                        objdados.IdMarca = Convert.ToInt32(registro["MARCA"]);
+                        objdados.IdUnidadeMedidaTipos = Convert.ToInt32(registro["UNIDADEMEDIDATIPOS"]);
+                       // });
                     }
                 }
 

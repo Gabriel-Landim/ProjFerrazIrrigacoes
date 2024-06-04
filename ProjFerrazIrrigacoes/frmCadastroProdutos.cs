@@ -38,7 +38,7 @@ namespace ProjFerrazIrrigacoes
             tbEstoque.Text = objDados.Estoque.ToString();
             tbValor.Text = objDados.ValorProduto.ToString();
             cbCategoria.SelectedValue = objDados.IdCategoriasTipo;
-            cbMarca.SelectedValue = objDados.IdMarca;
+            cbUnidadeMedida.SelectedValue = objDados.IdUnidadeMedidaTipos;
             cbMarca.SelectedValue = objDados.IdMarca;
         }
         private void CarregarMarca()

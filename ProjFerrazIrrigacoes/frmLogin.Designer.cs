@@ -63,11 +63,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 26);
+            this.label2.Size = new System.Drawing.Size(175, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Ferraz Irrigações";
             // 
@@ -92,13 +92,14 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(259, 26);
             this.tbEmail.TabIndex = 14;
+            this.tbEmail.Text = "adm";
             // 
             // tbEditar
             // 
             this.tbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
             this.tbEditar.FlatAppearance.BorderSize = 0;
             this.tbEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbEditar.Font = new System.Drawing.Font("RBNo3.1 Bold", 15F, System.Drawing.FontStyle.Bold);
+            this.tbEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.tbEditar.ForeColor = System.Drawing.Color.White;
             this.tbEditar.Location = new System.Drawing.Point(87, 150);
             this.tbEditar.Name = "tbEditar";
@@ -112,11 +113,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(47, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
+            this.label1.Size = new System.Drawing.Size(61, 22);
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
             // 
@@ -141,8 +142,10 @@
             this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbSenha.Location = new System.Drawing.Point(53, 81);
             this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
             this.tbSenha.Size = new System.Drawing.Size(259, 26);
             this.tbSenha.TabIndex = 16;
+            this.tbSenha.Text = "adm";
             // 
             // pictureBox2
             // 
@@ -166,7 +169,7 @@
             // 
             this.btnNovoUsuario.FlatAppearance.BorderSize = 0;
             this.btnNovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoUsuario.Font = new System.Drawing.Font("RBNo3.1 Light", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnNovoUsuario.ForeColor = System.Drawing.Color.White;
             this.btnNovoUsuario.Location = new System.Drawing.Point(96, 113);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
@@ -179,11 +182,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(49, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.Size = new System.Drawing.Size(67, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Senha";
             // 
