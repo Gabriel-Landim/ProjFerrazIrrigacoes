@@ -23,12 +23,12 @@ namespace ProjFerrazIrrigacoes
 
         private void frmProdutos_Load(object sender, EventArgs e)
         {
-            CarregarMarca();
-            CarregarCategoria();
-            CarregarUnidadeMedida();
-            CarregarProduto();
-            BloqueiaTela();
-            tbProdutoNome.Focus();
+            //CarregarMarca();
+            //CarregarCategoria();
+            //CarregarUnidadeMedida();
+            //CarregarProduto();
+            //BloqueiaTela();
+            
         }
 
         private void CarregarMarca()
@@ -69,7 +69,7 @@ namespace ProjFerrazIrrigacoes
             tbValor.Text = objDados.ValorProduto.ToString();
             cbCategoria.SelectedValue = objDados.IdCategoriasTipo;
             cbMarca.SelectedValue = objDados.IdMarca;
-            cbMarca.SelectedValue = objDados.IdMarca;
+            cbUnidadeMedida.SelectedValue = objDados.IdUnidadeMedidaTipos;
         }
         private void BloqueiaTela()
         {
@@ -143,7 +143,7 @@ namespace ProjFerrazIrrigacoes
             cbMarca.SelectedValue = Convert.ToInt32(gvProdutos.Rows[e.RowIndex].Cells["IdMarca"].Value);
             cbUnidadeMedida.SelectedValue = Convert.ToInt32(gvProdutos.Rows[e.RowIndex].Cells["IdUnidadeMedidaTipos"].Value);
 
-            //cbCategoria.SelectedValue = 1;
+            cbCategoria.SelectedValue = 1;
 
             //btnGravar.Enabled = true;
             //btnEditar.Enabled = true;
@@ -167,11 +167,11 @@ namespace ProjFerrazIrrigacoes
 
         private void frmProdutos_Shown(object sender, EventArgs e)
         {
-            //CarregarProduto();
-            //CarregarMarca();
-            //CarregarCategoria();
-            //CarregarUnidadeMedida();
-
+            CarregarProduto();
+            CarregarMarca();
+            CarregarCategoria();
+            CarregarUnidadeMedida();
+            tbProdutoNome.Focus();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

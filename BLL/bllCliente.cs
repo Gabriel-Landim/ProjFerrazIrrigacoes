@@ -35,7 +35,7 @@ namespace BLL
                 objExcluir.Excluir(id);
             }
         }
-        public modCliente CarregarDadosCliente()
+        public List<modCliente> CarregarDadosCliente()
         {
             dalCliente objdados = new dalCliente();
             return objdados.CarregarCliente();
@@ -45,6 +45,12 @@ namespace BLL
         {
             dalCliente objdados = new dalCliente();
             return objdados.SelecionaPorNome(nome);
+        }
+
+        public modCliente BuscaPorCodigoCliente(int id)
+        {
+            dalCliente objBusca = new dalCliente();
+            return objBusca.BuscarPorCodigoCliente(id);
         }
     }
 }
