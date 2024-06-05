@@ -19,7 +19,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, EMAIL, SENHA FROM USUARIO" +
+                cmd.CommandText = " SELECT ID, NOME, EMAIL, CARGO, SENHA FROM USUARIO" +
                                   " ORDER BY EMAIL ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -75,12 +75,16 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO EMAIL, SENHA FROM USUARIO" +  //comando que eu quero
-                                  " VALUES (@EMAIL, @SENHA) ";
+                cmd.CommandText = " INSERT INTO ID, NOME, CARGO, EMAIL, SENHA FROM USUARIO " +  //comando que eu quero
+                                  " VALUES (@NOME, @CARGO, @EMAIL, @SENHA) " +
+                                  " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@EMAIL", objDados.Email);
                 cmd.Parameters.AddWithValue("@SENHA", objDados.Senha);
+                cmd.Parameters.AddWithValue("@ID", objDados.Id);
+                cmd.Parameters.AddWithValue("@NOME", objDados.Nome);
+                cmd.Parameters.AddWithValue("@CARGO", objDados.Cargo);
                 cmd.Connection = cn;
                 cn.Open();
 
