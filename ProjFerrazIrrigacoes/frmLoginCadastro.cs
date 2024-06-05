@@ -55,7 +55,21 @@ namespace ProjFerrazIrrigacoes
 
         private void tbCadastrar_Click(object sender, EventArgs e)
         {
-            
+            bllUsuario objCadastrar = new bllUsuario();
+
+            if (objCadastrar.Cadastrar( tbNome.Text, tbCargo.Text, tbEmail.Text, tbSenha.Text) != 0) 
+            {
+                Form1 tela = new Form1();
+                tela.ShowDialog();
+                tela.Dispose();
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Cadastro realizado com sucesso!");
+               
+            }
         }
     }
 }

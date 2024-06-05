@@ -16,10 +16,15 @@ namespace BLL
             return objLogar.Logar(email, senha);
         }
 
-        public int Cadastrar(string cargo, string id, string nome, string email, string senha)
+        public int Cadastrar(string nome, string cargo, string email, string senha)
         {
             dalUsuario objLogar = new dalUsuario();
-            return objLogar.Logar(email, senha);
+            modUsuario objModulo = new modUsuario();
+            objModulo.Cargo = cargo;
+            objModulo.Nome = nome;
+            objModulo.Email = email;
+            objModulo.Senha = senha;
+           return objLogar.Insere(objModulo);
         }
 
         public void Inserir(modUsuario objdados)
