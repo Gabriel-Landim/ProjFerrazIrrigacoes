@@ -110,6 +110,7 @@
             this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tbSenha.Location = new System.Drawing.Point(64, 364);
             this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
             this.tbSenha.Size = new System.Drawing.Size(254, 23);
             this.tbSenha.TabIndex = 13;
             // 

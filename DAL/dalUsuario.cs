@@ -66,7 +66,7 @@ namespace DAL
             }
 
         }
-        public void Insere(modUsuario objDados)
+        public int Insere(modUsuario objDados)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -75,22 +75,35 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO ID, NOME, CARGO, EMAIL, SENHA FROM USUARIO " +  //comando que eu quero
+                cmd.CommandText = " INSERT INTO USUARIO ( NOME, CARGO, EMAIL, SENHA ) " +  //comando que eu quero
                                   " VALUES (@NOME, @CARGO, @EMAIL, @SENHA) " +
-                                  " WHERE ID = @ID ";
+                                  " SELECT @@IDENTITY AS ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@EMAIL", objDados.Email);
                 cmd.Parameters.AddWithValue("@SENHA", objDados.Senha);
-                cmd.Parameters.AddWithValue("@ID", objDados.Id);
                 cmd.Parameters.AddWithValue("@NOME", objDados.Nome);
                 cmd.Parameters.AddWithValue("@CARGO", objDados.Cargo);
                 cmd.Connection = cn;
                 cn.Open();
 
                 //Executando o comando e armazenando o resultado em registro
-                cmd.ExecuteNonQuery();  //execução do comando
+                SqlDataReader registro = cmd.ExecuteReader();
                 cmd.Dispose();
+
+                //Criar uma variável.
+                int Codigo = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        Codigo = Convert.ToInt32(registro["id"]);
+                    }
+                }
+
+                return Codigo;
 
             }
             catch (SqlException ex)
