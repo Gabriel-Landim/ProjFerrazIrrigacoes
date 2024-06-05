@@ -106,6 +106,7 @@
             // 
             // tbPreçoUnit
             // 
+            this.tbPreçoUnit.Enabled = false;
             this.tbPreçoUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbPreçoUnit.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbPreçoUnit.Location = new System.Drawing.Point(160, 304);
@@ -156,6 +157,7 @@
             // 
             // cbMarca
             // 
+            this.cbMarca.Enabled = false;
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(20, 65);
             this.cbMarca.Name = "cbMarca";
@@ -219,6 +221,7 @@
             // 
             // cbUnidadeMedida
             // 
+            this.cbUnidadeMedida.Enabled = false;
             this.cbUnidadeMedida.FormattingEnabled = true;
             this.cbUnidadeMedida.Location = new System.Drawing.Point(21, 159);
             this.cbUnidadeMedida.Name = "cbUnidadeMedida";
@@ -227,6 +230,7 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.Enabled = false;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(21, 112);
             this.cbCategoria.Name = "cbCategoria";
@@ -332,10 +336,11 @@
             // 
             this.tbTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.tbTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTelefone.Enabled = false;
             this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbTelefone.Location = new System.Drawing.Point(529, 10);
             this.tbTelefone.Name = "tbTelefone";
-            this.tbTelefone.Size = new System.Drawing.Size(119, 23);
+            this.tbTelefone.Size = new System.Drawing.Size(133, 23);
             this.tbTelefone.TabIndex = 54;
             // 
             // label10
@@ -376,6 +381,7 @@
             // 
             this.tbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbId.Location = new System.Drawing.Point(386, 10);
             this.tbId.Name = "tbId";
