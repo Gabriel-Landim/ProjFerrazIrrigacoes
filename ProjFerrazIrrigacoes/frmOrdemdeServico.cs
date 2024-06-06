@@ -21,6 +21,7 @@ namespace ProjFerrazIrrigacoes
         public frmOrdemdeServico()
         {
             InitializeComponent();
+
             objCmp = new Comprar();
 
             tbQuantidade.DataBindings.Add("Text", objCmp, "QuantidadeProdutotb", true, DataSourceUpdateMode.OnPropertyChanged);
