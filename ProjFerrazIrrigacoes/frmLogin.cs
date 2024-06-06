@@ -28,11 +28,13 @@ namespace ProjFerrazIrrigacoes
             bllUsuario objLogar = new bllUsuario();
 
             if (objLogar.Logar(tbEmail.Text, tbSenha.Text) != 0)
-            {
+            {              
                 Form1 tela = new Form1();
-                tela.ShowDialog();
-                tela.Dispose();
+                this.Visible = false;
+                tela.ShowDialog();               
                 this.Close();
+                tela.Dispose();
+
             }
 
             else

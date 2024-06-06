@@ -15,7 +15,7 @@ namespace ProjFerrazIrrigacoes
     {
         public frmLoginCadastro()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace ProjFerrazIrrigacoes
             if (objCadastrar.Cadastrar( tbNome.Text, tbCargo.Text, tbEmail.Text, tbSenha.Text) != 0) 
             {
                 Form1 tela = new Form1();
+                this.Visible = false;
                 tela.ShowDialog();
                 tela.Dispose();
                 this.Close();
@@ -70,6 +71,28 @@ namespace ProjFerrazIrrigacoes
                 MessageBox.Show("Cadastro realizado com sucesso!");
                
             }
+        }
+        private void CarregarCargo()
+        {
+            bllUsuario objBusca = new bllUsuario();
+            tbCargo.DataSource = objBusca.CarregarCargo();
+            tbCargo.ValueMember = "Id";
+            tbCargo.DisplayMember= "Cargo";           
+        }
+
+        private void tbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmLoginCadastro_Shown(object sender, EventArgs e)
+        {
+            CarregarCargo();
+        }
+
+        private void frmLoginCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
