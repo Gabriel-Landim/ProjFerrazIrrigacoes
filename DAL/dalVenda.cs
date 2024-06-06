@@ -70,7 +70,7 @@ namespace DAL
             }
 
         }
-        public void Insere(modVenda objDados)
+        public int  Insere(modVenda objDados)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -79,22 +79,37 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO VENDA (VALORPRODUTO, QUANTIDADE, PRODUTO, VENDA ) " +  //comando que eu quero
-                                  " VALUES (@VALORPRODUTO, @QUANTIDADE, @PRODUTO, @VENDA ) ";
+                cmd.CommandText = " INSERT INTO VENDA (DATAVENDA ) " +  //comando que eu quero
+                                  " VALUES (@DATAVENDA ) SELECT @@IDENTITY AS CODIGO ";
 
-                //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@ID", objDados.Id);
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha              
                 cmd.Parameters.AddWithValue("@DATAVENDA", objDados.DataVenda);
-                cmd.Parameters.AddWithValue("@VALOR", objDados.ValorVenda);
-                cmd.Parameters.AddWithValue("@CAIXA", objDados.IdCaixa);
-                cmd.Parameters.AddWithValue("@FORMADEPAGAMENTO", objDados.IdFormaDePagamento);
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
 
                 cmd.Connection = cn;
                 cn.Open();
 
                 //Executando o comando e armazenando o resultado em registro
-                cmd.ExecuteNonQuery();  //execução do comando
+                SqlDataReader registro = cmd.ExecuteReader();
                 cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                int Codigo = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+
+                        Codigo = Convert.ToInt32(registro["CODIGO"]);
+
+                        
+                    }
+                }
+
+
+                return Codigo;
 
             }
             catch (SqlException ex)

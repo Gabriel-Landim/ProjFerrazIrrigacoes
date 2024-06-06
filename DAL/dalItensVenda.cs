@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DAL
 {
     public class dalItensVenda
     {
-        public List<modItensVenda> CarregarItensVenda()
+        public List<modItensVenda> CarregarrItensVenda()
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -19,7 +20,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID, VALORPRODUTO, QUANTIDADE, PRODUTO, VENDA FROM ITENSVENDA " +
+                cmd.CommandText = " SELECT ID, VALORPRODUTO, QUANTIDADE, PRODUTO, VENDA, VALORTOTALPRODUTOS FROM ITENSVENDA " +
                                   " ORDER BY ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
@@ -42,7 +43,8 @@ namespace DAL
                         ListaItensVenda.Add(new modItensVenda()
                         {
                             Id = Convert.ToInt32(registro["Id"]),
-                            ValorProduto = Convert.ToDouble(registro["ValorProduto"]),
+                            ValorProdutoUnit = Convert.ToDouble(registro["ValorProduto"]),
+                            ValorTotalProdutos = Convert.ToDouble(registro["ValorTotalProdutos"]),
                             Quantidade = Convert.ToInt32(registro["Quantidade"]),
                             IdProduto = Convert.ToInt32(registro["Produto"]),
                             IdVenda = Convert.ToInt32(registro["Venda"])
@@ -70,6 +72,70 @@ namespace DAL
             }
 
         }
+        public List<modItensVenda> CarregaItensVenda(int Id)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ITENSVENDA.ID, ITENSVENDA.VALORPRODUTO, ITENSVENDA.QUANTIDADE, ITENSVENDA.VALORTOTALPRODUTOS, " +
+                                  " PRODUTO, VENDA, PRODUTO.NOME " +
+                                  " FROM ITENSVENDA LEFT OUTER JOIN PRODUTO ON(ITENSVENDA.Produto = Produto.Id)" +
+                                  " WHERE ITENSVENDA.VENDA = @VENDA ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@VENDA", Id);
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListaItens = new List<modItensVenda>();
+                modItensVenda objDados = new modItensVenda();
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ListaItens.Add(new modItensVenda()
+                        {
+                            Id = Convert.ToInt32(registro["ID"]),
+                            ValorProdutoUnit = Convert.ToDouble(registro["VALORPRODUTO"]),
+                            Quantidade = Convert.ToInt32(registro["QUANTIDADE"]),
+                            ValorTotalProdutos = Convert.ToDouble(registro["VALORTOTALPRODUTOS"]),
+                            IdProduto = Convert.ToInt32(registro["PRODUTO"]),
+                            ProdutoNome = Convert.ToString(registro["NOME"]),
+                            IdVenda = Convert.ToInt32(registro["VENDA"]),
+                        });
+                    }
+                }
+
+
+                return ListaItens;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
         public void Insere(modItensVenda objDados)
         {
             //Variavel de Conexao
@@ -79,14 +145,15 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO ITENSVENDA (VALORPRODUTO, QUANTIDADE, PRODUTO, VENDA ) " +  //comando que eu quero
-                                  " VALUES (@VALORPRODUTO, @QUANTIDADE, @PRODUTO, @VENDA ) ";
+                cmd.CommandText = " INSERT INTO ITENSVENDA (VALORPRODUTO, QUANTIDADE, PRODUTO, VENDA, VALORTOTALPRODUTOS ) " +  //comando que eu quero
+                                  " VALUES (@VALORPRODUTO, @QUANTIDADE, @PRODUTO, @VENDA, @VALORTOTALPRODUTOS ) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@VALORPRODUTO", objDados.ValorProduto);
+                cmd.Parameters.AddWithValue("@VALORPRODUTO", objDados.ValorProdutoUnit);
                 cmd.Parameters.AddWithValue("@QUANTIDADE", objDados.Quantidade);
                 cmd.Parameters.AddWithValue("@PRODUTO", objDados.IdProduto);
                 cmd.Parameters.AddWithValue("@VENDA", objDados.IdVenda);
+                cmd.Parameters.AddWithValue("@VALORTOTALPRODUTOS", objDados.ValorTotalProdutos);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -120,16 +187,17 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE ITENSVENDA SET  VALORPRODUTO = @VALORPRODUTO, QUANTIDADE = @QUANTIDADE, PRODUTO = @PRODUTO, " +
-                                  " VENDA = @VENDA " +  //comando que eu quero
+                cmd.CommandText = " UPDATE ITENSVENDA SET VALORPRODUTO = @VALORPRODUTO, QUANTIDADE = @QUANTIDADE, PRODUTO = @PRODUTO, " +
+                                  " VENDA = @VENDA, VALORTOTALPRODUTOS = @VALORTOTALPRODUTOS " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@ID", objDados.Id);
-                cmd.Parameters.AddWithValue("VALORPRODUTO", objDados.ValorProduto);
+                cmd.Parameters.AddWithValue("VALORPRODUTO", objDados.ValorProdutoUnit);
                 cmd.Parameters.AddWithValue("@QUANTIDADE", objDados.Quantidade);
                 cmd.Parameters.AddWithValue("@PRODUTO", objDados.IdProduto);
                 cmd.Parameters.AddWithValue("@VENDA", objDados.IdVenda);
+                cmd.Parameters.AddWithValue("@VALORTOTALPRODUTOS", objDados.ValorTotalProdutos);
 
                 cmd.Connection = cn;
                 cn.Open();

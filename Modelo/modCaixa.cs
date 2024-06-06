@@ -14,6 +14,5 @@ namespace Modelo
         public DateTime DataAbertura { get; set; }
         public DateTime DataFechamento { get; set; }
         public int UsuarioId { get; set; }
-        public object Nome { get; set; }
     }
 }

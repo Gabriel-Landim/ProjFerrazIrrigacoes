@@ -143,7 +143,7 @@ namespace ProjFerrazIrrigacoes
             cbMarca.SelectedValue = Convert.ToInt32(gvProdutos.Rows[e.RowIndex].Cells["IdMarca"].Value);
             cbUnidadeMedida.SelectedValue = Convert.ToInt32(gvProdutos.Rows[e.RowIndex].Cells["IdUnidadeMedidaTipos"].Value);
 
-            cbCategoria.SelectedValue = 1;
+            //cbCategoria.SelectedValue = 1;
 
             //btnGravar.Enabled = true;
             //btnEditar.Enabled = true;
