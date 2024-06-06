@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNovaVenda = new System.Windows.Forms.Button();
             this.tbPreçoUnit = new System.Windows.Forms.MaskedTextBox();
             this.tbValor = new System.Windows.Forms.MaskedTextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.tbBuscaProdutoCompra = new System.Windows.Forms.TextBox();
-            this.gvBuscaNome = new System.Windows.Forms.DataGridView();
+            this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
             this.btAlterar = new System.Windows.Forms.Button();
             this.btDeletar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -73,7 +74,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pProcurarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,6 +85,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.panel2.Controls.Add(this.btnNovaVenda);
             this.panel2.Controls.Add(this.tbPreçoUnit);
             this.panel2.Controls.Add(this.tbValor);
             this.panel2.Controls.Add(this.btAdicionar);
@@ -103,6 +105,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 440);
             this.panel2.TabIndex = 57;
+            // 
+            // btnNovaVenda
+            // 
+            this.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.btnNovaVenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnNovaVenda.Location = new System.Drawing.Point(7, 5);
+            this.btnNovaVenda.Name = "btnNovaVenda";
+            this.btnNovaVenda.Size = new System.Drawing.Size(303, 40);
+            this.btnNovaVenda.TabIndex = 54;
+            this.btnNovaVenda.Text = "NovaVenda";
+            this.btnNovaVenda.UseVisualStyleBackColor = true;
+            this.btnNovaVenda.Click += new System.EventHandler(this.btnNovaVenda_Click);
             // 
             // tbPreçoUnit
             // 
@@ -125,7 +140,6 @@
             // 
             // btAdicionar
             // 
-            this.btAdicionar.Enabled = false;
             this.btAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdicionar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
@@ -135,6 +149,7 @@
             this.btAdicionar.TabIndex = 51;
             this.btAdicionar.Text = "Adicionar";
             this.btAdicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
             // tbQuantidade
             // 
@@ -265,7 +280,7 @@
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
-            this.pProcurarCliente.Controls.Add(this.gvBuscaNome);
+            this.pProcurarCliente.Controls.Add(this.gvProdutosComprados);
             this.pProcurarCliente.Controls.Add(this.btAlterar);
             this.pProcurarCliente.Controls.Add(this.btDeletar);
             this.pProcurarCliente.Location = new System.Drawing.Point(336, 116);
@@ -282,16 +297,18 @@
             this.tbBuscaProdutoCompra.Size = new System.Drawing.Size(346, 30);
             this.tbBuscaProdutoCompra.TabIndex = 31;
             this.tbBuscaProdutoCompra.Text = "Digite o produto";
+            this.tbBuscaProdutoCompra.TextChanged += new System.EventHandler(this.tbBuscaProdutoCompra_TextChanged);
             // 
-            // gvBuscaNome
+            // gvProdutosComprados
             // 
-            this.gvBuscaNome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.gvBuscaNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gvBuscaNome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvBuscaNome.Location = new System.Drawing.Point(9, 55);
-            this.gvBuscaNome.Name = "gvBuscaNome";
-            this.gvBuscaNome.Size = new System.Drawing.Size(346, 346);
-            this.gvBuscaNome.TabIndex = 20;
+            this.gvProdutosComprados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.gvProdutosComprados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvProdutosComprados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvProdutosComprados.Location = new System.Drawing.Point(9, 55);
+            this.gvProdutosComprados.Name = "gvProdutosComprados";
+            this.gvProdutosComprados.Size = new System.Drawing.Size(346, 346);
+            this.gvProdutosComprados.TabIndex = 20;
+            this.gvProdutosComprados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProdutosComprados_CellDoubleClick);
             // 
             // btAlterar
             // 
@@ -307,7 +324,6 @@
             // 
             // btDeletar
             // 
-            this.btDeletar.Enabled = false;
             this.btDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeletar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
@@ -317,6 +333,7 @@
             this.btDeletar.TabIndex = 59;
             this.btDeletar.Text = "Deletar";
             this.btDeletar.UseVisualStyleBackColor = true;
+            this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
             // panel3
             // 
@@ -444,17 +461,16 @@
             this.tbValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbValorTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbValorTotal.Location = new System.Drawing.Point(133, 103);
-            this.tbValorTotal.Mask = "$";
             this.tbValorTotal.Name = "tbValorTotal";
             this.tbValorTotal.Size = new System.Drawing.Size(115, 23);
             this.tbValorTotal.TabIndex = 56;
+            this.tbValorTotal.TextChanged += new System.EventHandler(this.tbValorTotal_TextChanged);
             // 
             // tbMaodeObra
             // 
             this.tbMaodeObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbMaodeObra.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbMaodeObra.Location = new System.Drawing.Point(133, 72);
-            this.tbMaodeObra.Mask = "$";
             this.tbMaodeObra.Name = "tbMaodeObra";
             this.tbMaodeObra.Size = new System.Drawing.Size(115, 23);
             this.tbMaodeObra.TabIndex = 55;
@@ -464,7 +480,6 @@
             this.tbDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbDesconto.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbDesconto.Location = new System.Drawing.Point(133, 41);
-            this.tbDesconto.Mask = "$";
             this.tbDesconto.Name = "tbDesconto";
             this.tbDesconto.Size = new System.Drawing.Size(115, 23);
             this.tbDesconto.TabIndex = 54;
@@ -584,7 +599,7 @@
             this.panel2.PerformLayout();
             this.pProcurarCliente.ResumeLayout(false);
             this.pProcurarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -616,7 +631,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pProcurarCliente;
         private System.Windows.Forms.TextBox tbBuscaProdutoCompra;
-        private System.Windows.Forms.DataGridView gvBuscaNome;
+        private System.Windows.Forms.DataGridView gvProdutosComprados;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btDeletar;
         private System.Windows.Forms.Button btAlterar;
@@ -644,5 +659,6 @@
         private System.Windows.Forms.Button btnPagamento;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnNovaVenda;
     }
 }
