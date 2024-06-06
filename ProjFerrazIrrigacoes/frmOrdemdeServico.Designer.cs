@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNovaVenda = new System.Windows.Forms.Button();
             this.tbPreçoUnit = new System.Windows.Forms.MaskedTextBox();
             this.tbValor = new System.Windows.Forms.MaskedTextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnNovaVenda = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
@@ -105,6 +105,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 440);
             this.panel2.TabIndex = 57;
+            // 
+            // btnNovaVenda
+            // 
+            this.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.btnNovaVenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnNovaVenda.Location = new System.Drawing.Point(7, 5);
+            this.btnNovaVenda.Name = "btnNovaVenda";
+            this.btnNovaVenda.Size = new System.Drawing.Size(303, 40);
+            this.btnNovaVenda.TabIndex = 54;
+            this.btnNovaVenda.Text = "NovaVenda";
+            this.btnNovaVenda.UseVisualStyleBackColor = true;
+            this.btnNovaVenda.Click += new System.EventHandler(this.btnNovaVenda_Click);
             // 
             // tbPreçoUnit
             // 
@@ -311,7 +324,6 @@
             // 
             // btDeletar
             // 
-            this.btDeletar.Enabled = false;
             this.btDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
@@ -321,6 +333,7 @@
             this.btDeletar.TabIndex = 59;
             this.btDeletar.Text = "Deletar";
             this.btDeletar.UseVisualStyleBackColor = true;
+            this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
             // panel3
             // 
@@ -448,17 +461,16 @@
             this.tbValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbValorTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbValorTotal.Location = new System.Drawing.Point(133, 103);
-            this.tbValorTotal.Mask = "$";
             this.tbValorTotal.Name = "tbValorTotal";
             this.tbValorTotal.Size = new System.Drawing.Size(115, 23);
             this.tbValorTotal.TabIndex = 56;
+            this.tbValorTotal.TextChanged += new System.EventHandler(this.tbValorTotal_TextChanged);
             // 
             // tbMaodeObra
             // 
             this.tbMaodeObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbMaodeObra.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbMaodeObra.Location = new System.Drawing.Point(133, 72);
-            this.tbMaodeObra.Mask = "$";
             this.tbMaodeObra.Name = "tbMaodeObra";
             this.tbMaodeObra.Size = new System.Drawing.Size(115, 23);
             this.tbMaodeObra.TabIndex = 55;
@@ -468,7 +480,6 @@
             this.tbDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.tbDesconto.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbDesconto.Location = new System.Drawing.Point(133, 41);
-            this.tbDesconto.Mask = "$";
             this.tbDesconto.Name = "tbDesconto";
             this.tbDesconto.Size = new System.Drawing.Size(115, 23);
             this.tbDesconto.TabIndex = 54;
@@ -566,19 +577,6 @@
             this.label13.Size = new System.Drawing.Size(88, 26);
             this.label13.TabIndex = 12;
             this.label13.Text = "Extrato";
-            // 
-            // btnNovaVenda
-            // 
-            this.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.btnNovaVenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btnNovaVenda.Location = new System.Drawing.Point(7, 5);
-            this.btnNovaVenda.Name = "btnNovaVenda";
-            this.btnNovaVenda.Size = new System.Drawing.Size(303, 40);
-            this.btnNovaVenda.TabIndex = 54;
-            this.btnNovaVenda.Text = "NovaVenda";
-            this.btnNovaVenda.UseVisualStyleBackColor = true;
-            this.btnNovaVenda.Click += new System.EventHandler(this.btnNovaVenda_Click);
             // 
             // frmOrdemdeServico
             // 

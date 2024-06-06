@@ -18,6 +18,8 @@ namespace ProjFerrazIrrigacoes
         Comprar objCmp;
         int Codigovenda = 0;
 
+        private BindingList<bllItensVenda> ItensVenda;
+
         public frmOrdemdeServico()
         {
             InitializeComponent();
@@ -99,8 +101,6 @@ namespace ProjFerrazIrrigacoes
             cbCliente.DisplayMember = "NomeCliente";
         }
 
-
-
         private void BuscaPorCodigoCliente(int Clienteid)
         {
             bllCliente objBusca = new bllCliente();
@@ -155,6 +155,8 @@ namespace ProjFerrazIrrigacoes
 
             
             gvProdutosComprados.DataSource = objbusca.CarregaItensVenda(Codigovenda);
+
+            CalculaValorTotal();
         }
 
         private void btnNovaVenda_Click(object sender, EventArgs e)
@@ -164,5 +166,83 @@ namespace ProjFerrazIrrigacoes
             objDados.DataVenda = DateTime.Now;
             Codigovenda = objInsere.Insere(objDados);
         }
+
+        private void btDeletar_Click(object sender, EventArgs e)
+        {
+            // Verifica se há uma linha selecionada
+            if (gvProdutosComprados.SelectedRows.Count > 0)
+            {
+                // Confirmação de exclusão
+                DialogResult result = MessageBox.Show("Você tem certeza que deseja deletar a linha selecionada? ",
+                "Confirmação de Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Pega a linha selecionada
+                        int selectedIndex = gvProdutosComprados.SelectedRows[0].Index;
+
+                        //Obtém o ID ou chave da linha selecionada, caso necessário para deletar do banco de dados
+                        int rowID = Convert.ToInt32(gvProdutosComprados[0, selectedIndex].Value);
+
+                        // Remove a linha do DataGridView
+
+                        //gvProdutosComprados.Rows.RemoveAt(selectedIndex);
+
+                        // Remova a linha do banco de dados, se necessário
+                        bllItensVenda objDeletar = new bllItensVenda();
+                        objDeletar.Excluir(rowID);
+
+                        gvProdutosComprados.DataSource = objDeletar.CarregaItensVenda(Codigovenda);
+
+                        CalculaValorTotal();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao deletar a linha: " + ex.Message);
+                    }
+
+                }
+               
+                
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha para deletar. ");
+            }     
+        }
+
+        private void tbValorTotal_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CalculaValorTotal()
+        {
+            bllItensVenda objCalcula = new bllItensVenda();
+            modItensVenda objDados = new modItensVenda();
+
+            double ValorTotal = objCalcula.Calcula(Codigovenda);
+            double MaodeObra = ValorTotal * 0.4;
+
+            tbValorTotal.Text = Convert.ToString(ValorTotal);
+            tbMaodeObra.Text = Convert.ToString(MaodeObra);
+
+        }
+
+        private void CalculaDesconto()
+        {
+            double ValorTotal = Convert.ToDouble(tbValorTotal.Text);
+            double MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
+            double Desconto = Convert.ToDouble(tbDesconto.Text);
+
+            Desconto = (ValorTotal - ((Desconto / 100) * ValorTotal));
+            ValorTotal = Desconto;
+
+        }
+
     }
 }

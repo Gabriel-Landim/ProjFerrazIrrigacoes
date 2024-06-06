@@ -21,5 +21,17 @@ namespace BLL
             dalItensVenda objInsere = new dalItensVenda();
             objInsere.Insere(objDados);
         }
+
+        public void Excluir (int Id)
+        {
+            dalItensVenda objExcluir = new dalItensVenda();
+            objExcluir.Excluir(Id);
+        }
+
+        public double Calcula(int objCalculo)
+        {
+            dalItensVenda objCalcular = new dalItensVenda();
+            return objCalcular.Calculo(objCalculo);
+        }
     }
 }
