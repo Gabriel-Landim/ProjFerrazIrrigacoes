@@ -35,5 +35,11 @@ namespace BLL
                 objInserir.Insere(objdados);
             }
         }
+
+        public List<modUsuario> CarregarCargo()
+        {
+            dalUsuario objModulo = new dalUsuario();
+            return objModulo.CarregarCargo();
+        }
     }
 }

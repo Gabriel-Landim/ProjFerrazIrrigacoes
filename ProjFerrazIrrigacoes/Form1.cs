@@ -249,6 +249,11 @@ namespace ProjFerrazIrrigacoes
         {
             BtnBuscar.BackColor = Color.FromArgb(33, 43, 53);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

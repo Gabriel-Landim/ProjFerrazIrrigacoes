@@ -48,11 +48,12 @@
             this.BtnCadastro = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tbCargo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tbID = new System.Windows.Forms.Label();
+            this.tbNome = new System.Windows.Forms.Label();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -338,14 +339,26 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.tbCargo);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.tbID);
+            this.panel3.Controls.Add(this.tbNome);
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Location = new System.Drawing.Point(904, 19);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(239, 61);
             this.panel3.TabIndex = 10;
+            // 
+            // tbCargo
+            // 
+            this.tbCargo.AutoSize = true;
+            this.tbCargo.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.tbCargo.ForeColor = System.Drawing.Color.LimeGreen;
+            this.tbCargo.Location = new System.Drawing.Point(124, 30);
+            this.tbCargo.Name = "tbCargo";
+            this.tbCargo.Size = new System.Drawing.Size(93, 19);
+            this.tbCargo.TabIndex = 14;
+            this.tbCargo.Text = "VENDEDOR";
             // 
             // pictureBox2
             // 
@@ -358,27 +371,28 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // tbID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(64, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 19);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ID 4321";
+            this.tbID.AutoSize = true;
+            this.tbID.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.tbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbID.Location = new System.Drawing.Point(64, 30);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(63, 19);
+            this.tbID.TabIndex = 12;
+            this.tbID.Text = "ID 4321";
             // 
-            // label1
+            // tbNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(81, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 18);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Administrador";
+            this.tbNome.AutoSize = true;
+            this.tbNome.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.tbNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbNome.Location = new System.Drawing.Point(77, 11);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(110, 18);
+            this.tbNome.TabIndex = 11;
+            this.tbNome.Text = "Administrador";
+            this.tbNome.Click += new System.EventHandler(this.label1_Click);
             // 
             // BtnSair
             // 
@@ -393,16 +407,15 @@
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // label3
+            // textBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label3.Location = new System.Drawing.Point(124, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "VENDEDOR";
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(68, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 18);
+            this.textBox1.TabIndex = 10;
             // 
             // Form1
             // 
@@ -455,11 +468,12 @@
         private System.Windows.Forms.Button BtnCadastroProdutos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label tbID;
+        private System.Windows.Forms.Label tbNome;
         private System.Windows.Forms.Button BtnBuscarProdutos;
         private System.Windows.Forms.Button BtnBuscarCliente;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label tbCargo;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
