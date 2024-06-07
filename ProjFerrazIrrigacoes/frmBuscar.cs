@@ -31,7 +31,7 @@ namespace ProjFerrazIrrigacoes
         private void CarregaCidade()
         {
             bllCidade objBusca = new bllCidade();
-            //cbCidade.DataSource = objBusca.CarregaCidade();
+            cbCidade.DataSource = objBusca.CarregaCidade();
             cbCidade.ValueMember = "Id";
             cbCidade.DisplayMember = "CidadeNome";
         }
@@ -97,10 +97,10 @@ namespace ProjFerrazIrrigacoes
             bllCliente objgravar = new bllCliente();
             modCliente objdados = new modCliente();
 
-            if (operacao == "I")
+            if (operacao == "A")
             {
                 objdados.NomeCliente = tbNomeCliente.Text;
-                objgravar.Inserir(objdados);
+                objgravar.Alterar(objdados);
             }
 
             else

@@ -156,6 +156,8 @@ namespace ProjFerrazIrrigacoes
             
             gvProdutosComprados.DataSource = objbusca.CarregaItensVenda(Codigovenda);
 
+            CalculaSubTotal();
+
             CalculaValorTotal();
         }
 
@@ -198,16 +200,15 @@ namespace ProjFerrazIrrigacoes
 
                         gvProdutosComprados.DataSource = objDeletar.CarregaItensVenda(Codigovenda);
 
+                        CalculaSubTotal();
+
                         CalculaValorTotal();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro ao deletar a linha: " + ex.Message);
                     }
-
                 }
-               
-                
             }
             else
             {
@@ -222,27 +223,54 @@ namespace ProjFerrazIrrigacoes
 
         private void CalculaValorTotal()
         {
-            bllItensVenda objCalcula = new bllItensVenda();
+            //bllItensVenda objCalcula = new bllItensVenda();
+            //modItensVenda objDados = new modItensVenda();
+
+            //double ValorTotal = Convert.ToDouble(tbValorTotal.Text);
+            //double SubTotal = Convert.ToDouble(tbSubTotal.Text);
+            //double MaodeObra = ValorTotal * 0.4;
+
+            //tbValorTotal.Text = Convert.ToString(ValorTotal);
+            //tbMaodeObra.Text = Convert.ToString(MaodeObra);
+        }
+
+        private void CalculaSubTotal ()
+        {
+            bllItensVenda objSubTotal = new bllItensVenda();
             modItensVenda objDados = new modItensVenda();
 
-            double ValorTotal = objCalcula.Calcula(Codigovenda);
-            double MaodeObra = ValorTotal * 0.4;
-
-            tbValorTotal.Text = Convert.ToString(ValorTotal);
-            tbMaodeObra.Text = Convert.ToString(MaodeObra);
-
+            double subtotal = objSubTotal.Calcula(Codigovenda);
+            tbSubTotal.Text = Convert.ToString(subtotal);
         }
 
         private void CalculaDesconto()
         {
-            double ValorTotal = Convert.ToDouble(tbValorTotal.Text);
-            double MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
+            double ValorTotal = Convert.ToDouble(tbSubTotal.Text);
+            double MaodeObra = 0;
             double Desconto = Convert.ToDouble(tbDesconto.Text);
 
             Desconto = (ValorTotal - ((Desconto / 100) * ValorTotal));
             ValorTotal = Desconto;
 
+            tbValorTotal.Text = Convert.ToString(ValorTotal);
+            MaodeObra = ValorTotal * 0.4;
+            tbMaodeObra.Text = Convert.ToString(MaodeObra);
+
         }
 
+        private void tbDesconto_Leave(object sender, EventArgs e)
+        {
+            if (tbDesconto.Text.Trim().Length > 0)
+            {
+                CalculaDesconto();
+            }
+        }
+
+        private void tbValorTotal_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        
     }
 }

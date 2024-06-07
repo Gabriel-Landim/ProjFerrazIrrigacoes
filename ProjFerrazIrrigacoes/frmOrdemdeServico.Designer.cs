@@ -48,7 +48,6 @@
             this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.tbBuscaProdutoCompra = new System.Windows.Forms.TextBox();
             this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
-            this.btAlterar = new System.Windows.Forms.Button();
             this.btDeletar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbTelefone = new System.Windows.Forms.TextBox();
@@ -72,6 +71,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.tbSubTotal = new System.Windows.Forms.MaskedTextBox();
+            this.lbSubTtl = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
@@ -279,9 +280,10 @@
             // pProcurarCliente
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.pProcurarCliente.Controls.Add(this.lbSubTtl);
+            this.pProcurarCliente.Controls.Add(this.tbSubTotal);
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
             this.pProcurarCliente.Controls.Add(this.gvProdutosComprados);
-            this.pProcurarCliente.Controls.Add(this.btAlterar);
             this.pProcurarCliente.Controls.Add(this.btDeletar);
             this.pProcurarCliente.Location = new System.Drawing.Point(336, 116);
             this.pProcurarCliente.Name = "pProcurarCliente";
@@ -310,24 +312,12 @@
             this.gvProdutosComprados.TabIndex = 20;
             this.gvProdutosComprados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProdutosComprados_CellDoubleClick);
             // 
-            // btAlterar
-            // 
-            this.btAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.btAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btAlterar.Location = new System.Drawing.Point(59, 407);
-            this.btAlterar.Name = "btAlterar";
-            this.btAlterar.Size = new System.Drawing.Size(119, 34);
-            this.btAlterar.TabIndex = 58;
-            this.btAlterar.Text = "Alterar";
-            this.btAlterar.UseVisualStyleBackColor = true;
-            // 
             // btDeletar
             // 
             this.btDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btDeletar.Location = new System.Drawing.Point(188, 407);
+            this.btDeletar.Location = new System.Drawing.Point(222, 407);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(119, 34);
             this.btDeletar.TabIndex = 59;
@@ -464,6 +454,7 @@
             this.tbValorTotal.Name = "tbValorTotal";
             this.tbValorTotal.Size = new System.Drawing.Size(115, 23);
             this.tbValorTotal.TabIndex = 56;
+            this.tbValorTotal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbValorTotal_MaskInputRejected);
             this.tbValorTotal.TextChanged += new System.EventHandler(this.tbValorTotal_TextChanged);
             // 
             // tbMaodeObra
@@ -483,6 +474,7 @@
             this.tbDesconto.Name = "tbDesconto";
             this.tbDesconto.Size = new System.Drawing.Size(115, 23);
             this.tbDesconto.TabIndex = 54;
+            this.tbDesconto.Leave += new System.EventHandler(this.tbDesconto_Leave);
             // 
             // label14
             // 
@@ -578,6 +570,26 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Extrato";
             // 
+            // tbSubTotal
+            // 
+            this.tbSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.tbSubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbSubTotal.Location = new System.Drawing.Point(90, 414);
+            this.tbSubTotal.Name = "tbSubTotal";
+            this.tbSubTotal.Size = new System.Drawing.Size(115, 23);
+            this.tbSubTotal.TabIndex = 62;
+            // 
+            // lbSubTtl
+            // 
+            this.lbSubTtl.AutoSize = true;
+            this.lbSubTtl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.lbSubTtl.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbSubTtl.Location = new System.Drawing.Point(2, 414);
+            this.lbSubTtl.Name = "lbSubTtl";
+            this.lbSubTtl.Size = new System.Drawing.Size(91, 22);
+            this.lbSubTtl.TabIndex = 62;
+            this.lbSubTtl.Text = "SubTotal";
+            // 
             // frmOrdemdeServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,7 +646,6 @@
         private System.Windows.Forms.DataGridView gvProdutosComprados;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btDeletar;
-        private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.Label label8;
@@ -660,5 +671,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnNovaVenda;
+        private System.Windows.Forms.Label lbSubTtl;
+        private System.Windows.Forms.MaskedTextBox tbSubTotal;
     }
 }
