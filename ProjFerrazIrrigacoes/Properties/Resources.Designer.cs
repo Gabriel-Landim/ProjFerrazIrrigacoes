@@ -103,6 +103,26 @@ namespace ProjFerrazIrrigacoes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Caixa {
+            get {
+                object obj = ResourceManager.GetObject("Caixa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cash {
+            get {
+                object obj = ResourceManager.GetObject("Cash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Configuracoes {
             get {
                 object obj = ResourceManager.GetObject("Configuracoes", resourceCulture);
@@ -266,6 +286,16 @@ namespace ProjFerrazIrrigacoes.Properties {
         internal static System.Drawing.Bitmap Sair2 {
             get {
                 object obj = ResourceManager.GetObject("Sair2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair21 {
+            get {
+                object obj = ResourceManager.GetObject("Sair21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

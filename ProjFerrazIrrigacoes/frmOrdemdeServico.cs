@@ -244,5 +244,11 @@ namespace ProjFerrazIrrigacoes
 
         }
 
+        private void BtnAbrirCaixa_Click(object sender, EventArgs e)
+        {
+            frmCaixaAbrir telaCaixa = new frmCaixaAbrir();
+            telaCaixa.ShowDialog();
+            telaCaixa.Dispose();
+        }
     }
 }
