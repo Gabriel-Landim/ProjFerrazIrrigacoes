@@ -33,34 +33,42 @@
             this.PanelCarregar = new System.Windows.Forms.Panel();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.BtnOrdemDeServico = new System.Windows.Forms.Button();
             this.PanelBuscar = new System.Windows.Forms.Panel();
             this.BtnBuscarCliente = new System.Windows.Forms.Button();
             this.BtnBuscarProdutos = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnEmpresa = new System.Windows.Forms.Button();
             this.PanelCadastro = new System.Windows.Forms.Panel();
             this.BtnCadastroCliente = new System.Windows.Forms.Button();
             this.BtnCadastroProdutos = new System.Windows.Forms.Button();
-            this.BtnCadastro = new System.Windows.Forms.Button();
-            this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbCargo = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbID = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.Label();
-            this.BtnSair = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnOrdemDeServico = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnEmpresa = new System.Windows.Forms.Button();
+            this.BtnCadastro = new System.Windows.Forms.Button();
+            this.BtnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelBuscar.SuspendLayout();
             this.PanelCadastro.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TituloDashboard
@@ -102,16 +110,6 @@
             this.panel2.Size = new System.Drawing.Size(258, 144);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
@@ -140,26 +138,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 20);
             this.panel7.TabIndex = 10;
-            // 
-            // BtnOrdemDeServico
-            // 
-            this.BtnOrdemDeServico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnOrdemDeServico.FlatAppearance.BorderSize = 0;
-            this.BtnOrdemDeServico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnOrdemDeServico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnOrdemDeServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOrdemDeServico.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
-            this.BtnOrdemDeServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnOrdemDeServico.Image = global::ProjFerrazIrrigacoes.Properties.Resources.OrdemDeServico;
-            this.BtnOrdemDeServico.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 561);
-            this.BtnOrdemDeServico.Name = "BtnOrdemDeServico";
-            this.BtnOrdemDeServico.Size = new System.Drawing.Size(258, 57);
-            this.BtnOrdemDeServico.TabIndex = 9;
-            this.BtnOrdemDeServico.Text = "Ordem de Serviço";
-            this.BtnOrdemDeServico.UseVisualStyleBackColor = true;
-            this.BtnOrdemDeServico.Click += new System.EventHandler(this.BtnOrdemDeServico_Click_1);
-            this.BtnOrdemDeServico.Leave += new System.EventHandler(this.BtnOrdemDeServico_Leave);
             // 
             // PanelBuscar
             // 
@@ -208,46 +186,6 @@
             this.BtnBuscarProdutos.UseVisualStyleBackColor = false;
             this.BtnBuscarProdutos.Click += new System.EventHandler(this.BtnBuscarProdutos_Click);
             // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
-            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnBuscar.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Buscar;
-            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBuscar.Location = new System.Drawing.Point(0, 412);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(258, 57);
-            this.BtnBuscar.TabIndex = 7;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
-            this.BtnBuscar.Leave += new System.EventHandler(this.BtnBuscar_Leave);
-            // 
-            // BtnEmpresa
-            // 
-            this.BtnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEmpresa.FlatAppearance.BorderSize = 0;
-            this.BtnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.BtnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
-            this.BtnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.BtnEmpresa.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
-            this.BtnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEmpresa.Location = new System.Drawing.Point(0, 355);
-            this.BtnEmpresa.Name = "BtnEmpresa";
-            this.BtnEmpresa.Size = new System.Drawing.Size(258, 57);
-            this.BtnEmpresa.TabIndex = 5;
-            this.BtnEmpresa.Text = "Empresa";
-            this.BtnEmpresa.UseVisualStyleBackColor = true;
-            this.BtnEmpresa.Click += new System.EventHandler(this.BtnEmpresa_Click);
-            this.BtnEmpresa.Leave += new System.EventHandler(this.BtnEmpresa_Leave);
-            // 
             // PanelCadastro
             // 
             this.PanelCadastro.BackColor = System.Drawing.Color.Transparent;
@@ -295,6 +233,205 @@
             this.BtnCadastroProdutos.UseVisualStyleBackColor = false;
             this.BtnCadastroProdutos.Click += new System.EventHandler(this.BtnCadastroProdutos_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.tbCargo);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.tbID);
+            this.panel3.Controls.Add(this.tbNome);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Location = new System.Drawing.Point(904, 19);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(239, 61);
+            this.panel3.TabIndex = 10;
+            // 
+            // tbCargo
+            // 
+            this.tbCargo.AutoSize = true;
+            this.tbCargo.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.tbCargo.ForeColor = System.Drawing.Color.LimeGreen;
+            this.tbCargo.Location = new System.Drawing.Point(124, 30);
+            this.tbCargo.Name = "tbCargo";
+            this.tbCargo.Size = new System.Drawing.Size(93, 19);
+            this.tbCargo.TabIndex = 14;
+            this.tbCargo.Text = "VENDEDOR";
+            // 
+            // tbID
+            // 
+            this.tbID.AutoSize = true;
+            this.tbID.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.tbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbID.Location = new System.Drawing.Point(64, 30);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(63, 19);
+            this.tbID.TabIndex = 12;
+            this.tbID.Text = "ID 4321";
+            // 
+            // tbNome
+            // 
+            this.tbNome.AutoSize = true;
+            this.tbNome.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.tbNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbNome.Location = new System.Drawing.Point(69, 11);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(110, 18);
+            this.tbNome.TabIndex = 11;
+            this.tbNome.Text = "Administrador";
+            this.tbNome.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(68, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 18);
+            this.textBox1.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Location = new System.Drawing.Point(792, 19);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(106, 61);
+            this.panel4.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(30, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 18);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "OFFILINE";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(33, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "PDV";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(69, 10);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(134, 18);
+            this.textBox2.TabIndex = 10;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Caixa;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.UsuarioBoi;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BtnSair
+            // 
+            this.BtnSair.BackgroundImage = global::ProjFerrazIrrigacoes.Properties.Resources.exit1;
+            this.BtnSair.FlatAppearance.BorderSize = 0;
+            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSair.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnSair.Location = new System.Drawing.Point(1221, 6);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(15, 15);
+            this.BtnSair.TabIndex = 9;
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // BtnOrdemDeServico
+            // 
+            this.BtnOrdemDeServico.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnOrdemDeServico.FlatAppearance.BorderSize = 0;
+            this.BtnOrdemDeServico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnOrdemDeServico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnOrdemDeServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOrdemDeServico.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnOrdemDeServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnOrdemDeServico.Image = global::ProjFerrazIrrigacoes.Properties.Resources.OrdemDeServico;
+            this.BtnOrdemDeServico.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnOrdemDeServico.Location = new System.Drawing.Point(0, 561);
+            this.BtnOrdemDeServico.Name = "BtnOrdemDeServico";
+            this.BtnOrdemDeServico.Size = new System.Drawing.Size(258, 57);
+            this.BtnOrdemDeServico.TabIndex = 9;
+            this.BtnOrdemDeServico.Text = "Ordem de Serviço";
+            this.BtnOrdemDeServico.UseVisualStyleBackColor = true;
+            this.BtnOrdemDeServico.Click += new System.EventHandler(this.BtnOrdemDeServico_Click_1);
+            this.BtnOrdemDeServico.Leave += new System.EventHandler(this.BtnOrdemDeServico_Leave);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnBuscar.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Buscar;
+            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.Location = new System.Drawing.Point(0, 412);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(258, 57);
+            this.BtnBuscar.TabIndex = 7;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
+            this.BtnBuscar.Leave += new System.EventHandler(this.BtnBuscar_Leave);
+            // 
+            // BtnEmpresa
+            // 
+            this.BtnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEmpresa.FlatAppearance.BorderSize = 0;
+            this.BtnEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.BtnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEmpresa.Font = new System.Drawing.Font("RBNo3.1 Book", 14F, System.Drawing.FontStyle.Bold);
+            this.BtnEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
+            this.BtnEmpresa.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Produtos;
+            this.BtnEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEmpresa.Location = new System.Drawing.Point(0, 355);
+            this.BtnEmpresa.Name = "BtnEmpresa";
+            this.BtnEmpresa.Size = new System.Drawing.Size(258, 57);
+            this.BtnEmpresa.TabIndex = 5;
+            this.BtnEmpresa.Text = "Empresa";
+            this.BtnEmpresa.UseVisualStyleBackColor = true;
+            this.BtnEmpresa.Click += new System.EventHandler(this.BtnEmpresa_Click);
+            this.BtnEmpresa.Leave += new System.EventHandler(this.BtnEmpresa_Leave);
+            // 
             // BtnCadastro
             // 
             this.BtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
@@ -335,87 +472,26 @@
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click_1);
             this.BtnDashboard.Leave += new System.EventHandler(this.BtnDashboard_Leave);
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tbCargo);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.tbID);
-            this.panel3.Controls.Add(this.tbNome);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(904, 19);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(239, 61);
-            this.panel3.TabIndex = 10;
+            this.pictureBox1.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // tbCargo
+            // label2
             // 
-            this.tbCargo.AutoSize = true;
-            this.tbCargo.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.tbCargo.ForeColor = System.Drawing.Color.LimeGreen;
-            this.tbCargo.Location = new System.Drawing.Point(124, 30);
-            this.tbCargo.Name = "tbCargo";
-            this.tbCargo.Size = new System.Drawing.Size(93, 19);
-            this.tbCargo.TabIndex = 14;
-            this.tbCargo.Text = "VENDEDOR";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::ProjFerrazIrrigacoes.Properties.Resources.UsuarioBoi;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // tbID
-            // 
-            this.tbID.AutoSize = true;
-            this.tbID.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.tbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbID.Location = new System.Drawing.Point(64, 30);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(63, 19);
-            this.tbID.TabIndex = 12;
-            this.tbID.Text = "ID 4321";
-            // 
-            // tbNome
-            // 
-            this.tbNome.AutoSize = true;
-            this.tbNome.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.tbNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbNome.Location = new System.Drawing.Point(77, 11);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(110, 18);
-            this.tbNome.TabIndex = 11;
-            this.tbNome.Text = "Administrador";
-            this.tbNome.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // BtnSair
-            // 
-            this.BtnSair.BackgroundImage = global::ProjFerrazIrrigacoes.Properties.Resources.exit1;
-            this.BtnSair.FlatAppearance.BorderSize = 0;
-            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSair.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnSair.Location = new System.Drawing.Point(1221, 6);
-            this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(15, 15);
-            this.BtnSair.TabIndex = 9;
-            this.BtnSair.UseVisualStyleBackColor = true;
-            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(68, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 18);
-            this.textBox1.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(69, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 18);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "01";
             // 
             // Form1
             // 
@@ -424,6 +500,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1243, 720);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.PanelCarregar);
@@ -435,13 +512,16 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.PanelBuscar.ResumeLayout(false);
             this.PanelCadastro.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,6 +554,12 @@
         private System.Windows.Forms.Button BtnBuscarCliente;
         private System.Windows.Forms.Label tbCargo;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

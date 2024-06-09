@@ -87,6 +87,12 @@
     <Compile Include="frmCadastroCliente.Designer.cs">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCaixaAbrir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaixaAbrir.Designer.cs">
+      <DependentUpon>frmCaixaAbrir.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaixaAbrir.resx">
+      <DependentUpon>frmCaixaAbrir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
@@ -254,6 +263,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sair2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
