@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjFerrazIrrigacoes
 {
-    public partial class frmCaixaAbrir : Form
+    public partial class frmLancamentos : Form
     {
-        public frmCaixaAbrir()
+        public frmLancamentos()
         {
             InitializeComponent();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
