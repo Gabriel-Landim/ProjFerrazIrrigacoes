@@ -153,8 +153,10 @@ namespace ProjFerrazIrrigacoes
 
             objbusca.InsereItem(objDados);
 
-            
+
             gvProdutosComprados.DataSource = objbusca.CarregaItensVenda(Codigovenda);
+
+            CalculaSubTotal();
 
             CalculaValorTotal();
         }
@@ -165,6 +167,8 @@ namespace ProjFerrazIrrigacoes
             modVenda objDados = new modVenda();
             objDados.DataVenda = DateTime.Now;
             Codigovenda = objInsere.Insere(objDados);
+
+            btnNovaVenda.Enabled = false;
         }
 
         private void btDeletar_Click(object sender, EventArgs e)
@@ -198,26 +202,25 @@ namespace ProjFerrazIrrigacoes
 
                         gvProdutosComprados.DataSource = objDeletar.CarregaItensVenda(Codigovenda);
 
+                        CalculaSubTotal();
+
                         CalculaValorTotal();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro ao deletar a linha: " + ex.Message);
                     }
-
                 }
-               
-                
             }
             else
             {
                 MessageBox.Show("Por favor, selecione uma linha para deletar. ");
-            }     
+            }
         }
 
         private void tbValorTotal_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CalculaValorTotal()
@@ -225,30 +228,51 @@ namespace ProjFerrazIrrigacoes
             bllItensVenda objCalcula = new bllItensVenda();
             modItensVenda objDados = new modItensVenda();
 
-            double ValorTotal = objCalcula.Calcula(Codigovenda);
-            double MaodeObra = ValorTotal * 0.4;
+            //double ValorTotal = Convert.ToDouble(tbValorTotal.Text);
+            //double SubTotal = Convert.ToDouble(tbsubTotal.Text);
+            //double MaodeObra = ValorTotal * 0.4;
 
-            tbValorTotal.Text = Convert.ToString(ValorTotal);
-            tbMaodeObra.Text = Convert.ToString(MaodeObra);
+            //tbValorTotal.Text = Convert.ToString(ValorTotal);
+            //tbMaodeObra.Text = Convert.ToString(MaodeObra);
+        }
 
+        private void CalculaSubTotal()
+        {
+            bllItensVenda objSubTotal = new bllItensVenda();
+            modItensVenda objDados = new modItensVenda();
+
+            double subtotal = objSubTotal.Calcula(Codigovenda);
+            tbsubTotal.Text = Convert.ToString(subtotal);
         }
 
         private void CalculaDesconto()
         {
-            double ValorTotal = Convert.ToDouble(tbValorTotal.Text);
-            double MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
+            double ValorTotal = Convert.ToDouble(tbsubTotal.Text);
+            double MaodeObra = 0;
             double Desconto = Convert.ToDouble(tbDesconto.Text);
 
             Desconto = (ValorTotal - ((Desconto / 100) * ValorTotal));
             ValorTotal = Desconto;
 
+            tbValorTotal.Text = Convert.ToString(ValorTotal);
+            MaodeObra = ValorTotal * 0.4;
+            tbMaodeObra.Text = Convert.ToString(MaodeObra);
         }
+
 
         private void BtnAbrirCaixa_Click(object sender, EventArgs e)
         {
             frmCaixaAbrir telaCaixa = new frmCaixaAbrir();
             telaCaixa.ShowDialog();
             telaCaixa.Dispose();
+        }
+
+        private void tbDesconto_Leave_1(object sender, EventArgs e)
+        {
+            if (tbDesconto.Text.Trim().Length > 0)
+            {
+                CalculaDesconto();
+            }
         }
     }
 }

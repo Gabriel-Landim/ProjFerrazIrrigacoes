@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TituloDashboard = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbCaixa = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbUsuario = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnAbrirCaixa = new System.Windows.Forms.Button();
+            this.tbValor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbData = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbValor = new System.Windows.Forms.TextBox();
-            this.btnAbrirCaixa = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.cbUsuario = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCaixa = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.TituloDashboard = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,64 +64,50 @@
             this.panel1.Size = new System.Drawing.Size(381, 383);
             this.panel1.TabIndex = 0;
             // 
-            // TituloDashboard
+            // btnSair
             // 
-            this.TituloDashboard.AutoSize = true;
-            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
-            this.TituloDashboard.ForeColor = System.Drawing.Color.Gold;
-            this.TituloDashboard.Location = new System.Drawing.Point(58, 18);
-            this.TituloDashboard.Name = "TituloDashboard";
-            this.TituloDashboard.Size = new System.Drawing.Size(259, 35);
-            this.TituloDashboard.TabIndex = 2;
-            this.TituloDashboard.Text = "Abertura de Caixa";
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Sair21;
+            this.btnSair.Location = new System.Drawing.Point(333, 3);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(48, 31);
+            this.btnSair.TabIndex = 63;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // panel2
+            // btnAbrirCaixa
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Location = new System.Drawing.Point(66, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 10);
-            this.panel2.TabIndex = 3;
+            this.btnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirCaixa.Font = new System.Drawing.Font("RBNo3.1 Light", 15F, System.Drawing.FontStyle.Bold);
+            this.btnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
+            this.btnAbrirCaixa.Location = new System.Drawing.Point(67, 312);
+            this.btnAbrirCaixa.Name = "btnAbrirCaixa";
+            this.btnAbrirCaixa.Size = new System.Drawing.Size(243, 34);
+            this.btnAbrirCaixa.TabIndex = 62;
+            this.btnAbrirCaixa.Text = "Abrir Caixa";
+            this.btnAbrirCaixa.UseVisualStyleBackColor = true;
             // 
-            // cbCaixa
+            // tbValor
             // 
-            this.cbCaixa.Enabled = false;
-            this.cbCaixa.FormattingEnabled = true;
-            this.cbCaixa.Location = new System.Drawing.Point(62, 116);
-            this.cbCaixa.Name = "cbCaixa";
-            this.cbCaixa.Size = new System.Drawing.Size(255, 21);
-            this.cbCaixa.TabIndex = 30;
+            this.tbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbValor.Location = new System.Drawing.Point(62, 256);
+            this.tbValor.Name = "tbValor";
+            this.tbValor.Size = new System.Drawing.Size(255, 23);
+            this.tbValor.TabIndex = 51;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(58, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 23);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "PDV";
-            // 
-            // cbUsuario
-            // 
-            this.cbUsuario.Enabled = false;
-            this.cbUsuario.FormattingEnabled = true;
-            this.cbUsuario.Location = new System.Drawing.Point(62, 163);
-            this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(255, 21);
-            this.cbUsuario.TabIndex = 32;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(58, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 23);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Usuário";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(59, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 23);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Valor";
             // 
             // cbData
             // 
@@ -143,57 +129,71 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "Data/Hora";
             // 
-            // label4
+            // cbUsuario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(59, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 23);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Valor";
+            this.cbUsuario.Enabled = false;
+            this.cbUsuario.FormattingEnabled = true;
+            this.cbUsuario.Location = new System.Drawing.Point(62, 163);
+            this.cbUsuario.Name = "cbUsuario";
+            this.cbUsuario.Size = new System.Drawing.Size(255, 21);
+            this.cbUsuario.TabIndex = 32;
             // 
-            // tbValor
+            // label1
             // 
-            this.tbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbValor.Location = new System.Drawing.Point(62, 256);
-            this.tbValor.Name = "tbValor";
-            this.tbValor.Size = new System.Drawing.Size(255, 23);
-            this.tbValor.TabIndex = 51;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(58, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 23);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Usuário";
             // 
-            // btnAbrirCaixa
+            // cbCaixa
             // 
-            this.btnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirCaixa.Font = new System.Drawing.Font("RBNo3.1 Light", 15F, System.Drawing.FontStyle.Bold);
-            this.btnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
-            this.btnAbrirCaixa.Location = new System.Drawing.Point(67, 312);
-            this.btnAbrirCaixa.Name = "btnAbrirCaixa";
-            this.btnAbrirCaixa.Size = new System.Drawing.Size(243, 34);
-            this.btnAbrirCaixa.TabIndex = 62;
-            this.btnAbrirCaixa.Text = "Abrir Caixa";
-            this.btnAbrirCaixa.UseVisualStyleBackColor = true;
+            this.cbCaixa.Enabled = false;
+            this.cbCaixa.FormattingEnabled = true;
+            this.cbCaixa.Location = new System.Drawing.Point(62, 116);
+            this.cbCaixa.Name = "cbCaixa";
+            this.cbCaixa.Size = new System.Drawing.Size(255, 21);
+            this.cbCaixa.TabIndex = 30;
             // 
-            // btnSair
+            // label2
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Transparent;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Sair21;
-            this.btnSair.Location = new System.Drawing.Point(333, 3);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(48, 31);
-            this.btnSair.TabIndex = 63;
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(58, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 23);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "PDV";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gold;
+            this.panel2.Location = new System.Drawing.Point(66, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(243, 10);
+            this.panel2.TabIndex = 3;
+            // 
+            // TituloDashboard
+            // 
+            this.TituloDashboard.AutoSize = true;
+            this.TituloDashboard.Font = new System.Drawing.Font("RBNo3.1 Book", 20F, System.Drawing.FontStyle.Bold);
+            this.TituloDashboard.ForeColor = System.Drawing.Color.Gold;
+            this.TituloDashboard.Location = new System.Drawing.Point(58, 18);
+            this.TituloDashboard.Name = "TituloDashboard";
+            this.TituloDashboard.Size = new System.Drawing.Size(259, 35);
+            this.TituloDashboard.TabIndex = 2;
+            this.TituloDashboard.Text = "Abertura de Caixa";
             // 
             // frmCaixaAbrir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(387, 389);
+            this.ClientSize = new System.Drawing.Size(386, 389);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCaixaAbrir";
