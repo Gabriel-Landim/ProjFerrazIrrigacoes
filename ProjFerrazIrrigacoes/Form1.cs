@@ -41,6 +41,7 @@ namespace ProjFerrazIrrigacoes
             InitializeComponent();
             SubPanel();
             SubPanelBuscar();
+            SubPanelOrdemDeServico();
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));          
 
             TituloDashboard.Text = "DashBoard";
@@ -100,6 +101,7 @@ namespace ProjFerrazIrrigacoes
         private void BtnOrdemDeServico_Click_1(object sender, EventArgs e)
         {
             ShowPanel = !ShowPanel;
+            SubPanelOrdemDeServico();
             PainelNav.Height = BtnOrdemDeServico.Height;
             PainelNav.Top = BtnOrdemDeServico.Top;
             BtnOrdemDeServico.BackColor = Color.FromArgb(99, 115, 130);
@@ -136,6 +138,18 @@ namespace ProjFerrazIrrigacoes
             else
             {
                 PanelBuscar.Height = 0;
+            }
+        }
+        private void SubPanelOrdemDeServico()
+        {
+            if (ShowPanel)
+            {
+
+                PanelOrdemDeServico.Height = 46;
+            }
+            else
+            {
+                PanelOrdemDeServico.Height = 0;
             }
         }
 
