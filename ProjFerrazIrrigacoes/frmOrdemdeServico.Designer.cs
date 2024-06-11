@@ -45,6 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pProcurarCliente = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tbsubTotal = new System.Windows.Forms.MaskedTextBox();
             this.tbBuscaProdutoCompra = new System.Windows.Forms.TextBox();
             this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
             this.btDeletar = new System.Windows.Forms.Button();
@@ -85,8 +87,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.BtnFecharCaixa = new System.Windows.Forms.Button();
             this.BtnAbrirCaixa = new System.Windows.Forms.Button();
-            this.tbsubTotal = new System.Windows.Forms.MaskedTextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
@@ -293,6 +293,27 @@
             this.pProcurarCliente.Size = new System.Drawing.Size(365, 452);
             this.pProcurarCliente.TabIndex = 53;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.SystemColors.Control;
+            this.label21.Location = new System.Drawing.Point(5, 414);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(88, 23);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "SubTotal";
+            // 
+            // tbsubTotal
+            // 
+            this.tbsubTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.tbsubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.tbsubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbsubTotal.Location = new System.Drawing.Point(94, 408);
+            this.tbsubTotal.Name = "tbsubTotal";
+            this.tbsubTotal.Size = new System.Drawing.Size(115, 32);
+            this.tbsubTotal.TabIndex = 62;
+            // 
             // tbBuscaProdutoCompra
             // 
             this.tbBuscaProdutoCompra.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
@@ -320,7 +341,7 @@
             this.btDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeletar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btDeletar.Location = new System.Drawing.Point(213, 407);
+            this.btDeletar.Location = new System.Drawing.Point(213, 408);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(119, 34);
             this.btDeletar.TabIndex = 59;
@@ -736,6 +757,7 @@
             this.BtnFecharCaixa.TabIndex = 63;
             this.BtnFecharCaixa.Text = "Fechar";
             this.BtnFecharCaixa.UseVisualStyleBackColor = true;
+            this.BtnFecharCaixa.Click += new System.EventHandler(this.BtnFecharCaixa_Click);
             // 
             // BtnAbrirCaixa
             // 
@@ -749,26 +771,6 @@
             this.BtnAbrirCaixa.Text = "Abrir";
             this.BtnAbrirCaixa.UseVisualStyleBackColor = true;
             this.BtnAbrirCaixa.Click += new System.EventHandler(this.BtnAbrirCaixa_Click);
-            // 
-            // tbsubTotal
-            // 
-            this.tbsubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbsubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbsubTotal.Location = new System.Drawing.Point(92, 414);
-            this.tbsubTotal.Name = "tbsubTotal";
-            this.tbsubTotal.Size = new System.Drawing.Size(115, 23);
-            this.tbsubTotal.TabIndex = 62;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(-2, 417);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(88, 23);
-            this.label21.TabIndex = 62;
-            this.label21.Text = "SubTotal";
             // 
             // frmOrdemdeServico
             // 

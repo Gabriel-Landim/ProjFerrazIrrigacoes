@@ -196,6 +196,88 @@ namespace DAL
             }
 
         }
+        public void AbrirCaixa(modCaixa objDados)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();  //objeto de comando
+                cmd.CommandText = " INSERT INTO CAIXA (USUARIO, DATAABERTURA, VALORINICIAL) " +
+                                  " VALUES (@USUARIO, @DATAABERTURA, @VALORINICIAL) ";
 
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@USUARIO", objDados.UsuarioId);
+                cmd.Parameters.AddWithValue("@DATAABERTURA", objDados.DataAbertura);
+                cmd.Parameters.AddWithValue("@VALORINICIAL", objDados.TotalInicial);
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                cmd.ExecuteNonQuery();  //execução do comando
+                cmd.Dispose();
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
+        public void FecharCaixa(modCaixa objDados)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();  //objeto de comando
+                cmd.CommandText = " UPDATE CAIXA SET DATAFECHAMENTO = @DATAFECHAMENTO, TOTALFINAL = @TOTALFINAL, " +
+                                  " WHERE USUARIO = @USUARIO AND DATAFECHAMENTO IS NULL";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@USUARIO", objDados.UsuarioId);
+                cmd.Parameters.AddWithValue("@DATAFECHAMENTO", objDados.DataFechamento);
+                cmd.Parameters.AddWithValue("@VALORFINAL", objDados.TotalFinal);
+                cmd.Connection = cn;
+                cn.Open();
+                
+                //Executando o comando e armazenando o resultado em registro
+                int rows = cmd.ExecuteNonQuery();  //execução do comando
+                cmd.Dispose();
+
+                if (rows == 0)
+                {
+                    throw new Exception("Erro ao fechar o caixa.");
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
     }
 }

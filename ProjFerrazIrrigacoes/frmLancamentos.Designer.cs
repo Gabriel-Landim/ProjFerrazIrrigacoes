@@ -28,53 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.tbBuscaProdutoCompra = new System.Windows.Forms.TextBox();
             this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4.SuspendLayout();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(409, 39);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(365, 37);
-            this.panel4.TabIndex = 63;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("RBNo3.1 Book", 16F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.label12.Location = new System.Drawing.Point(102, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 28);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Lançamentos";
             // 
             // pProcurarCliente
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
             this.pProcurarCliente.Controls.Add(this.gvProdutosComprados);
-            this.pProcurarCliente.Location = new System.Drawing.Point(409, 55);
+            this.pProcurarCliente.Location = new System.Drawing.Point(479, 55);
             this.pProcurarCliente.Name = "pProcurarCliente";
             this.pProcurarCliente.Size = new System.Drawing.Size(365, 452);
             this.pProcurarCliente.TabIndex = 62;
@@ -111,10 +94,60 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cbCategoria);
-            this.panel2.Location = new System.Drawing.Point(86, 57);
+            this.panel2.Location = new System.Drawing.Point(156, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(303, 439);
+            this.panel2.Size = new System.Drawing.Size(303, 450);
             this.panel2.TabIndex = 64;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox3.Location = new System.Drawing.Point(20, 222);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(254, 91);
+            this.textBox3.TabIndex = 58;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(16, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 23);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Descrição";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox2.Location = new System.Drawing.Point(21, 168);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(254, 23);
+            this.textBox2.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(17, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 23);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Valor";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox1.Location = new System.Drawing.Point(20, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(254, 23);
+            this.textBox1.TabIndex = 54;
             // 
             // btAdicionar
             // 
@@ -159,55 +192,45 @@
             this.cbCategoria.Size = new System.Drawing.Size(254, 21);
             this.cbCategoria.TabIndex = 40;
             // 
-            // textBox1
+            // label12
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.Location = new System.Drawing.Point(20, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 23);
-            this.textBox1.TabIndex = 54;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("RBNo3.1 Book", 16F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.label12.Location = new System.Drawing.Point(102, 5);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(164, 28);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Lançamentos";
             // 
-            // textBox2
+            // panel4
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox2.Location = new System.Drawing.Point(21, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 23);
-            this.textBox2.TabIndex = 56;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Location = new System.Drawing.Point(479, 39);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(365, 37);
+            this.panel4.TabIndex = 63;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(17, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 23);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Vendedor";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(156, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(303, 37);
+            this.panel1.TabIndex = 64;
             // 
-            // textBox3
+            // label4
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox3.Location = new System.Drawing.Point(20, 222);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 91);
-            this.textBox3.TabIndex = 58;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(16, 196);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 23);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Descrição";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("RBNo3.1 Book", 16F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.label4.Location = new System.Drawing.Point(63, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 28);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Lançamentos";
             // 
             // frmLancamentos
             // 
@@ -215,27 +238,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(977, 620);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pProcurarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLancamentos";
             this.Text = "frmLancamentos";
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.pProcurarCliente.ResumeLayout(false);
             this.pProcurarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel pProcurarCliente;
         private System.Windows.Forms.TextBox tbBuscaProdutoCompra;
         private System.Windows.Forms.DataGridView gvProdutosComprados;
@@ -249,5 +272,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
     }
 }

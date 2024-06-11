@@ -275,5 +275,12 @@ namespace ProjFerrazIrrigacoes
                 CalculaDesconto();
             }
         }
+
+        private void BtnFecharCaixa_Click(object sender, EventArgs e)
+        {
+            frmCaixaAbrir telaCaixa = new frmCaixaAbrir();
+            telaCaixa.ShowDialog();
+            telaCaixa.Dispose();
+        }
     }
 }

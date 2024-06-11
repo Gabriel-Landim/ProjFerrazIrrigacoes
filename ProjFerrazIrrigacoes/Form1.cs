@@ -278,6 +278,16 @@ namespace ProjFerrazIrrigacoes
         {
 
         }
+
+        private void btnLancamentos_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Lançamentos";
+            this.PanelCarregar.Controls.Clear();
+            frmLancamentos FrmLancamentos_Vrb = new frmLancamentos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmLancamentos_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmLancamentos_Vrb);
+            FrmLancamentos_Vrb.Show();
+        }
     }
     }
 
