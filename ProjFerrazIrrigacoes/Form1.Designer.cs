@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelOrdemDeServico = new System.Windows.Forms.Panel();
+            this.btnLancamentos = new System.Windows.Forms.Button();
             this.BtnOrdemDeServico = new System.Windows.Forms.Button();
             this.PanelBuscar = new System.Windows.Forms.Panel();
             this.BtnBuscarCliente = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -145,12 +145,30 @@
             // PanelOrdemDeServico
             // 
             this.PanelOrdemDeServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.PanelOrdemDeServico.Controls.Add(this.button1);
+            this.PanelOrdemDeServico.Controls.Add(this.btnLancamentos);
             this.PanelOrdemDeServico.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelOrdemDeServico.Location = new System.Drawing.Point(0, 618);
             this.PanelOrdemDeServico.Name = "PanelOrdemDeServico";
             this.PanelOrdemDeServico.Size = new System.Drawing.Size(258, 46);
             this.PanelOrdemDeServico.TabIndex = 10;
+            // 
+            // btnLancamentos
+            // 
+            this.btnLancamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
+            this.btnLancamentos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLancamentos.FlatAppearance.BorderSize = 0;
+            this.btnLancamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnLancamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnLancamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLancamentos.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLancamentos.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLancamentos.Location = new System.Drawing.Point(0, 0);
+            this.btnLancamentos.Name = "btnLancamentos";
+            this.btnLancamentos.Size = new System.Drawing.Size(258, 45);
+            this.btnLancamentos.TabIndex = 6;
+            this.btnLancamentos.Text = "Lançamentos";
+            this.btnLancamentos.UseVisualStyleBackColor = false;
+            this.btnLancamentos.Click += new System.EventHandler(this.btnLancamentos_Click);
             // 
             // BtnOrdemDeServico
             // 
@@ -436,9 +454,8 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(69, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 18);
+            this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 16;
-            this.label2.Text = "01";
             // 
             // pictureBox3
             // 
@@ -466,11 +483,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(33, 12);
+            this.label3.Location = new System.Drawing.Point(37, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 18);
+            this.label3.Size = new System.Drawing.Size(51, 18);
             this.label3.TabIndex = 11;
-            this.label3.Text = "PDV";
+            this.label3.Text = "CAIXA";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
@@ -495,23 +512,6 @@
             this.BtnSair.TabIndex = 9;
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(35)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("RBNo3.1 Book", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 45);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Lançamentos";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -581,7 +581,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLancamentos;
     }
 }
 
