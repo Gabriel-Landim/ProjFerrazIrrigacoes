@@ -31,7 +31,7 @@ namespace ProjFerrazIrrigacoes
         private void CarregaCidade()
         {
             bllCidade objBusca = new bllCidade();
-            //cbCidade.DataSource = objBusca.CarregaCidade();
+            cbCidade.DataSource = objBusca.CarregaCidade();
             cbCidade.ValueMember = "Id";
             cbCidade.DisplayMember = "CidadeNome";
         }
