@@ -205,13 +205,13 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " INSERT INTO CAIXA (USUARIO, DATAABERTURA, VALORINICIAL) " +
-                                  " VALUES (@USUARIO, @DATAABERTURA, @VALORINICIAL) ";
+                cmd.CommandText = " INSERT INTO CAIXA (USUARIO, DATAABERTURA, TOTALINICIAL) " +
+                                  " VALUES (@USUARIO, @DATAABERTURA, @TOTALINICIAL) ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@USUARIO", objDados.UsuarioId);
                 cmd.Parameters.AddWithValue("@DATAABERTURA", objDados.DataAbertura);
-                cmd.Parameters.AddWithValue("@VALORINICIAL", objDados.TotalInicial);
+                cmd.Parameters.AddWithValue("@TOTALINICIAL", objDados.TotalInicial);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -235,7 +235,7 @@ namespace DAL
             }
 
         }
-        public void FecharCaixa(modCaixa objDados)
+        public void FecharCaixa(string usuario, DateTime dataFechamento, decimal totalFinal)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -248,9 +248,9 @@ namespace DAL
                                   " WHERE USUARIO = @USUARIO AND DATAFECHAMENTO IS NULL";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@USUARIO", objDados.UsuarioId);
-                cmd.Parameters.AddWithValue("@DATAFECHAMENTO", objDados.DataFechamento);
-                cmd.Parameters.AddWithValue("@VALORFINAL", objDados.TotalFinal);
+                cmd.Parameters.AddWithValue("@USUARIO", usuario);
+                cmd.Parameters.AddWithValue("@DATAFECHAMENTO", dataFechamento);
+                cmd.Parameters.AddWithValue("@TOTALFINAL", totalFinal);
                 cmd.Connection = cn;
                 cn.Open();
                 
@@ -262,6 +262,58 @@ namespace DAL
                 {
                     throw new Exception("Erro ao fechar o caixa.");
                 }
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
+        public int BuscarPorCodigo()
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ISNULL(ID, 0) AS ID FROM CAIXA " +
+                                  " WHERE DataAbertura IS NOT NULL AND DataFechamento IS NULL ";
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                var ListarCaixa = new List<modCaixa>();
+                int Id = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        // ListaIdProduto.Add(new modProduto()
+                        // {
+                        Id = Convert.ToInt32(registro["ID"]);
+                        // });
+                    }
+                }
+
+                return Id;
 
             }
             catch (SqlException ex)

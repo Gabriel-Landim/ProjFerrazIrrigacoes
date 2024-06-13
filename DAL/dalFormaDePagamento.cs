@@ -43,11 +43,9 @@ namespace DAL
                         {
                             Id = Convert.ToInt32(registro["Id"]),
                             Descricao = Convert.ToString(registro["Descricao"]),
-
                         });
                     }
                 }
-
 
                 return ListaFormadePag;
 

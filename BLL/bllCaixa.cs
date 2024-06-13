@@ -19,13 +19,19 @@ namespace BLL
             }
         }
 
-        public void FecharCaixa(modCaixa objDados)
+        public void FecharCaixa(string usuario, DateTime dataFechamento, decimal totalFinal)
         {
+            modCaixa objDados = new modCaixa();
             if (objDados.DataFechamento.ToString() != "")
             {
                 dalCaixa objFechar = new dalCaixa();
-                objFechar.FecharCaixa(objDados);
+                objFechar.FecharCaixa(usuario, dataFechamento, totalFinal);
             }
+        }
+        public int BuscaPorCodigo()
+        {
+            dalCaixa objBusca = new dalCaixa();
+            return objBusca.BuscarPorCodigo();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace DAL
                         {
                             Id = Convert.ToInt32(registro["Id"]),
                             Email = Convert.ToString(registro["Email"]),
+                            Nome = Convert.ToString(registro["Nome"])
                         });
                     }
                 }
