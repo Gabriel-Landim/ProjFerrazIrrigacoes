@@ -13,5 +13,8 @@ namespace Modelo
         public double ValorVenda { get; set; }
         public int IdCaixa { get; set; }
         public int IdFormaDePagamento { get; set; }
+        public int IdCliente { get; set; }
+        public double MaodeObra { get; set; }
+        public double Desconto { get; set; }
     }
 }

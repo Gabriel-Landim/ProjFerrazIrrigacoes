@@ -41,5 +41,11 @@ namespace BLL
             dalUsuario objModulo = new dalUsuario();
             return objModulo.CarregarCargo();
         }
+
+        public List<modUsuario> CarregaUsuario()
+        {
+            dalUsuario objdados = new dalUsuario();
+            return objdados.CarregarUsuario();
+        }
     }
 }

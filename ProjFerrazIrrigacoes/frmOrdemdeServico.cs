@@ -17,6 +17,7 @@ namespace ProjFerrazIrrigacoes
     {
         Comprar objCmp;
         int Codigovenda = 0;
+        int CodigoCaixa = 0;
 
         private BindingList<bllItensVenda> ItensVenda;
 
@@ -45,6 +46,8 @@ namespace ProjFerrazIrrigacoes
             CarregarUnidadeMedida();
             CarregarProduto();
             CarregaCliente();
+            CarregaFormaPagamento();
+            VerificaCaixa();
         }
 
         private void CarregarProduto()
@@ -90,7 +93,6 @@ namespace ProjFerrazIrrigacoes
             cbUnidadeMedida.DisplayMember = "NomeMedida";
             cbUnidadeMedida.Text = "";
         }
-
         private void CarregaCliente()
         {
             bllCliente objCarregar = new bllCliente();
@@ -100,7 +102,6 @@ namespace ProjFerrazIrrigacoes
             cbCliente.ValueMember = "Id";
             cbCliente.DisplayMember = "NomeCliente";
         }
-
         private void BuscaPorCodigoCliente(int Clienteid)
         {
             bllCliente objBusca = new bllCliente();
@@ -110,7 +111,19 @@ namespace ProjFerrazIrrigacoes
             tbTelefone.Text = objDados.TelefoneCliente.ToString();
             tbId.Text = objDados.Id.ToString();
         }
+        private void CarregaFormaPagamento()
+        {
+            bllFormaDePagamento objBusca = new bllFormaDePagamento();
+            cbFormaDePagamento.DataSource = objBusca.CarregaFormaPagamento();
+            cbFormaDePagamento.ValueMember = "Id";
+            cbFormaDePagamento.DisplayMember = "Descricao";
+        }
+        private void VerificaCaixa()
+        {
+            bllCaixa objBusca = new bllCaixa();
 
+            CodigoCaixa = objBusca.BuscaPorCodigo();
+        }
         private void cbProduto_TextChanged(object sender, EventArgs e)
         {
             //CarregarProduto();
@@ -281,6 +294,20 @@ namespace ProjFerrazIrrigacoes
             frmCaixaAbrir telaCaixa = new frmCaixaAbrir();
             telaCaixa.ShowDialog();
             telaCaixa.Dispose();
+        }
+
+        private void btnConcluirVenda_Click(object sender, EventArgs e)
+        {
+            modVenda objDados = new modVenda();
+            bllVenda objVenda = new bllVenda();
+
+            objDados.IdCliente = Convert.ToInt32(tbId.Text);
+            objDados.Desconto = Convert.ToDouble(tbDesconto.Text);
+            objDados.MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
+            objDados.ValorVenda = Convert.ToDouble(tbValorTotal.Text);
+            objDados.IdFormaDePagamento = Convert.ToInt32(cbFormaDePagamento.SelectedValue);
+
+            objVenda.Alterar(objDados);
         }
     }
 }

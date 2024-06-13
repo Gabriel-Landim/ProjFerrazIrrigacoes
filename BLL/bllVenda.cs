@@ -15,5 +15,11 @@ namespace BLL
             dalVenda objInserir = new dalVenda();
             return objInserir.Insere(objDados);
         }
+
+        public void Alterar(modVenda objDados)
+        {
+            dalVenda objAlterar = new dalVenda();
+            objAlterar.Alterar(objDados);
+        }
     }
 }

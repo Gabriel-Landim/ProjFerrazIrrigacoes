@@ -20,13 +20,8 @@ namespace ProjFerrazIrrigacoes
         {
             InitializeComponent();
             caixaBll = new bllCaixa();
+            
         }
-
-        private void btnAbrirCaixa_Click(object sender, EventArgs e)
-        {
- 
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -37,6 +32,54 @@ namespace ProjFerrazIrrigacoes
 
         }
 
-       
+        private void CarregaUsuario()
+        {
+            bllUsuario objBusca = new bllUsuario();
+            cbUsuario.DataSource = objBusca.CarregaUsuario();
+            cbUsuario.ValueMember = "Id";
+            cbUsuario.DisplayMember = "Nome";
+        }
+
+        private void frmCaixaAbrir_Shown(object sender, EventArgs e)
+        {
+            CarregaUsuario();
+        }
+        private void btnAbrirCaixa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modCaixa caixa = new modCaixa
+                {
+                    UsuarioId = Convert.ToInt32(cbUsuario.SelectedValue),
+                    DataAbertura = DateTime.Now,
+                    TotalInicial = Convert.ToDouble(tbValor.Text)
+                };
+                caixaBll.AbrirCaixa(caixa);
+
+                MessageBox.Show("Caixa aberto com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+        }
+
+        private void btnFecharCaixa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string usuario = cbUsuario.Text;
+                DateTime dataFechamento = DateTime.Parse(dtFechamento.Text);
+                decimal totalFinal = decimal.Parse(tbValor.Text);
+
+                caixaBll.FecharCaixa(usuario, dataFechamento, totalFinal);
+
+                MessageBox.Show("Caixa fechado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro:{ex.Message}");
+            }
+        }
     }
 }

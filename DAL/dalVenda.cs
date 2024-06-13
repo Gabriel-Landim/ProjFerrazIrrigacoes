@@ -136,17 +136,19 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao; //onde disparar o comando
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE VENDA SET DATAVENDA = @DATAVENDA, VALOR = @VALOR, CAIXA = @CAIXA, " +
-                                  " FORMADEPAGAMENTO = @FORMADEPAGAMENTO " +  //comando que eu quero
+                cmd.CommandText = " UPDATE VENDA SET VALOR = @VALOR, CAIXA = @CAIXA, " +
+                                  " FORMADEPAGAMENTO = @FORMADEPAGAMENTO, MAODEOBRA = @MAODEOBRA, DESCONTO = @DESCONTO, " +
+                                  " CLIENTEID = @CLIENTEID " +  //comando que eu quero
                                   " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@ID", objDados.Id);
-                cmd.Parameters.AddWithValue("DATAVENDA", objDados.DataVenda);
                 cmd.Parameters.AddWithValue("@VALOR", objDados.ValorVenda);
                 cmd.Parameters.AddWithValue("@CAIXA", objDados.IdCaixa);
                 cmd.Parameters.AddWithValue("@FORMADEPAGAMENTO", objDados.IdFormaDePagamento);
-
+                cmd.Parameters.AddWithValue("@MAODEOBRA", objDados.MaodeObra);
+                cmd.Parameters.AddWithValue("@DESCONTO", objDados.Desconto);
+                cmd.Parameters.AddWithValue("@CLIENTEID", objDados.IdCliente);
                 cmd.Connection = cn;
                 cn.Open();
 
