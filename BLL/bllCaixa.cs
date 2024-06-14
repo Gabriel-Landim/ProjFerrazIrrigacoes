@@ -18,8 +18,7 @@ namespace BLL
                 objAbrir.AbrirCaixa(objDados);
             }
         }
-
-        public void FecharCaixa(string usuario, DateTime dataFechamento, decimal totalFinal)
+        public void FecharCaixa(int usuario, DateTime dataFechamento, decimal totalFinal)
         {
             modCaixa objDados = new modCaixa();
             if (objDados.DataFechamento.ToString() != "")

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace ProjFerrazIrrigacoes
         }
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace ProjFerrazIrrigacoes
         {
             try
             {
-                string usuario = cbUsuario.Text;
+                int usuario = Convert.ToInt32(cbUsuario.SelectedValue);
                 DateTime dataFechamento = DateTime.Parse(dtFechamento.Text);
                 decimal totalFinal = decimal.Parse(tbValor.Text);
 

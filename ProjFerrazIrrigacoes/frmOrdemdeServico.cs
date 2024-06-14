@@ -123,6 +123,11 @@ namespace ProjFerrazIrrigacoes
             bllCaixa objBusca = new bllCaixa();
 
             CodigoCaixa = objBusca.BuscaPorCodigo();
+
+            if (CodigoCaixa == 0)
+            {
+                btnNovaVenda.Visible = false;
+            }
         }
         private void cbProduto_TextChanged(object sender, EventArgs e)
         {
@@ -168,6 +173,10 @@ namespace ProjFerrazIrrigacoes
 
 
             gvProdutosComprados.DataSource = objbusca.CarregaItensVenda(Codigovenda);
+            gvProdutosComprados.Columns[0].Visible = false;
+            gvProdutosComprados.Columns[4].Visible = false;
+            gvProdutosComprados.Columns[5].Visible = false;
+            gvProdutosComprados.Columns[6].Visible = false;
 
             CalculaSubTotal();
 
@@ -306,8 +315,21 @@ namespace ProjFerrazIrrigacoes
             objDados.MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
             objDados.ValorVenda = Convert.ToDouble(tbValorTotal.Text);
             objDados.IdFormaDePagamento = Convert.ToInt32(cbFormaDePagamento.SelectedValue);
+            objDados.Id = Codigovenda;
+            objDados.IdCaixa = CodigoCaixa;
 
             objVenda.Alterar(objDados);
+
+            modLancamento objLancamento = new modLancamento();
+            bllLancamento objLancar = new bllLancamento();
+
+            objLancamento.Movimento = "C";
+            objLancamento.Data = DateTime.Now;
+            objLancamento.IdVenda = Codigovenda;
+            objLancamento.Valor = Convert.ToDouble(tbValorTotal.Text);
+            objLancamento.Descricao = "Venda Realizada Cliente: " + cbCliente.Text;
+
+            objLancar.Inserir(objLancamento);
         }
     }
 }

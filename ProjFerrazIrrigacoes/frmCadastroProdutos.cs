@@ -108,6 +108,12 @@ namespace ProjFerrazIrrigacoes
         {
             bllProduto objbusca = new bllProduto();
             gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBusca.Text);
+
+            gvProdutos.Columns[0].Visible = false;
+            gvProdutos.Columns[5].Visible = false;
+            gvProdutos.Columns[6].Visible = false;
+            gvProdutos.Columns[7].Visible = false;
+
         }
 
         private void btnMarcaAdd_Click(object sender, EventArgs e)

@@ -50,6 +50,7 @@
     <Compile Include="modFormaDePagamento.cs" />
     <Compile Include="modItensOrcamento.cs" />
     <Compile Include="modItensVenda.cs" />
+    <Compile Include="modLancamento.cs" />
     <Compile Include="modMarca.cs" />
     <Compile Include="modOrcamentos.cs" />
     <Compile Include="modProduto.cs" />
