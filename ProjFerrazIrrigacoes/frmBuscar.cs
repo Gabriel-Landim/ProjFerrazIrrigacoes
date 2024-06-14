@@ -143,6 +143,9 @@ namespace ProjFerrazIrrigacoes
         {
             bllCliente objbusca = new bllCliente();
             gvBuscaNome.DataSource = objbusca.SelecionarPorNome(tbBuscaCliente.Text);
+
+            gvBuscaNome.Columns[10].Visible = false;
+            gvBuscaNome.Columns[11].Visible = false;
         }
 
         private void gvBuscaNome_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -36,7 +36,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,11 +85,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.btAdicionar);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
@@ -140,15 +140,6 @@
             this.label1.TabIndex = 55;
             this.label1.Text = "Valor";
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.Location = new System.Drawing.Point(20, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 23);
-            this.textBox1.TabIndex = 54;
-            // 
             // btAdicionar
             // 
             this.btAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -168,9 +159,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(16, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 23);
+            this.label2.Size = new System.Drawing.Size(52, 23);
             this.label2.TabIndex = 29;
-            this.label2.Text = "ID";
+            this.label2.Text = "Data";
             // 
             // label3
             // 
@@ -179,14 +170,16 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(17, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 23);
+            this.label3.Size = new System.Drawing.Size(108, 23);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Tipo";
+            this.label3.Text = "Movimento";
             // 
             // cbCategoria
             // 
-            this.cbCategoria.Enabled = false;
             this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "C",
+            "D"});
             this.cbCategoria.Location = new System.Drawing.Point(20, 119);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(254, 21);
@@ -232,6 +225,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Lançamentos";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(20, 69);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker1.TabIndex = 59;
+            // 
             // frmLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +267,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

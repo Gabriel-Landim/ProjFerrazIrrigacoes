@@ -96,7 +96,6 @@ namespace DAL
                 //Executando o comando e armazenando o resultado em registro
                 cmd.ExecuteNonQuery();  //execução do comando
                 cmd.Dispose();
-
             }
             catch (SqlException ex)
             {
@@ -111,7 +110,6 @@ namespace DAL
                 cn.Close();
                 cn.Dispose();
             }
-
         }
         public void Alterar(modCaixa objDados)
         {
@@ -235,7 +233,7 @@ namespace DAL
             }
 
         }
-        public void FecharCaixa(string usuario, DateTime dataFechamento, decimal totalFinal)
+        public void FecharCaixa(int usuario, DateTime dataFechamento, decimal totalFinal)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -244,7 +242,7 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
-                cmd.CommandText = " UPDATE CAIXA SET DATAFECHAMENTO = @DATAFECHAMENTO, TOTALFINAL = @TOTALFINAL, " +
+                cmd.CommandText = " UPDATE CAIXA SET DATAFECHAMENTO = @DATAFECHAMENTO, TOTALFINAL = @TOTALFINAL " +
                                   " WHERE USUARIO = @USUARIO AND DATAFECHAMENTO IS NULL";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha

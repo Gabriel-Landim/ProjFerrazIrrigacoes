@@ -51,6 +51,7 @@
     <Compile Include="dalFormaDePagamento.cs" />
     <Compile Include="dalItemOrcamento.cs" />
     <Compile Include="dalItensVenda.cs" />
+    <Compile Include="dalLancamento.cs" />
     <Compile Include="dalMarca.cs" />
     <Compile Include="dalOrcamento.cs" />
     <Compile Include="dalProduto.cs" />

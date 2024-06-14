@@ -49,6 +49,7 @@
     <Compile Include="bllFormaDePagamento.cs" />
     <Compile Include="bllItemOrcamento.cs" />
     <Compile Include="bllItensVenda.cs" />
+    <Compile Include="bllLancamento.cs" />
     <Compile Include="bllMarca.cs" />
     <Compile Include="bllOrcamento.cs" />
     <Compile Include="bllProduto.cs" />

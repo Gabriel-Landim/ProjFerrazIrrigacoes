@@ -130,6 +130,11 @@ namespace ProjFerrazIrrigacoes
         {
             bllProduto objbusca = new bllProduto();
             gvProdutos.DataSource = objbusca.SelecionarPorNome(tbBuscaProduto.Text);
+
+            gvProdutos.Columns[0].Visible = false;
+            gvProdutos.Columns[5].Visible = false;
+            gvProdutos.Columns[6].Visible = false;
+            gvProdutos.Columns[7].Visible = false;
         }
 
         private void gvProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
