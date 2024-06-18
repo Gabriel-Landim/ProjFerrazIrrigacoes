@@ -233,7 +233,7 @@ namespace DAL
             }
 
         }
-        public void FecharCaixa(int usuario, DateTime dataFechamento, decimal totalFinal)
+        public void FecharCaixa(int Id, DateTime dataFechamento, decimal totalFinal)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -243,10 +243,10 @@ namespace DAL
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();  //objeto de comando
                 cmd.CommandText = " UPDATE CAIXA SET DATAFECHAMENTO = @DATAFECHAMENTO, TOTALFINAL = @TOTALFINAL " +
-                                  " WHERE USUARIO = @USUARIO AND DATAFECHAMENTO IS NULL";
+                                  " WHERE ID = @ID ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
-                cmd.Parameters.AddWithValue("@USUARIO", usuario);
+                cmd.Parameters.AddWithValue("@ID", Id);
                 cmd.Parameters.AddWithValue("@DATAFECHAMENTO", dataFechamento);
                 cmd.Parameters.AddWithValue("@TOTALFINAL", totalFinal);
                 cmd.Connection = cn;
@@ -312,6 +312,62 @@ namespace DAL
                 }
 
                 return Id;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+        }
+        public double CalculaCaixa(int Caixa)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();  //objeto de comando
+                cmd.CommandText = " CALCULACAIXA @CAIXAID ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha              
+                cmd.Parameters.AddWithValue("@CAIXAID", Caixa);
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                double Saldo = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+
+                        Saldo = Convert.ToInt32(registro["TOTALCAIXA"]);
+
+
+                    }
+                }
+
+
+                return Saldo;
 
             }
             catch (SqlException ex)

@@ -307,29 +307,42 @@ namespace ProjFerrazIrrigacoes
 
         private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-            modVenda objDados = new modVenda();
-            bllVenda objVenda = new bllVenda();
+            try {
+                modVenda objDados = new modVenda();
+                bllVenda objVenda = new bllVenda();
 
-            objDados.IdCliente = Convert.ToInt32(tbId.Text);
-            objDados.Desconto = Convert.ToDouble(tbDesconto.Text);
-            objDados.MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
-            objDados.ValorVenda = Convert.ToDouble(tbValorTotal.Text);
-            objDados.IdFormaDePagamento = Convert.ToInt32(cbFormaDePagamento.SelectedValue);
-            objDados.Id = Codigovenda;
-            objDados.IdCaixa = CodigoCaixa;
+                objDados.IdCliente = Convert.ToInt32(tbId.Text);
+                objDados.Desconto = Convert.ToDouble(tbDesconto.Text);
+                objDados.MaodeObra = Convert.ToDouble(tbMaodeObra.Text);
+                objDados.ValorVenda = Convert.ToDouble(tbValorTotal.Text);
+                objDados.IdFormaDePagamento = Convert.ToInt32(cbFormaDePagamento.SelectedValue);
+                objDados.Id = Codigovenda;
+                objDados.IdCaixa = CodigoCaixa;
 
-            objVenda.Alterar(objDados);
+                objVenda.Alterar(objDados);
 
-            modLancamento objLancamento = new modLancamento();
-            bllLancamento objLancar = new bllLancamento();
+                modLancamento objLancamento = new modLancamento();
+                bllLancamento objLancar = new bllLancamento();
 
-            objLancamento.Movimento = "C";
-            objLancamento.Data = DateTime.Now;
-            objLancamento.IdVenda = Codigovenda;
-            objLancamento.Valor = Convert.ToDouble(tbValorTotal.Text);
-            objLancamento.Descricao = "Venda Realizada Cliente: " + cbCliente.Text;
+                objLancamento.Movimento = "C";
+                objLancamento.Data = DateTime.Now;
+                objLancamento.IdVenda = Codigovenda;
+                objLancamento.IdCaixa = CodigoCaixa;
+                objLancamento.Valor = Convert.ToDouble(tbValorTotal.Text);
+                objLancamento.Descricao = "Venda Realizada Cliente: " + cbCliente.Text;
 
-            objLancar.Inserir(objLancamento);
+                objLancar.Inserir(objLancamento);
+
+                MessageBox.Show("Venda realizada com sucesso");
+            }
+            
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+
+
+
         }
     }
 }

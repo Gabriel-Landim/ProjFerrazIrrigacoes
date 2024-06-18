@@ -77,14 +77,23 @@ namespace ProjFerrazIrrigacoes
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Realmente deseja excluir?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            try 
             {
-                bllCliente objexcluir = new bllCliente();
-                objexcluir.Excluir(Convert.ToInt32(tbId.Text));
-                gvBuscaNome.DataSource = null;
-                MessageBox.Show("Exclusão realizada com sucesso!");
+                DialogResult result = MessageBox.Show("Realmente deseja excluir?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    bllCliente objexcluir = new bllCliente();
+                    objexcluir.Excluir(Convert.ToInt32(tbId.Text));
+                    gvBuscaNome.DataSource = null;
+                    MessageBox.Show("Exclusão realizada com sucesso!");
+                }
             }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -94,32 +103,38 @@ namespace ProjFerrazIrrigacoes
 
         private void btGravar_Click(object sender, EventArgs e)
         {
-            bllCliente objgravar = new bllCliente();
-            modCliente objdados = new modCliente();
+            
+            
+                bllCliente objgravar = new bllCliente();
+                modCliente objdados = new modCliente();
 
-            if (operacao == "I")
-            {
-                objdados.NomeCliente = tbNomeCliente.Text;
-                objgravar.Inserir(objdados);
-            }
+                if (operacao == "I")
+                {
+                    objdados.NomeCliente = tbNomeCliente.Text;
+                    objgravar.Inserir(objdados);
+                }
 
-            else
-            {
-                objdados.Id = Convert.ToInt32(tbId.Text);
-                objdados.NomeCliente = tbNomeCliente.Text;
-                objdados.Cpf = Convert.ToString(tbCpf.Text);
-                objdados.Cep = Convert.ToString(tbCep.Text);
-                objdados.IdCidade = Convert.ToInt32(cbCidade.SelectedValue);
-                objdados.Rua = Convert.ToString(tbRua.Text);
-                objdados.Bairro = Convert.ToString(tbBairro.Text);
-                objdados.NumeroEndereco = Convert.ToString(tbNumero.Text);
-                objdados.Complemento = Convert.ToString(tbComplemento.Text);
-                objdados.TelefoneCliente = Convert.ToString(tbTelefone.Text);
-                objdados.Email = Convert.ToString(tbEmail.Text);
+                else
+                {
+                    objdados.Id = Convert.ToInt32(tbId.Text);
+                    objdados.NomeCliente = tbNomeCliente.Text;
+                    objdados.Cpf = Convert.ToString(tbCpf.Text);
+                    objdados.Cep = Convert.ToString(tbCep.Text);
+                    objdados.IdCidade = Convert.ToInt32(cbCidade.SelectedValue);
+                    objdados.Rua = Convert.ToString(tbRua.Text);
+                    objdados.Bairro = Convert.ToString(tbBairro.Text);
+                    objdados.NumeroEndereco = Convert.ToString(tbNumero.Text);
+                    objdados.Complemento = Convert.ToString(tbComplemento.Text);
+                    objdados.TelefoneCliente = Convert.ToString(tbTelefone.Text);
+                    objdados.Email = Convert.ToString(tbEmail.Text);
 
-                objgravar.Alterar(objdados);
-            }
-            MessageBox.Show("Alteração Efetuada!");
+                    objgravar.Alterar(objdados);
+                }
+                MessageBox.Show("Alteração Efetuada!");
+            
+
+            
+
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
