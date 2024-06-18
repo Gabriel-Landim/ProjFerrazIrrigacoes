@@ -30,23 +30,23 @@
         {
             this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.tbBuscaProdutoCompra = new System.Windows.Forms.TextBox();
-            this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
+            this.gvLancamentos = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbDescricao = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbValorLancamento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.cbMovimento = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pProcurarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLancamentos)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,7 +56,7 @@
             // 
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
-            this.pProcurarCliente.Controls.Add(this.gvProdutosComprados);
+            this.pProcurarCliente.Controls.Add(this.gvLancamentos);
             this.pProcurarCliente.Location = new System.Drawing.Point(479, 55);
             this.pProcurarCliente.Name = "pProcurarCliente";
             this.pProcurarCliente.Size = new System.Drawing.Size(365, 452);
@@ -72,42 +72,49 @@
             this.tbBuscaProdutoCompra.TabIndex = 31;
             this.tbBuscaProdutoCompra.Text = "Digite o produto";
             // 
-            // gvProdutosComprados
+            // gvLancamentos
             // 
-            this.gvProdutosComprados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.gvProdutosComprados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gvProdutosComprados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvProdutosComprados.Location = new System.Drawing.Point(9, 55);
-            this.gvProdutosComprados.Name = "gvProdutosComprados";
-            this.gvProdutosComprados.Size = new System.Drawing.Size(346, 386);
-            this.gvProdutosComprados.TabIndex = 20;
+            this.gvLancamentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.gvLancamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvLancamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvLancamentos.Location = new System.Drawing.Point(9, 55);
+            this.gvLancamentos.Name = "gvLancamentos";
+            this.gvLancamentos.Size = new System.Drawing.Size(346, 386);
+            this.gvLancamentos.TabIndex = 20;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.tbDescricao);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.tbValorLancamento);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btAdicionar);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.cbCategoria);
+            this.panel2.Controls.Add(this.cbMovimento);
             this.panel2.Location = new System.Drawing.Point(156, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 450);
             this.panel2.TabIndex = 64;
             // 
-            // textBox3
+            // dateTimePicker1
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox3.Location = new System.Drawing.Point(20, 222);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 91);
-            this.textBox3.TabIndex = 58;
+            this.dateTimePicker1.Location = new System.Drawing.Point(20, 69);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker1.TabIndex = 59;
+            // 
+            // tbDescricao
+            // 
+            this.tbDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbDescricao.Location = new System.Drawing.Point(20, 222);
+            this.tbDescricao.Multiline = true;
+            this.tbDescricao.Name = "tbDescricao";
+            this.tbDescricao.Size = new System.Drawing.Size(254, 91);
+            this.tbDescricao.TabIndex = 58;
             // 
             // label6
             // 
@@ -120,14 +127,14 @@
             this.label6.TabIndex = 57;
             this.label6.Text = "Descrição";
             // 
-            // textBox2
+            // tbValorLancamento
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox2.Location = new System.Drawing.Point(21, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 23);
-            this.textBox2.TabIndex = 56;
+            this.tbValorLancamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbValorLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbValorLancamento.Location = new System.Drawing.Point(21, 168);
+            this.tbValorLancamento.Name = "tbValorLancamento";
+            this.tbValorLancamento.Size = new System.Drawing.Size(254, 23);
+            this.tbValorLancamento.TabIndex = 56;
             // 
             // label1
             // 
@@ -151,6 +158,7 @@
             this.btAdicionar.TabIndex = 51;
             this.btAdicionar.Text = "Adicionar";
             this.btAdicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
             // label2
             // 
@@ -174,16 +182,16 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Movimento";
             // 
-            // cbCategoria
+            // cbMovimento
             // 
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
+            this.cbMovimento.FormattingEnabled = true;
+            this.cbMovimento.Items.AddRange(new object[] {
             "C",
             "D"});
-            this.cbCategoria.Location = new System.Drawing.Point(20, 119);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(254, 21);
-            this.cbCategoria.TabIndex = 40;
+            this.cbMovimento.Location = new System.Drawing.Point(20, 119);
+            this.cbMovimento.Name = "cbMovimento";
+            this.cbMovimento.Size = new System.Drawing.Size(254, 21);
+            this.cbMovimento.TabIndex = 40;
             // 
             // label12
             // 
@@ -225,13 +233,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Lançamentos";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(20, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker1.TabIndex = 59;
-            // 
             // frmLancamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,9 +246,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLancamentos";
             this.Text = "frmLancamentos";
+            this.Shown += new System.EventHandler(this.frmLancamentos_Shown);
             this.pProcurarCliente.ResumeLayout(false);
             this.pProcurarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLancamentos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -261,16 +263,16 @@
         #endregion
         private System.Windows.Forms.Panel pProcurarCliente;
         private System.Windows.Forms.TextBox tbBuscaProdutoCompra;
-        private System.Windows.Forms.DataGridView gvProdutosComprados;
+        private System.Windows.Forms.DataGridView gvLancamentos;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbValorLancamento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.ComboBox cbMovimento;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;

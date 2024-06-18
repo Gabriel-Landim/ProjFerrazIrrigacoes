@@ -18,19 +18,25 @@ namespace BLL
                 objAbrir.AbrirCaixa(objDados);
             }
         }
-        public void FecharCaixa(int usuario, DateTime dataFechamento, decimal totalFinal)
+        public void FecharCaixa(int Id, DateTime dataFechamento, decimal totalFinal)
         {
             modCaixa objDados = new modCaixa();
             if (objDados.DataFechamento.ToString() != "")
             {
                 dalCaixa objFechar = new dalCaixa();
-                objFechar.FecharCaixa(usuario, dataFechamento, totalFinal);
+                objFechar.FecharCaixa(Id, dataFechamento, totalFinal);
             }
         }
         public int BuscaPorCodigo()
         {
             dalCaixa objBusca = new dalCaixa();
             return objBusca.BuscarPorCodigo();
+        }
+
+        public double CalculaCaixa(int Caixa)
+        {
+            dalCaixa objBusca = new dalCaixa();
+            return objBusca.CalculaCaixa(Caixa);
         }
     }
 }

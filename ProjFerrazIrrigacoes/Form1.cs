@@ -9,14 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
+using BLL;
+using Modelo;
+using DAL;
 
 
 namespace ProjFerrazIrrigacoes
 {
     public partial class Form1 : Form
     {
+        int CodigoCaixa = 0;
         public Color ColorTop { get; set; }
         public Color ColorBottom { get; set; }
+
+        public void TrocaCaixa(bool status)
+        {
+            if (status)
+            {
+                lbCaixa.Text = "Aberto";
+            }
+            else
+            {
+                lbCaixa.Text = "Fechado";
+            }
+            
+        }
+
+
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -42,6 +61,7 @@ namespace ProjFerrazIrrigacoes
             SubPanel();
             SubPanelBuscar();
             SubPanelOrdemDeServico();
+            VerificaCaixa();
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));          
 
             TituloDashboard.Text = "DashBoard";
@@ -287,6 +307,30 @@ namespace ProjFerrazIrrigacoes
             FrmLancamentos_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.PanelCarregar.Controls.Add(FrmLancamentos_Vrb);
             FrmLancamentos_Vrb.Show();
+        }
+
+        private void VerificaCaixa()
+        {
+            bllCaixa objBusca = new bllCaixa();
+
+            CodigoCaixa = objBusca.BuscaPorCodigo();
+
+            if (CodigoCaixa == 0)
+            {
+                lbCaixa.Text = "FECHADO";
+                lbCaixa.ForeColor = Color.Red;
+            }
+
+            else if (CodigoCaixa != 0)
+            {
+                lbCaixa.Text = "ABERTO";
+                lbCaixa.ForeColor = Color.Green;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            VerificaCaixa();
         }
     }
     }

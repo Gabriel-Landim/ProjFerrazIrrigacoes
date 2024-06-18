@@ -14,5 +14,6 @@ namespace Modelo
         public string Descricao { get; set; }
         public int IdVenda { get; set; }
         public DateTime Data { get; set; }
+        public int IdCaixa { get; set; }
     }
 }

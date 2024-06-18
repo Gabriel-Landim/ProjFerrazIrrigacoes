@@ -16,6 +16,7 @@ namespace ProjFerrazIrrigacoes
 {
     public partial class frmCaixaAbrir : Form
     {
+        int CodigoCaixa = 0;
         private bllCaixa caixaBll;
         public frmCaixaAbrir()
         {
@@ -44,6 +45,7 @@ namespace ProjFerrazIrrigacoes
         private void frmCaixaAbrir_Shown(object sender, EventArgs e)
         {
             CarregaUsuario();
+            VerificaCaixa();
         }
         private void btnAbrirCaixa_Click(object sender, EventArgs e)
         {
@@ -63,23 +65,42 @@ namespace ProjFerrazIrrigacoes
             {
                 MessageBox.Show($"Erro: {ex.Message}");
             }
+
         }
 
         private void btnFecharCaixa_Click(object sender, EventArgs e)
         {
             try
             {
-                int usuario = Convert.ToInt32(cbUsuario.SelectedValue);
                 DateTime dataFechamento = DateTime.Parse(dtFechamento.Text);
                 decimal totalFinal = decimal.Parse(tbValor.Text);
 
-                caixaBll.FecharCaixa(usuario, dataFechamento, totalFinal);
+                caixaBll.FecharCaixa(CodigoCaixa, dataFechamento, totalFinal);
 
                 MessageBox.Show("Caixa fechado com sucesso!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro:{ex.Message}");
+            }
+        }
+        private void VerificaCaixa()
+        {
+            bllCaixa objBusca = new bllCaixa();
+
+            CodigoCaixa = objBusca.BuscaPorCodigo();
+
+            if (CodigoCaixa == 0)
+            {
+                btnFecharCaixa.Visible = false;
+            }
+
+            else if (CodigoCaixa != 0)
+            {
+                btnAbrirCaixa.Visible = false;
+
+                bllCaixa objSaldo = new bllCaixa();
+                tbValor.Text = Convert.ToString(objSaldo.CalculaCaixa(CodigoCaixa));
             }
         }
     }

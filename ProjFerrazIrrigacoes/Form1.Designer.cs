@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TituloDashboard = new System.Windows.Forms.Label();
             this.PainelNav = new System.Windows.Forms.Panel();
             this.PanelCarregar = new System.Windows.Forms.Panel();
@@ -57,10 +58,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbCaixa = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.BtnSair = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -439,7 +441,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lbCaixa);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Location = new System.Drawing.Point(792, 19);
@@ -467,16 +469,16 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // label1
+            // lbCaixa
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(30, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "OFFILINE";
+            this.lbCaixa.AutoSize = true;
+            this.lbCaixa.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 10F, System.Drawing.FontStyle.Bold);
+            this.lbCaixa.ForeColor = System.Drawing.Color.Crimson;
+            this.lbCaixa.Location = new System.Drawing.Point(30, 28);
+            this.lbCaixa.Name = "lbCaixa";
+            this.lbCaixa.Size = new System.Drawing.Size(72, 18);
+            this.lbCaixa.TabIndex = 14;
+            this.lbCaixa.Text = "OFFILINE";
             // 
             // label3
             // 
@@ -512,6 +514,11 @@
             this.BtnSair.TabIndex = 9;
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -576,12 +583,13 @@
         private System.Windows.Forms.Label tbCargo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCaixa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLancamentos;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
