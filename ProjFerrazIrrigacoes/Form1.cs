@@ -127,10 +127,6 @@ namespace ProjFerrazIrrigacoes
 
             TituloDashboard.Text = "Ordem de Servico";
             this.PanelCarregar.Controls.Clear();
-            frmOrdemdeServico FrmOrdemdeServico_Vrb = new frmOrdemdeServico() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmOrdemdeServico_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(FrmOrdemdeServico_Vrb);
-            FrmOrdemdeServico_Vrb.Show();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -164,7 +160,7 @@ namespace ProjFerrazIrrigacoes
             if (ShowPanel)
             {
 
-                PanelOrdemDeServico.Height = 46;
+                PanelOrdemDeServico.Height = 90;
             }
             else
             {
@@ -296,17 +292,7 @@ namespace ProjFerrazIrrigacoes
         private void label3_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnLancamentos_Click(object sender, EventArgs e)
-        {
-            TituloDashboard.Text = "Lançamentos";
-            this.PanelCarregar.Controls.Clear();
-            frmLancamentos FrmLancamentos_Vrb = new frmLancamentos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmLancamentos_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.PanelCarregar.Controls.Add(FrmLancamentos_Vrb);
-            FrmLancamentos_Vrb.Show();
-        }
+        }    
 
         private void VerificaCaixa()
         {
@@ -338,6 +324,26 @@ namespace ProjFerrazIrrigacoes
         private void timer1_Tick(object sender, EventArgs e)
         {
             VerificaCaixa();
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Vendas";
+            this.PanelCarregar.Controls.Clear();
+            frmOrdemdeServico FrmOrdemdeServico_Vrb = new frmOrdemdeServico() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmOrdemdeServico_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmOrdemdeServico_Vrb);
+            FrmOrdemdeServico_Vrb.Show();
+        }
+
+        private void btnLancamentos_Click_1(object sender, EventArgs e)
+        {
+            TituloDashboard.Text = "Lançamentos";
+            this.PanelCarregar.Controls.Clear();
+            frmLancamentos FrmLancamentos_Vrb = new frmLancamentos() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmLancamentos_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PanelCarregar.Controls.Add(FrmLancamentos_Vrb);
+            FrmLancamentos_Vrb.Show();
         }
     }
     }

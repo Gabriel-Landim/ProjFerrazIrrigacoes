@@ -62,10 +62,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.cbFormaDePagamento = new System.Windows.Forms.ComboBox();
             this.tbValorTotal = new System.Windows.Forms.MaskedTextBox();
             this.tbMaodeObra = new System.Windows.Forms.MaskedTextBox();
@@ -73,7 +71,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnConcluirVenda = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -81,32 +78,18 @@
             this.btnNovaVenda = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tbTotCaixa = new System.Windows.Forms.MaskedTextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbTotVendas = new System.Windows.Forms.MaskedTextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tbTotAbertura = new System.Windows.Forms.MaskedTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.BtnFecharCaixa = new System.Windows.Forms.Button();
             this.BtnAbrirCaixa = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pProcurarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -131,7 +114,8 @@
             this.panel2.Controls.Add(this.tbPreçoUnit);
             this.panel2.Controls.Add(this.tbValor);
             this.panel2.Controls.Add(this.tbQuantidade);
-            this.panel2.Location = new System.Drawing.Point(29, 129);
+            this.panel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel2.Location = new System.Drawing.Point(16, 136);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 439);
             this.panel2.TabIndex = 57;
@@ -346,9 +330,10 @@
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
             this.pProcurarCliente.Controls.Add(this.gvProdutosComprados);
             this.pProcurarCliente.Controls.Add(this.btDeletar);
-            this.pProcurarCliente.Location = new System.Drawing.Point(336, 116);
+            this.pProcurarCliente.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.pProcurarCliente.Location = new System.Drawing.Point(330, 123);
             this.pProcurarCliente.Name = "pProcurarCliente";
-            this.pProcurarCliente.Size = new System.Drawing.Size(365, 452);
+            this.pProcurarCliente.Size = new System.Drawing.Size(470, 452);
             this.pProcurarCliente.TabIndex = 53;
             // 
             // label31
@@ -378,18 +363,18 @@
             this.tbsubTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbsubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tbsubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbsubTotal.Location = new System.Drawing.Point(131, 411);
+            this.tbsubTotal.Location = new System.Drawing.Point(131, 412);
             this.tbsubTotal.Name = "tbsubTotal";
-            this.tbsubTotal.Size = new System.Drawing.Size(115, 26);
+            this.tbsubTotal.Size = new System.Drawing.Size(211, 26);
             this.tbsubTotal.TabIndex = 62;
             // 
             // tbBuscaProdutoCompra
             // 
             this.tbBuscaProdutoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.tbBuscaProdutoCompra.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.tbBuscaProdutoCompra.Location = new System.Drawing.Point(9, 32);
+            this.tbBuscaProdutoCompra.Location = new System.Drawing.Point(7, 32);
             this.tbBuscaProdutoCompra.Name = "tbBuscaProdutoCompra";
-            this.tbBuscaProdutoCompra.Size = new System.Drawing.Size(346, 27);
+            this.tbBuscaProdutoCompra.Size = new System.Drawing.Size(458, 27);
             this.tbBuscaProdutoCompra.TabIndex = 31;
             this.tbBuscaProdutoCompra.Text = "Digite o produto";
             this.tbBuscaProdutoCompra.TextChanged += new System.EventHandler(this.tbBuscaProdutoCompra_TextChanged);
@@ -399,9 +384,9 @@
             this.gvProdutosComprados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.gvProdutosComprados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvProdutosComprados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvProdutosComprados.Location = new System.Drawing.Point(9, 55);
+            this.gvProdutosComprados.Location = new System.Drawing.Point(7, 55);
             this.gvProdutosComprados.Name = "gvProdutosComprados";
-            this.gvProdutosComprados.Size = new System.Drawing.Size(346, 346);
+            this.gvProdutosComprados.Size = new System.Drawing.Size(458, 346);
             this.gvProdutosComprados.TabIndex = 20;
             this.gvProdutosComprados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProdutosComprados_CellDoubleClick);
             // 
@@ -410,7 +395,7 @@
             this.btDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.btDeletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btDeletar.Location = new System.Drawing.Point(252, 411);
+            this.btDeletar.Location = new System.Drawing.Point(359, 411);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(101, 29);
             this.btDeletar.TabIndex = 59;
@@ -421,15 +406,17 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.panel3.Controls.Add(this.BtnAbrirCaixa);
             this.panel3.Controls.Add(this.tbTelefone);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.cbCliente);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.tbId);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(29, 43);
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel3.Location = new System.Drawing.Point(16, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(672, 41);
+            this.panel3.Size = new System.Drawing.Size(945, 41);
             this.panel3.TabIndex = 60;
             // 
             // tbTelefone
@@ -437,7 +424,7 @@
             this.tbTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbTelefone.Enabled = false;
             this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tbTelefone.Location = new System.Drawing.Point(523, 7);
+            this.tbTelefone.Location = new System.Drawing.Point(534, 7);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(133, 26);
             this.tbTelefone.TabIndex = 54;
@@ -447,7 +434,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(434, 10);
+            this.label10.Location = new System.Drawing.Point(445, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 22);
             this.label10.TabIndex = 53;
@@ -482,7 +469,7 @@
             this.tbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tbId.Location = new System.Drawing.Point(380, 7);
+            this.tbId.Location = new System.Drawing.Point(381, 8);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(50, 26);
             this.tbId.TabIndex = 28;
@@ -492,38 +479,18 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(352, 10);
+            this.label9.Location = new System.Drawing.Point(353, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 22);
             this.label9.TabIndex = 27;
             this.label9.Text = "ID";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.cbFormaDePagamento);
-            this.panel1.Controls.Add(this.tbValorTotal);
-            this.panel1.Controls.Add(this.tbMaodeObra);
-            this.panel1.Controls.Add(this.tbDesconto);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.btnConcluirVenda);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Location = new System.Drawing.Point(707, 365);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 203);
-            this.panel1.TabIndex = 58;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label27.Location = new System.Drawing.Point(127, 86);
+            this.label27.Location = new System.Drawing.Point(15, 183);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(32, 20);
             this.label27.TabIndex = 76;
@@ -534,22 +501,11 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label26.Location = new System.Drawing.Point(127, 54);
+            this.label26.Location = new System.Drawing.Point(15, 132);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(32, 20);
             this.label26.TabIndex = 75;
             this.label26.Text = "R$";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label25.Location = new System.Drawing.Point(126, 22);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 20);
-            this.label25.TabIndex = 74;
-            this.label25.Text = "R$";
             // 
             // cbFormaDePagamento
             // 
@@ -557,16 +513,17 @@
             this.cbFormaDePagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.cbFormaDePagamento.ForeColor = System.Drawing.SystemColors.Info;
             this.cbFormaDePagamento.FormattingEnabled = true;
-            this.cbFormaDePagamento.Location = new System.Drawing.Point(122, 119);
+            this.cbFormaDePagamento.Location = new System.Drawing.Point(12, 270);
             this.cbFormaDePagamento.Name = "cbFormaDePagamento";
             this.cbFormaDePagamento.Size = new System.Drawing.Size(133, 25);
             this.cbFormaDePagamento.TabIndex = 63;
             // 
             // tbValorTotal
             // 
+            this.tbValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbValorTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbValorTotal.Location = new System.Drawing.Point(158, 85);
+            this.tbValorTotal.ForeColor = System.Drawing.SystemColors.Window;
+            this.tbValorTotal.Location = new System.Drawing.Point(43, 181);
             this.tbValorTotal.Name = "tbValorTotal";
             this.tbValorTotal.Size = new System.Drawing.Size(90, 23);
             this.tbValorTotal.TabIndex = 56;
@@ -575,9 +532,10 @@
             // 
             // tbMaodeObra
             // 
+            this.tbMaodeObra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbMaodeObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbMaodeObra.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbMaodeObra.Location = new System.Drawing.Point(158, 53);
+            this.tbMaodeObra.ForeColor = System.Drawing.SystemColors.Window;
+            this.tbMaodeObra.Location = new System.Drawing.Point(43, 130);
             this.tbMaodeObra.Name = "tbMaodeObra";
             this.tbMaodeObra.Size = new System.Drawing.Size(90, 23);
             this.tbMaodeObra.TabIndex = 55;
@@ -585,9 +543,10 @@
             // 
             // tbDesconto
             // 
+            this.tbDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.tbDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbDesconto.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbDesconto.Location = new System.Drawing.Point(158, 22);
+            this.tbDesconto.ForeColor = System.Drawing.SystemColors.Window;
+            this.tbDesconto.Location = new System.Drawing.Point(43, 75);
             this.tbDesconto.Name = "tbDesconto";
             this.tbDesconto.Size = new System.Drawing.Size(90, 23);
             this.tbDesconto.TabIndex = 54;
@@ -599,7 +558,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.SystemColors.Control;
-            this.label22.Location = new System.Drawing.Point(8, 120);
+            this.label22.Location = new System.Drawing.Point(24, 242);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(110, 22);
             this.label22.TabIndex = 64;
@@ -610,11 +569,11 @@
             this.btnConcluirVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConcluirVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.btnConcluirVenda.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnConcluirVenda.Location = new System.Drawing.Point(13, 157);
+            this.btnConcluirVenda.Location = new System.Drawing.Point(9, 334);
             this.btnConcluirVenda.Name = "btnConcluirVenda";
-            this.btnConcluirVenda.Size = new System.Drawing.Size(235, 34);
+            this.btnConcluirVenda.Size = new System.Drawing.Size(136, 88);
             this.btnConcluirVenda.TabIndex = 61;
-            this.btnConcluirVenda.Text = "Concluir venda";
+            this.btnConcluirVenda.Text = "Concluir Venda";
             this.btnConcluirVenda.UseVisualStyleBackColor = true;
             this.btnConcluirVenda.Click += new System.EventHandler(this.btnConcluirVenda_Click);
             // 
@@ -623,29 +582,18 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(19, 84);
+            this.label14.Location = new System.Drawing.Point(24, 156);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 22);
             this.label14.TabIndex = 33;
             this.label14.Text = "Valor Total";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(31, 21);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 22);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Desconto";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(5, 52);
+            this.label17.Location = new System.Drawing.Point(10, 105);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(125, 22);
             this.label17.TabIndex = 45;
@@ -656,19 +604,20 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(336, 100);
+            this.panel4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel4.Location = new System.Drawing.Point(330, 107);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(365, 37);
+            this.panel4.Size = new System.Drawing.Size(470, 37);
             this.panel4.TabIndex = 61;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.label12.Location = new System.Drawing.Point(76, 5);
+            this.label12.Location = new System.Drawing.Point(145, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(193, 26);
+            this.label12.Size = new System.Drawing.Size(189, 30);
             this.label12.TabIndex = 12;
             this.label12.Text = "Itens Comprados";
             // 
@@ -676,7 +625,8 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.panel5.Controls.Add(this.btnNovaVenda);
-            this.panel5.Location = new System.Drawing.Point(29, 100);
+            this.panel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel5.Location = new System.Drawing.Point(16, 107);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(303, 37);
             this.panel5.TabIndex = 62;
@@ -689,7 +639,7 @@
             this.btnNovaVenda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnNovaVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.btnNovaVenda.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.btnNovaVenda.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnNovaVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovaVenda.Location = new System.Drawing.Point(0, -1);
@@ -704,192 +654,78 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(707, 330);
+            this.panel6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel6.Location = new System.Drawing.Point(810, 108);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(262, 37);
+            this.panel6.Size = new System.Drawing.Size(151, 37);
             this.panel6.TabIndex = 62;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.label13.Location = new System.Drawing.Point(79, 5);
+            this.label13.Location = new System.Drawing.Point(33, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 26);
+            this.label13.Size = new System.Drawing.Size(89, 30);
             this.label13.TabIndex = 12;
             this.label13.Text = "Extrato";
+            // 
+            // BtnAbrirCaixa
+            // 
+            this.BtnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAbrirCaixa.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.BtnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
+            this.BtnAbrirCaixa.Location = new System.Drawing.Point(688, 3);
+            this.BtnAbrirCaixa.Name = "BtnAbrirCaixa";
+            this.BtnAbrirCaixa.Size = new System.Drawing.Size(246, 34);
+            this.BtnAbrirCaixa.TabIndex = 62;
+            this.BtnAbrirCaixa.Text = "Status do Caixa";
+            this.BtnAbrirCaixa.UseVisualStyleBackColor = true;
+            this.BtnAbrirCaixa.Click += new System.EventHandler(this.BtnAbrirCaixa_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.BtnFecharCaixa);
-            this.panel7.Controls.Add(this.BtnAbrirCaixa);
-            this.panel7.Location = new System.Drawing.Point(707, 44);
+            this.panel7.Controls.Add(this.btnConcluirVenda);
+            this.panel7.Controls.Add(this.label27);
+            this.panel7.Controls.Add(this.cbFormaDePagamento);
+            this.panel7.Controls.Add(this.label18);
+            this.panel7.Controls.Add(this.label22);
+            this.panel7.Controls.Add(this.label26);
+            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.tbValorTotal);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.tbDesconto);
+            this.panel7.Controls.Add(this.tbMaodeObra);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.panel7.Location = new System.Drawing.Point(810, 134);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(262, 278);
-            this.panel7.TabIndex = 62;
+            this.panel7.Size = new System.Drawing.Size(151, 441);
+            this.panel7.TabIndex = 77;
             // 
-            // panel9
+            // label18
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.panel9.Controls.Add(this.tbTotCaixa);
-            this.panel9.Controls.Add(this.label23);
-            this.panel9.Controls.Add(this.label24);
-            this.panel9.Controls.Add(this.tbTotVendas);
-            this.panel9.Controls.Add(this.label19);
-            this.panel9.Controls.Add(this.label20);
-            this.panel9.Controls.Add(this.tbTotAbertura);
-            this.panel9.Controls.Add(this.label18);
-            this.panel9.Controls.Add(this.label16);
-            this.panel9.Location = new System.Drawing.Point(9, 80);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(244, 185);
-            this.panel9.TabIndex = 65;
-            // 
-            // tbTotCaixa
-            // 
-            this.tbTotCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.tbTotCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbTotCaixa.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbTotCaixa.Location = new System.Drawing.Point(40, 143);
-            this.tbTotCaixa.Name = "tbTotCaixa";
-            this.tbTotCaixa.Size = new System.Drawing.Size(190, 23);
-            this.tbTotCaixa.TabIndex = 72;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label18.Location = new System.Drawing.Point(15, 77);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(32, 20);
+            this.label18.TabIndex = 74;
+            this.label18.Text = "R$";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label23.Location = new System.Drawing.Point(8, 144);
+            this.label23.ForeColor = System.Drawing.SystemColors.Control;
+            this.label23.Location = new System.Drawing.Point(39, 50);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 22);
-            this.label23.TabIndex = 73;
-            this.label23.Text = "R$";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label24.Location = new System.Drawing.Point(63, 119);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(141, 22);
-            this.label24.TabIndex = 71;
-            this.label24.Text = "Total do Caixa";
-            // 
-            // tbTotVendas
-            // 
-            this.tbTotVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.tbTotVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbTotVendas.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbTotVendas.Location = new System.Drawing.Point(41, 93);
-            this.tbTotVendas.Name = "tbTotVendas";
-            this.tbTotVendas.Size = new System.Drawing.Size(189, 23);
-            this.tbTotVendas.TabIndex = 66;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.Ivory;
-            this.label19.Location = new System.Drawing.Point(9, 94);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 22);
-            this.label19.TabIndex = 67;
-            this.label19.Text = "R$";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.Ivory;
-            this.label20.Location = new System.Drawing.Point(59, 69);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(157, 22);
-            this.label20.TabIndex = 65;
-            this.label20.Text = "Total de Vendas";
-            // 
-            // tbTotAbertura
-            // 
-            this.tbTotAbertura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.tbTotAbertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.tbTotAbertura.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbTotAbertura.Location = new System.Drawing.Point(40, 43);
-            this.tbTotAbertura.Name = "tbTotAbertura";
-            this.tbTotAbertura.Size = new System.Drawing.Size(190, 23);
-            this.tbTotAbertura.TabIndex = 63;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.Ivory;
-            this.label18.Location = new System.Drawing.Point(8, 44);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 22);
-            this.label18.TabIndex = 64;
-            this.label18.Text = "R$";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.Ivory;
-            this.label16.Location = new System.Drawing.Point(63, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(139, 22);
-            this.label16.TabIndex = 62;
-            this.label16.Text = "Total Abertura";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
-            this.panel8.Controls.Add(this.label11);
-            this.panel8.Location = new System.Drawing.Point(-1, 1);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(262, 37);
-            this.panel8.TabIndex = 63;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.label11.Location = new System.Drawing.Point(91, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 26);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Caixa";
-            // 
-            // BtnFecharCaixa
-            // 
-            this.BtnFecharCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFecharCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.BtnFecharCaixa.ForeColor = System.Drawing.Color.Firebrick;
-            this.BtnFecharCaixa.Location = new System.Drawing.Point(132, 43);
-            this.BtnFecharCaixa.Name = "BtnFecharCaixa";
-            this.BtnFecharCaixa.Size = new System.Drawing.Size(121, 34);
-            this.BtnFecharCaixa.TabIndex = 63;
-            this.BtnFecharCaixa.Text = "Fechar";
-            this.BtnFecharCaixa.UseVisualStyleBackColor = true;
-            this.BtnFecharCaixa.Click += new System.EventHandler(this.BtnFecharCaixa_Click);
-            // 
-            // BtnAbrirCaixa
-            // 
-            this.BtnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAbrirCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            this.BtnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
-            this.BtnAbrirCaixa.Location = new System.Drawing.Point(9, 43);
-            this.BtnAbrirCaixa.Name = "BtnAbrirCaixa";
-            this.BtnAbrirCaixa.Size = new System.Drawing.Size(118, 34);
-            this.BtnAbrirCaixa.TabIndex = 62;
-            this.BtnAbrirCaixa.Text = "Abrir";
-            this.BtnAbrirCaixa.UseVisualStyleBackColor = true;
-            this.BtnAbrirCaixa.Click += new System.EventHandler(this.BtnAbrirCaixa_Click);
+            this.label23.Size = new System.Drawing.Size(94, 22);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "Desconto";
             // 
             // frmOrdemdeServico
             // 
@@ -897,14 +733,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(977, 620);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pProcurarCliente);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrdemdeServico";
             this.Text = "frmOrdemdeServico";
@@ -916,18 +751,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutosComprados)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -959,9 +789,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbTelefone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.MaskedTextBox tbPreçoUnit;
         private System.Windows.Forms.MaskedTextBox tbValor;
@@ -975,32 +803,20 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnNovaVenda;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button BtnFecharCaixa;
         private System.Windows.Forms.Button BtnAbrirCaixa;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.MaskedTextBox tbTotVendas;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox tbTotAbertura;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.MaskedTextBox tbTotCaixa;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.MaskedTextBox tbsubTotal;
         private System.Windows.Forms.ComboBox cbFormaDePagamento;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label23;
     }
 }
