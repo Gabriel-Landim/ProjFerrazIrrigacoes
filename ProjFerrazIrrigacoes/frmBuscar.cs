@@ -22,7 +22,7 @@ namespace ProjFerrazIrrigacoes
             
         }
         private void frmBuscar_Load(object sender, EventArgs e)
-        {
+        { 
             CarregaCidade();
             CarregaDados();
             BloqueiaTela();
