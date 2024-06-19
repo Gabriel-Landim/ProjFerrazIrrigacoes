@@ -18,6 +18,10 @@ namespace ProjFerrazIrrigacoes
 {
     public partial class Form1 : Form
     {
+        public string NomeUsuario;
+        public string CargoUsuario;
+        public string IdUsuario;
+            
         int CodigoCaixa = 0;
         public Color ColorTop { get; set; }
         public Color ColorBottom { get; set; }
@@ -34,8 +38,6 @@ namespace ProjFerrazIrrigacoes
             }
             
         }
-
-
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -71,14 +73,11 @@ namespace ProjFerrazIrrigacoes
             this.PanelCarregar.Controls.Add(frmDashboard_Vrb);
             frmDashboard_Vrb.Show();
         }
-
-    
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            //int a;
-            //a = 1;
-            //string tr;
+            lbUsuario.Text = NomeUsuario;
+            lbCargo.Text = CargoUsuario;
+            lbID.Text = IdUsuario;
         }
 
         private void BtnCadastro_Click_1(object sender, EventArgs e)
@@ -327,6 +326,14 @@ namespace ProjFerrazIrrigacoes
                 lbCaixa.ForeColor = Color.Green;
             }
         }
+
+        //private void CarregarCargo()
+        //{
+        //    bllUsuario objBusca = new bllUsuario();
+        //    lbUsuario = DataSource = objBusca.CarregarCargo();
+        //    lbCargo.ValueMember = "Id";
+        //    lbCargo.DisplayMember = "Cargo";
+        //}
 
         private void timer1_Tick(object sender, EventArgs e)
         {

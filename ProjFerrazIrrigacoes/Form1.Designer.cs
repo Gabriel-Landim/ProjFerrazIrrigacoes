@@ -50,10 +50,10 @@
             this.BtnCadastro = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tbCargo = new System.Windows.Forms.Label();
+            this.lbCargo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tbID = new System.Windows.Forms.Label();
-            this.tbNome = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.lbUsuario = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -370,26 +370,26 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tbCargo);
+            this.panel3.Controls.Add(this.lbCargo);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.tbID);
-            this.panel3.Controls.Add(this.tbNome);
+            this.panel3.Controls.Add(this.lbID);
+            this.panel3.Controls.Add(this.lbUsuario);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Location = new System.Drawing.Point(904, 19);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(239, 61);
             this.panel3.TabIndex = 10;
             // 
-            // tbCargo
+            // lbCargo
             // 
-            this.tbCargo.AutoSize = true;
-            this.tbCargo.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.tbCargo.ForeColor = System.Drawing.Color.LimeGreen;
-            this.tbCargo.Location = new System.Drawing.Point(124, 30);
-            this.tbCargo.Name = "tbCargo";
-            this.tbCargo.Size = new System.Drawing.Size(93, 19);
-            this.tbCargo.TabIndex = 14;
-            this.tbCargo.Text = "VENDEDOR";
+            this.lbCargo.AutoSize = true;
+            this.lbCargo.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.lbCargo.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lbCargo.Location = new System.Drawing.Point(124, 30);
+            this.lbCargo.Name = "lbCargo";
+            this.lbCargo.Size = new System.Drawing.Size(93, 19);
+            this.lbCargo.TabIndex = 14;
+            this.lbCargo.Text = "VENDEDOR";
             // 
             // pictureBox2
             // 
@@ -402,28 +402,28 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // tbID
+            // lbID
             // 
-            this.tbID.AutoSize = true;
-            this.tbID.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
-            this.tbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbID.Location = new System.Drawing.Point(64, 30);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(63, 19);
-            this.tbID.TabIndex = 12;
-            this.tbID.Text = "ID 4321";
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("RBNo3.1 ExtraLight", 11F, System.Drawing.FontStyle.Bold);
+            this.lbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbID.Location = new System.Drawing.Point(64, 30);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(63, 19);
+            this.lbID.TabIndex = 12;
+            this.lbID.Text = "ID 4321";
             // 
-            // tbNome
+            // lbUsuario
             // 
-            this.tbNome.AutoSize = true;
-            this.tbNome.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
-            this.tbNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbNome.Location = new System.Drawing.Point(69, 11);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(110, 18);
-            this.tbNome.TabIndex = 11;
-            this.tbNome.Text = "Administrador";
-            this.tbNome.Click += new System.EventHandler(this.label1_Click);
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("RBNo3.1 Book", 10F, System.Drawing.FontStyle.Bold);
+            this.lbUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbUsuario.Location = new System.Drawing.Point(69, 11);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(110, 18);
+            this.lbUsuario.TabIndex = 11;
+            this.lbUsuario.Text = "Administrador";
+            this.lbUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -576,11 +576,11 @@
         private System.Windows.Forms.Button BtnCadastroProdutos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label tbID;
-        private System.Windows.Forms.Label tbNome;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lbUsuario;
         private System.Windows.Forms.Button BtnBuscarProdutos;
         private System.Windows.Forms.Button BtnBuscarCliente;
-        private System.Windows.Forms.Label tbCargo;
+        private System.Windows.Forms.Label lbCargo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbCaixa;

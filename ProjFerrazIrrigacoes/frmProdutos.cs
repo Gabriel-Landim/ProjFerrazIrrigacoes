@@ -191,6 +191,42 @@ namespace ProjFerrazIrrigacoes
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            if (cbCategoria.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Categoria");
+                return;
+            }
+            if (cbMarca.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Marca");
+                return;
+            }
+            if (cbUnidadeMedida.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Unidade de Medida");
+                return;
+            }
+            if (tbEstoque.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Estoque");
+                return;
+            }
+            if (tbProdutoNome.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Produto");
+                return;
+            }
+            if (tbValor.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Valor");
+                return;
+            }
+            if (tbDescricao.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Descrição");
+                return;
+            }
+
             bllProduto objgravar = new bllProduto();
             modProduto objdados = new modProduto();
 
