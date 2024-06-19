@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,11 +27,14 @@ namespace ProjFerrazIrrigacoes
         private void tbEditar_Click(object sender, EventArgs e)
         {
             bllUsuario objLogar = new bllUsuario();
-
-            if (objLogar.Logar(tbEmail.Text, tbSenha.Text) != 0)
+            modUsuario ObjDados = new modUsuario();
+            ObjDados = objLogar.Logar(tbEmail.Text, tbSenha.Text);
+            
+            if (ObjDados.Id != 0)
             {              
                 Form1 tela = new Form1();
                 this.Visible = false;
+                tela.NomeUsuario = ObjDados.Nome;
                 tela.ShowDialog();               
                 this.Close();
                 tela.Dispose();

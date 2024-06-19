@@ -104,9 +104,50 @@ namespace ProjFerrazIrrigacoes
         private void btGravar_Click(object sender, EventArgs e)
         {
             
-            
-                bllCliente objgravar = new bllCliente();
-                modCliente objdados = new modCliente();
+            if(tbRua.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Rua");
+                return;
+            }
+            if (tbBairro.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Bairro");
+                return;
+            }
+            if (cbCidade.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Cidade");
+                return;
+            }
+            if (tbCep.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Cep");
+                return;
+            }
+            if (tbComplemento.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Complemento");
+                return;
+            }
+            if (tbEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Email");
+                return;
+            }
+            if (tbNumero.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Numero Residencial");
+                return;
+            }
+            if (tbTelefone.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Telefone");
+                return;
+            }
+
+
+            bllCliente objgravar = new bllCliente();
+            modCliente objdados = new modCliente();
 
                 if (operacao == "I")
                 {
@@ -139,7 +180,7 @@ namespace ProjFerrazIrrigacoes
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-            operacao = "I";
+            //operacao = "I";
             tbNomeCliente.Enabled = true;
             tbCpf.Enabled = true;
             tbCep.Enabled = true;

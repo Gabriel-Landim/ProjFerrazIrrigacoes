@@ -268,7 +268,7 @@ namespace DAL
             }
 
         }
-        public int Logar(string email, string senha)
+        public modUsuario Logar(string email, string senha)
         {
             //Variavel de Conexao
             SqlConnection cn = new SqlConnection();
@@ -292,18 +292,21 @@ namespace DAL
                 cmd.Dispose();
 
                 //Criar uma variável.
-                int Codigo = 0;
 
+                modUsuario ObjDados = new modUsuario();
 
                 if (registro.HasRows)
                 {
                     while (registro.Read())
                     {
-                        Codigo = Convert.ToInt32(registro["id"]);
+                        ObjDados.Id = Convert.ToInt32(registro["ID"]);
+                        ObjDados.Nome = Convert.ToString(registro["NOME"]);
+                        ObjDados.Cargo = Convert.ToString(registro["CARGO"]);
                     }
                 }
 
-                return Codigo;
+                return ObjDados;
+
 
             }
             catch (SqlException ex)

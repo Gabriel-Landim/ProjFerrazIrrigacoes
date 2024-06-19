@@ -49,13 +49,7 @@
             this.BtnMarcasAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pMarca = new System.Windows.Forms.Panel();
             this.btnMarcaAdd = new System.Windows.Forms.Button();
             this.tbMarca = new System.Windows.Forms.TextBox();
@@ -68,7 +62,13 @@
             this.btnCategoriaAdd = new System.Windows.Forms.Button();
             this.tbCategoria = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -283,10 +283,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pMarca);
-            this.panel2.Controls.Add(this.pUniMedida);
             this.panel2.Controls.Add(this.tbId);
-            this.panel2.Controls.Add(this.pCategoria);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.BtnUniMedidasAdd);
@@ -308,6 +305,159 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 432);
             this.panel2.TabIndex = 57;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(30, 390);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 23);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "ID";
+            // 
+            // pMarca
+            // 
+            this.pMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.pMarca.Controls.Add(this.btnMarcaAdd);
+            this.pMarca.Controls.Add(this.tbMarca);
+            this.pMarca.Controls.Add(this.label9);
+            this.pMarca.Location = new System.Drawing.Point(956, 172);
+            this.pMarca.Name = "pMarca";
+            this.pMarca.Size = new System.Drawing.Size(304, 48);
+            this.pMarca.TabIndex = 58;
+            this.pMarca.Visible = false;
+            // 
+            // btnMarcaAdd
+            // 
+            this.btnMarcaAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnMarcaAdd.FlatAppearance.BorderSize = 0;
+            this.btnMarcaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnMarcaAdd.ForeColor = System.Drawing.Color.White;
+            this.btnMarcaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
+            this.btnMarcaAdd.Location = new System.Drawing.Point(236, 22);
+            this.btnMarcaAdd.Name = "btnMarcaAdd";
+            this.btnMarcaAdd.Size = new System.Drawing.Size(19, 22);
+            this.btnMarcaAdd.TabIndex = 39;
+            this.btnMarcaAdd.UseVisualStyleBackColor = false;
+            // 
+            // tbMarca
+            // 
+            this.tbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbMarca.Location = new System.Drawing.Point(5, 23);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(225, 20);
+            this.tbMarca.TabIndex = 36;
+            this.tbMarca.Text = "Exemplo: KRONA";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(3, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 19);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Adicionar marca";
+            // 
+            // pUniMedida
+            // 
+            this.pUniMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.pUniMedida.Controls.Add(this.btnUniMedidaAdd);
+            this.pUniMedida.Controls.Add(this.tbUnidMedida);
+            this.pUniMedida.Controls.Add(this.label14);
+            this.pUniMedida.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
+            this.pUniMedida.Location = new System.Drawing.Point(956, 267);
+            this.pUniMedida.Name = "pUniMedida";
+            this.pUniMedida.Size = new System.Drawing.Size(304, 48);
+            this.pUniMedida.TabIndex = 60;
+            this.pUniMedida.Visible = false;
+            // 
+            // btnUniMedidaAdd
+            // 
+            this.btnUniMedidaAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnUniMedidaAdd.FlatAppearance.BorderSize = 0;
+            this.btnUniMedidaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUniMedidaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnUniMedidaAdd.ForeColor = System.Drawing.Color.White;
+            this.btnUniMedidaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
+            this.btnUniMedidaAdd.Location = new System.Drawing.Point(236, 22);
+            this.btnUniMedidaAdd.Name = "btnUniMedidaAdd";
+            this.btnUniMedidaAdd.Size = new System.Drawing.Size(19, 22);
+            this.btnUniMedidaAdd.TabIndex = 41;
+            this.btnUniMedidaAdd.UseVisualStyleBackColor = false;
+            // 
+            // tbUnidMedida
+            // 
+            this.tbUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUnidMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbUnidMedida.Location = new System.Drawing.Point(5, 24);
+            this.tbUnidMedida.Name = "tbUnidMedida";
+            this.tbUnidMedida.Size = new System.Drawing.Size(225, 20);
+            this.tbUnidMedida.TabIndex = 35;
+            this.tbUnidMedida.Text = "Exemplo: METRO-M";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(2, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(223, 19);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Adicionar Unidade de Medida";
+            // 
+            // pCategoria
+            // 
+            this.pCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.pCategoria.Controls.Add(this.btnCategoriaAdd);
+            this.pCategoria.Controls.Add(this.tbCategoria);
+            this.pCategoria.Controls.Add(this.label12);
+            this.pCategoria.Location = new System.Drawing.Point(956, 219);
+            this.pCategoria.Name = "pCategoria";
+            this.pCategoria.Size = new System.Drawing.Size(304, 48);
+            this.pCategoria.TabIndex = 59;
+            this.pCategoria.Visible = false;
+            // 
+            // btnCategoriaAdd
+            // 
+            this.btnCategoriaAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnCategoriaAdd.FlatAppearance.BorderSize = 0;
+            this.btnCategoriaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoriaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnCategoriaAdd.ForeColor = System.Drawing.Color.White;
+            this.btnCategoriaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
+            this.btnCategoriaAdd.Location = new System.Drawing.Point(236, 21);
+            this.btnCategoriaAdd.Name = "btnCategoriaAdd";
+            this.btnCategoriaAdd.Size = new System.Drawing.Size(19, 22);
+            this.btnCategoriaAdd.TabIndex = 40;
+            this.btnCategoriaAdd.UseVisualStyleBackColor = false;
+            // 
+            // tbCategoria
+            // 
+            this.tbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbCategoria.Location = new System.Drawing.Point(5, 22);
+            this.tbCategoria.Name = "tbCategoria";
+            this.tbCategoria.Size = new System.Drawing.Size(225, 20);
+            this.tbCategoria.TabIndex = 37;
+            this.tbCategoria.Text = "Exemplo: TUBULAÇÃO";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(2, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 19);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Adicionar categoria";
             // 
             // label13
             // 
@@ -388,159 +538,6 @@
             this.label20.Tag = "";
             this.label20.Text = "Descrição";
             // 
-            // pMarca
-            // 
-            this.pMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.pMarca.Controls.Add(this.btnMarcaAdd);
-            this.pMarca.Controls.Add(this.tbMarca);
-            this.pMarca.Controls.Add(this.label9);
-            this.pMarca.Location = new System.Drawing.Point(0, 17);
-            this.pMarca.Name = "pMarca";
-            this.pMarca.Size = new System.Drawing.Size(304, 48);
-            this.pMarca.TabIndex = 58;
-            this.pMarca.Visible = false;
-            // 
-            // btnMarcaAdd
-            // 
-            this.btnMarcaAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnMarcaAdd.FlatAppearance.BorderSize = 0;
-            this.btnMarcaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnMarcaAdd.ForeColor = System.Drawing.Color.White;
-            this.btnMarcaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
-            this.btnMarcaAdd.Location = new System.Drawing.Point(236, 22);
-            this.btnMarcaAdd.Name = "btnMarcaAdd";
-            this.btnMarcaAdd.Size = new System.Drawing.Size(19, 22);
-            this.btnMarcaAdd.TabIndex = 39;
-            this.btnMarcaAdd.UseVisualStyleBackColor = false;
-            // 
-            // tbMarca
-            // 
-            this.tbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbMarca.Location = new System.Drawing.Point(5, 23);
-            this.tbMarca.Name = "tbMarca";
-            this.tbMarca.Size = new System.Drawing.Size(225, 20);
-            this.tbMarca.TabIndex = 36;
-            this.tbMarca.Text = "Exemplo: KRONA";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(3, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 19);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Adicionar marca";
-            // 
-            // pUniMedida
-            // 
-            this.pUniMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.pUniMedida.Controls.Add(this.btnUniMedidaAdd);
-            this.pUniMedida.Controls.Add(this.tbUnidMedida);
-            this.pUniMedida.Controls.Add(this.label14);
-            this.pUniMedida.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
-            this.pUniMedida.Location = new System.Drawing.Point(0, 112);
-            this.pUniMedida.Name = "pUniMedida";
-            this.pUniMedida.Size = new System.Drawing.Size(304, 48);
-            this.pUniMedida.TabIndex = 60;
-            this.pUniMedida.Visible = false;
-            // 
-            // btnUniMedidaAdd
-            // 
-            this.btnUniMedidaAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnUniMedidaAdd.FlatAppearance.BorderSize = 0;
-            this.btnUniMedidaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUniMedidaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnUniMedidaAdd.ForeColor = System.Drawing.Color.White;
-            this.btnUniMedidaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
-            this.btnUniMedidaAdd.Location = new System.Drawing.Point(236, 22);
-            this.btnUniMedidaAdd.Name = "btnUniMedidaAdd";
-            this.btnUniMedidaAdd.Size = new System.Drawing.Size(19, 22);
-            this.btnUniMedidaAdd.TabIndex = 41;
-            this.btnUniMedidaAdd.UseVisualStyleBackColor = false;
-            // 
-            // tbUnidMedida
-            // 
-            this.tbUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUnidMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbUnidMedida.Location = new System.Drawing.Point(5, 24);
-            this.tbUnidMedida.Name = "tbUnidMedida";
-            this.tbUnidMedida.Size = new System.Drawing.Size(225, 20);
-            this.tbUnidMedida.TabIndex = 35;
-            this.tbUnidMedida.Text = "Exemplo: METRO-M";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(2, 6);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(223, 19);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "Adicionar Unidade de Medida";
-            // 
-            // pCategoria
-            // 
-            this.pCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.pCategoria.Controls.Add(this.btnCategoriaAdd);
-            this.pCategoria.Controls.Add(this.tbCategoria);
-            this.pCategoria.Controls.Add(this.label12);
-            this.pCategoria.Location = new System.Drawing.Point(0, 64);
-            this.pCategoria.Name = "pCategoria";
-            this.pCategoria.Size = new System.Drawing.Size(304, 48);
-            this.pCategoria.TabIndex = 59;
-            this.pCategoria.Visible = false;
-            // 
-            // btnCategoriaAdd
-            // 
-            this.btnCategoriaAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnCategoriaAdd.FlatAppearance.BorderSize = 0;
-            this.btnCategoriaAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnCategoriaAdd.ForeColor = System.Drawing.Color.White;
-            this.btnCategoriaAdd.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Adicionar2;
-            this.btnCategoriaAdd.Location = new System.Drawing.Point(236, 21);
-            this.btnCategoriaAdd.Name = "btnCategoriaAdd";
-            this.btnCategoriaAdd.Size = new System.Drawing.Size(19, 22);
-            this.btnCategoriaAdd.TabIndex = 40;
-            this.btnCategoriaAdd.UseVisualStyleBackColor = false;
-            // 
-            // tbCategoria
-            // 
-            this.tbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbCategoria.Location = new System.Drawing.Point(5, 22);
-            this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(225, 20);
-            this.tbCategoria.TabIndex = 37;
-            this.tbCategoria.Text = "Exemplo: TUBULAÇÃO";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("RBNo3.1 Light", 11F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(2, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 19);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Adicionar categoria";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(30, 390);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 23);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "ID";
-            // 
             // frmProdutos
             // 
             this.AllowDrop = true;
@@ -548,8 +545,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(977, 620);
+            this.Controls.Add(this.pMarca);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pUniMedida);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pCategoria);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.LBBuscar);

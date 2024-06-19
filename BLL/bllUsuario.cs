@@ -10,7 +10,7 @@ namespace BLL
 {
     public class bllUsuario
     {
-        public int Logar(string email, string senha)
+        public modUsuario Logar(string email, string senha)
         {
             dalUsuario objLogar = new dalUsuario();
             return objLogar.Logar(email, senha);

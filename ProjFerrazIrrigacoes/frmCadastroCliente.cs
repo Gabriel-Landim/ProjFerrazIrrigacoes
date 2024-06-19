@@ -47,6 +47,47 @@ namespace ProjFerrazIrrigacoes
         }
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
+            if (tbRua.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Rua");
+                return;
+            }
+            if (tbBairro.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Bairro");
+                return;
+            }
+            if (cbCidade.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Cidade");
+                return;
+            }
+            if (tbCep.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Cep");
+                return;
+            }
+            if (tbComplemento.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Complemento");
+                return;
+            }
+            if (tbEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Email");
+                return;
+            }
+            if (tbNumero.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Numero Residencial");
+                return;
+            }
+            if (tbTelefone.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Telefone");
+                return;
+            }
+
             bllCliente objcadastrar = new bllCliente();
             modCliente objdados = new modCliente();
 

@@ -25,20 +25,20 @@ namespace ProjFerrazIrrigacoes
 
         private void tbEditar_Click(object sender, EventArgs e)
         {
-            bllUsuario objLogar = new bllUsuario();
+            //bllUsuario objLogar = new bllUsuario();
 
-            if (objLogar.Logar(tbEmail.Text, tbSenha.Text) != 0)
-            {
-                Form1 tela = new Form1();
-                tela.ShowDialog();
-                tela.Dispose();
-                this.Close();
-            }
+            //if (objLogar.Logar(tbEmail.Text, tbSenha.Text) != 0)
+            //{
+            //    Form1 tela = new Form1();
+            //    tela.ShowDialog();
+            //    tela.Dispose();
+            //    this.Close();
+            //}
 
-            else
-            {
-                MessageBox.Show("Email ou Senha inválido(a)!");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Email ou Senha inválido(a)!");
+            //}
         }
 
         private void btnNovoUsuario_Click(object sender, EventArgs e)
