@@ -58,6 +58,7 @@ namespace ProjFerrazIrrigacoes
             cbProduto.DataSource = objBusca.CarregarProduto();
             cbProduto.ValueMember = "Id";
             cbProduto.DisplayMember = "NomeProduto";
+            cbProduto.Text = "";
         }
 
         private void BuscaPorCodigo(int id)
@@ -77,6 +78,7 @@ namespace ProjFerrazIrrigacoes
             cbMarca.DataSource = objBusca.CarregarMarca();
             cbMarca.ValueMember = "Id";
             cbMarca.DisplayMember = "NomeMarca";
+            cbMarca.Text = "";
         }
         private void CarregarCategoria()
         {
@@ -84,6 +86,7 @@ namespace ProjFerrazIrrigacoes
             cbCategoria.DataSource = objBusca.CarregarCategoria();
             cbCategoria.ValueMember = "Id";
             cbCategoria.DisplayMember = "CategoriaNome";
+            cbCategoria.Text = "";
         }
         private void CarregarUnidadeMedida()
         {
@@ -101,6 +104,7 @@ namespace ProjFerrazIrrigacoes
             cbCliente.DataSource = objCarregar.CarregarDadosCliente();
             cbCliente.ValueMember = "Id";
             cbCliente.DisplayMember = "NomeCliente";
+            cbCliente.Text = "";
         }
         private void BuscaPorCodigoCliente(int Clienteid)
         {
@@ -117,6 +121,7 @@ namespace ProjFerrazIrrigacoes
             cbFormaDePagamento.DataSource = objBusca.CarregaFormaPagamento();
             cbFormaDePagamento.ValueMember = "Id";
             cbFormaDePagamento.DisplayMember = "Descricao";
+            cbFormaDePagamento.Text = "";
         }
         private void VerificaCaixa()
         {
@@ -161,6 +166,21 @@ namespace ProjFerrazIrrigacoes
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
+            if (cbCliente.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Cliente");
+                return;
+            }
+            if (cbProduto.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe o Produto");
+                return;
+            }
+            if (tbQuantidade.Text.Trim() == "")
+            {
+                MessageBox.Show("Informe a Quantidade");
+                return;
+            }
             bllItensVenda objbusca = new bllItensVenda();
             modItensVenda objDados = new modItensVenda();
             objDados.IdVenda = Codigovenda;
@@ -191,6 +211,7 @@ namespace ProjFerrazIrrigacoes
             Codigovenda = objInsere.Insere(objDados);
 
             btnNovaVenda.Enabled = false;
+            btAdicionar.Enabled = true;
         }
 
         private void btDeletar_Click(object sender, EventArgs e)

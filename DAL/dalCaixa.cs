@@ -385,5 +385,108 @@ namespace DAL
             }
 
         }
+        public modCaixa ConsultaDataAbertura (int Caixa)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT ID, DATAABERTURA, TOTALINICIAL FROM CAIXA " +
+                                  " WHERE DataAbertura IS NOT NULL AND DataFechamento IS NULL ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+                cmd.Parameters.AddWithValue("@ID", Caixa);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma variável.
+
+                modCaixa ObjDados = new modCaixa();
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        ObjDados.Id = Convert.ToInt32(registro["ID"]);
+                        ObjDados.DataAbertura = Convert.ToDateTime(registro["DATAABERTURA"]);
+                        ObjDados.TotalInicial = Convert.ToDouble(registro["TOTALINICIAL"]);
+                    }
+                }
+
+                return ObjDados;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+        }
+        public List<double> GraficoCaixas()
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = " SELECT top 5 TotalFinal FROM Caixa " +
+                                  " WHERE TotalFinal  IS NOT NULL ORDER BY Id desc ";
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma variável.
+
+                modCaixa ObjDados = new modCaixa();
+                List<double> list = new List<double>();
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        list.Add(Convert.ToDouble(registro["TOTALFINAL"]));
+                        //ObjDados.TotalFinal = Convert.ToInt32(registro["TOTALFINAL"]);
+                    }
+                }
+
+                return list;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+        }
     }
 }

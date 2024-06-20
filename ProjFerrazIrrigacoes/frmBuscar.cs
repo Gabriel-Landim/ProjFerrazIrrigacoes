@@ -68,12 +68,20 @@ namespace ProjFerrazIrrigacoes
             btGravar.Enabled = false;
         }
 
-        //private void LimpaTela()
-        //{
-        //    tbCodigo.Clear();
-        //    tbTitulo.Clear();
-        //    gvLivro.DataSource = null;
-        //}
+        private void LimpaTela()
+        {
+            tbBairro.Clear();
+            tbBuscaCliente.Clear();
+            tbCep.Clear();
+            tbCpf.Clear();
+            tbEmail.Clear();
+            tbId.Clear();
+            tbNomeCliente.Clear();
+            tbRua.Clear();
+            tbTelefone.Clear();
+            tbNumero.Clear();
+            cbCidade.SelectedText = "";
+        }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
@@ -270,6 +278,12 @@ namespace ProjFerrazIrrigacoes
         private void tbCpf_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LimpaTela();
+            pProcurarCliente.Visible = true;
         }
     }
 }

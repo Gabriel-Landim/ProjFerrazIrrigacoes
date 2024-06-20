@@ -197,5 +197,59 @@ namespace DAL
             }
 
         }
+        public double TotalLancamento(int Id)
+        {
+            //Variavel de Conexao
+            SqlConnection cn = new SqlConnection();
+            try
+            {
+                cn.ConnectionString = Dados.StringDeConexao;
+                //Variavel do comando
+                SqlCommand cmd = new SqlCommand();  //objeto de comando
+                cmd.CommandText = " SELECT ISNULL (SUM(Valor), 0) AS Valor " +
+                                  " FROM Lancamento WHERE CaixaId = @Id AND Movimento = 'C' ";  //comando que eu quero
+
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha              
+                cmd.Parameters.AddWithValue("@ID", Id);
+                
+                //Passsa os valores para o comando SQL pelos parametros @login e @senha
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                //Executando o comando e armazenando o resultado em registro
+                SqlDataReader registro = cmd.ExecuteReader();
+                cmd.Dispose();
+
+                //Criar uma lista para armazenar os dados.
+                double Valor = 0;
+
+
+                if (registro.HasRows)
+                {
+                    while (registro.Read())
+                    {
+                        Valor = Convert.ToInt32(registro["VALOR"]);
+                    }
+                }
+
+
+                return Valor;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro SQL: " + ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro SQL: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+        }
     }
 }

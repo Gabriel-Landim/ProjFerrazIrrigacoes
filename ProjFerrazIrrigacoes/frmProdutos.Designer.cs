@@ -37,7 +37,7 @@
             this.tbValor = new System.Windows.Forms.TextBox();
             this.tbEstoque = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.tbProdutoNome = new System.Windows.Forms.TextBox();
             this.cbUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -47,9 +47,16 @@
             this.BtnUniMedidasAdd = new System.Windows.Forms.Button();
             this.BtnCategoriasAdd = new System.Windows.Forms.Button();
             this.BtnMarcasAdd = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pBuscaProduto = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.pMarca = new System.Windows.Forms.Panel();
             this.btnMarcaAdd = new System.Windows.Forms.Button();
             this.tbMarca = new System.Windows.Forms.TextBox();
@@ -62,15 +69,8 @@
             this.btnCategoriaAdd = new System.Windows.Forms.Button();
             this.tbCategoria = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pBuscaProduto.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pMarca.SuspendLayout();
             this.pUniMedida.SuspendLayout();
@@ -163,16 +163,17 @@
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
-            // btnVoltar
+            // btnLimpar
             // 
-            this.btnVoltar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btnVoltar.Location = new System.Drawing.Point(618, 534);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(114, 34);
-            this.btnVoltar.TabIndex = 17;
-            this.btnVoltar.Text = "Limpar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
+            this.btnLimpar.Location = new System.Drawing.Point(618, 534);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(114, 34);
+            this.btnLimpar.TabIndex = 17;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // tbProdutoNome
             // 
@@ -269,15 +270,15 @@
             this.BtnMarcasAdd.UseVisualStyleBackColor = false;
             this.BtnMarcasAdd.Click += new System.EventHandler(this.BtnMarcasAdd_Click);
             // 
-            // panel1
+            // pBuscaProduto
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
-            this.panel1.Controls.Add(this.tbBuscaProduto);
-            this.panel1.Controls.Add(this.gvProdutos);
-            this.panel1.Location = new System.Drawing.Point(449, 70);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 432);
-            this.panel1.TabIndex = 39;
+            this.pBuscaProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
+            this.pBuscaProduto.Controls.Add(this.tbBuscaProduto);
+            this.pBuscaProduto.Controls.Add(this.gvProdutos);
+            this.pBuscaProduto.Location = new System.Drawing.Point(449, 70);
+            this.pBuscaProduto.Name = "pBuscaProduto";
+            this.pBuscaProduto.Size = new System.Drawing.Size(449, 432);
+            this.pBuscaProduto.TabIndex = 39;
             // 
             // panel2
             // 
@@ -316,6 +317,85 @@
             this.label1.Size = new System.Drawing.Size(28, 23);
             this.label1.TabIndex = 61;
             this.label1.Text = "ID";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(24, 23);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 23);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Marca";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(25, 68);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 23);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Categoria";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
+            this.label16.Location = new System.Drawing.Point(25, 113);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(153, 23);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Unidade Medida";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.SystemColors.Control;
+            this.label17.Location = new System.Drawing.Point(25, 335);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 23);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "Valor";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.SystemColors.Control;
+            this.label18.Location = new System.Drawing.Point(173, 335);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 23);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "Estoque";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.SystemColors.Control;
+            this.label19.Location = new System.Drawing.Point(25, 167);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 23);
+            this.label19.TabIndex = 42;
+            this.label19.Tag = "";
+            this.label19.Text = "Produto";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(24, 215);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(99, 23);
+            this.label20.TabIndex = 45;
+            this.label20.Tag = "";
+            this.label20.Text = "Descrição";
             // 
             // pMarca
             // 
@@ -459,85 +539,6 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "Adicionar categoria";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(24, 23);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 23);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Marca";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(25, 68);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 23);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Categoria";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(25, 113);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 23);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Unidade Medida";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(25, 335);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 23);
-            this.label17.TabIndex = 33;
-            this.label17.Text = "Valor";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(173, 335);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 23);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Estoque";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(25, 167);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 23);
-            this.label19.TabIndex = 42;
-            this.label19.Tag = "";
-            this.label19.Text = "Produto";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(24, 215);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(99, 23);
-            this.label20.TabIndex = 45;
-            this.label20.Tag = "";
-            this.label20.Text = "Descrição";
-            // 
             // frmProdutos
             // 
             this.AllowDrop = true;
@@ -548,9 +549,9 @@
             this.Controls.Add(this.pMarca);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pUniMedida);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pBuscaProduto);
             this.Controls.Add(this.pCategoria);
-            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.LBBuscar);
             this.Controls.Add(this.btnExcluir);
@@ -560,8 +561,8 @@
             this.Text = "frmProdutos";
             this.Shown += new System.EventHandler(this.frmProdutos_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gvProdutos)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pBuscaProduto.ResumeLayout(false);
+            this.pBuscaProduto.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pMarca.ResumeLayout(false);
@@ -584,7 +585,7 @@
         private System.Windows.Forms.TextBox tbValor;
         private System.Windows.Forms.TextBox tbEstoque;
         private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button BtnMarcasAdd;
         private System.Windows.Forms.TextBox tbProdutoNome;
         private System.Windows.Forms.ComboBox cbUnidadeMedida;
@@ -594,7 +595,7 @@
         private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Button BtnCategoriasAdd;
         private System.Windows.Forms.Button BtnUniMedidasAdd;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pBuscaProduto;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;

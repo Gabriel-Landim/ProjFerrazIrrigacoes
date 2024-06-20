@@ -39,5 +39,10 @@ namespace BLL
             dalLancamento objdados = new dalLancamento();
             return objdados.CarregarLancamento(caixaId);
         }
+        public double TotalLancamento(int Id)
+        {
+            dalLancamento objCalcular = new dalLancamento();
+            return objCalcular.TotalLancamento(Id);
+        }
     }
 }

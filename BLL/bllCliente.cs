@@ -40,17 +40,20 @@ namespace BLL
             dalCliente objdados = new dalCliente();
             return objdados.CarregarCliente();
         }
-
         public List<modCliente> SelecionarPorNome(string nome)
         {
             dalCliente objdados = new dalCliente();
             return objdados.SelecionaPorNome(nome);
         }
-
         public modCliente BuscaPorCodigoCliente(int id)
         {
             dalCliente objBusca = new dalCliente();
             return objBusca.BuscarPorCodigoCliente(id);
+        }
+        public int CalculaCliente()
+        {
+            dalCliente objBusca = new dalCliente();
+            return objBusca.CalculaCliente();
         }
     }
 }
