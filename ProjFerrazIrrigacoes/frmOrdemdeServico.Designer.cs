@@ -728,6 +728,7 @@
             this.Controls.Add(this.pProcurarCliente);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel7);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrdemdeServico";
             this.Text = "frmOrdemdeServico";
