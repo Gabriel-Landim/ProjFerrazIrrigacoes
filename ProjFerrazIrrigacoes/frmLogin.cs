@@ -35,6 +35,7 @@ namespace ProjFerrazIrrigacoes
                 Form1 tela = new Form1();
                 this.Visible = false;
                 tela.NomeUsuario = ObjDados.Nome;
+                tela.CargoUsuario = ObjDados.Cargo;
                 tela.ShowDialog();               
                 this.Close();
                 tela.Dispose();

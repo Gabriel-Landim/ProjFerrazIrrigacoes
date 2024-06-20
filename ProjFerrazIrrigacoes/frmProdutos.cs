@@ -86,6 +86,19 @@ namespace ProjFerrazIrrigacoes
             btnEditar.Enabled = true;
         }
 
+        private void LimpaTela()
+        {
+            tbBuscaProduto.Clear();
+            cbCategoria.SelectedText = "";
+            cbMarca.SelectedText = "";
+            cbUnidadeMedida.SelectedText = "";
+            tbEstoque.Clear();
+            tbProdutoNome.Clear();
+            tbValor.Clear();
+            tbId.Clear();
+            tbDescricao.Clear();
+        }
+
         //private void gvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    bllProduto objBusca = new bllProduto();
@@ -262,6 +275,12 @@ namespace ProjFerrazIrrigacoes
                 gvProdutos.DataSource = null;
                 MessageBox.Show("Exclusão realizada com sucesso!");
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimpaTela();
+            pBuscaProduto.Visible = true;
         }
     }
 }

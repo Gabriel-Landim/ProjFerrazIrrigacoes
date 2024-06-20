@@ -57,18 +57,18 @@
             this.pProcurarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
             this.pProcurarCliente.Controls.Add(this.tbBuscaProdutoCompra);
             this.pProcurarCliente.Controls.Add(this.gvLancamentos);
-            this.pProcurarCliente.Location = new System.Drawing.Point(479, 55);
+            this.pProcurarCliente.Location = new System.Drawing.Point(426, 85);
             this.pProcurarCliente.Name = "pProcurarCliente";
-            this.pProcurarCliente.Size = new System.Drawing.Size(365, 452);
+            this.pProcurarCliente.Size = new System.Drawing.Size(465, 452);
             this.pProcurarCliente.TabIndex = 62;
             // 
             // tbBuscaProdutoCompra
             // 
             this.tbBuscaProdutoCompra.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
             this.tbBuscaProdutoCompra.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.tbBuscaProdutoCompra.Location = new System.Drawing.Point(9, 32);
+            this.tbBuscaProdutoCompra.Location = new System.Drawing.Point(11, 32);
             this.tbBuscaProdutoCompra.Name = "tbBuscaProdutoCompra";
-            this.tbBuscaProdutoCompra.Size = new System.Drawing.Size(346, 30);
+            this.tbBuscaProdutoCompra.Size = new System.Drawing.Size(443, 30);
             this.tbBuscaProdutoCompra.TabIndex = 31;
             this.tbBuscaProdutoCompra.Text = "Digite o produto";
             // 
@@ -77,9 +77,9 @@
             this.gvLancamentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.gvLancamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvLancamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvLancamentos.Location = new System.Drawing.Point(9, 55);
+            this.gvLancamentos.Location = new System.Drawing.Point(11, 55);
             this.gvLancamentos.Name = "gvLancamentos";
-            this.gvLancamentos.Size = new System.Drawing.Size(346, 386);
+            this.gvLancamentos.Size = new System.Drawing.Size(443, 386);
             this.gvLancamentos.TabIndex = 20;
             // 
             // panel2
@@ -94,7 +94,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cbMovimento);
-            this.panel2.Location = new System.Drawing.Point(156, 57);
+            this.panel2.Location = new System.Drawing.Point(103, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 450);
             this.panel2.TabIndex = 64;
@@ -152,7 +152,7 @@
             this.btAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdicionar.Font = new System.Drawing.Font("RBNo3.1 Light", 13F, System.Drawing.FontStyle.Bold);
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.btAdicionar.Location = new System.Drawing.Point(82, 380);
+            this.btAdicionar.Location = new System.Drawing.Point(92, 380);
             this.btAdicionar.Name = "btAdicionar";
             this.btAdicionar.Size = new System.Drawing.Size(119, 34);
             this.btAdicionar.TabIndex = 51;
@@ -198,7 +198,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("RBNo3.1 Book", 16F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
-            this.label12.Location = new System.Drawing.Point(102, 5);
+            this.label12.Location = new System.Drawing.Point(150, 5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(164, 28);
             this.label12.TabIndex = 12;
@@ -208,16 +208,16 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(479, 39);
+            this.panel4.Location = new System.Drawing.Point(426, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(365, 37);
+            this.panel4.Size = new System.Drawing.Size(465, 37);
             this.panel4.TabIndex = 63;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(156, 40);
+            this.panel1.Location = new System.Drawing.Point(103, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 37);
             this.panel1.TabIndex = 64;

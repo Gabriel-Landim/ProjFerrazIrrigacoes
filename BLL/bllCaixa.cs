@@ -32,11 +32,20 @@ namespace BLL
             dalCaixa objBusca = new dalCaixa();
             return objBusca.BuscarPorCodigo();
         }
-
         public double CalculaCaixa(int Caixa)
         {
             dalCaixa objBusca = new dalCaixa();
             return objBusca.CalculaCaixa(Caixa);
+        }
+        public modCaixa ConsultaDataAbertura(int Caixa)
+        {
+            dalCaixa objDados = new dalCaixa();
+            return objDados.ConsultaDataAbertura(Caixa);
+        }
+        public List<double> GraficoCaixas()
+        {
+            dalCaixa objDados = new dalCaixa();
+            return objDados.GraficoCaixas();
         }
     }
 }

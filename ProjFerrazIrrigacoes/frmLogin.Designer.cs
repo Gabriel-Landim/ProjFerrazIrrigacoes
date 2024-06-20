@@ -92,7 +92,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(259, 26);
             this.tbEmail.TabIndex = 14;
-            this.tbEmail.Text = "adm";
+            this.tbEmail.Text = "ferraz@teste.com";
             // 
             // tbEditar
             // 

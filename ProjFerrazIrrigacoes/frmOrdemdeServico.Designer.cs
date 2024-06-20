@@ -32,7 +32,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.cbProduto = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,7 @@
             this.gvProdutosComprados = new System.Windows.Forms.DataGridView();
             this.btDeletar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnAbrirCaixa = new System.Windows.Forms.Button();
             this.tbTelefone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
@@ -78,7 +78,6 @@
             this.btnNovaVenda = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.BtnAbrirCaixa = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -98,7 +97,6 @@
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.label30);
             this.panel2.Controls.Add(this.label29);
-            this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.btAdicionar);
             this.panel2.Controls.Add(this.cbProduto);
             this.panel2.Controls.Add(this.cbMarca);
@@ -150,19 +148,9 @@
             this.label29.TabIndex = 78;
             this.label29.Text = "R$";
             // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label28.Location = new System.Drawing.Point(169, 261);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(32, 20);
-            this.label28.TabIndex = 77;
-            this.label28.Text = "R$";
-            // 
             // btAdicionar
             // 
+            this.btAdicionar.Enabled = false;
             this.btAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
@@ -419,6 +407,19 @@
             this.panel3.Size = new System.Drawing.Size(945, 41);
             this.panel3.TabIndex = 60;
             // 
+            // BtnAbrirCaixa
+            // 
+            this.BtnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAbrirCaixa.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.BtnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
+            this.BtnAbrirCaixa.Location = new System.Drawing.Point(688, 3);
+            this.BtnAbrirCaixa.Name = "BtnAbrirCaixa";
+            this.BtnAbrirCaixa.Size = new System.Drawing.Size(246, 34);
+            this.BtnAbrirCaixa.TabIndex = 62;
+            this.BtnAbrirCaixa.Text = "Status do Caixa";
+            this.BtnAbrirCaixa.UseVisualStyleBackColor = true;
+            this.BtnAbrirCaixa.Click += new System.EventHandler(this.BtnAbrirCaixa_Click);
+            // 
             // tbTelefone
             // 
             this.tbTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
@@ -671,19 +672,6 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Extrato";
             // 
-            // BtnAbrirCaixa
-            // 
-            this.BtnAbrirCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAbrirCaixa.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.BtnAbrirCaixa.ForeColor = System.Drawing.Color.Gold;
-            this.BtnAbrirCaixa.Location = new System.Drawing.Point(688, 3);
-            this.BtnAbrirCaixa.Name = "BtnAbrirCaixa";
-            this.BtnAbrirCaixa.Size = new System.Drawing.Size(246, 34);
-            this.BtnAbrirCaixa.TabIndex = 62;
-            this.BtnAbrirCaixa.Text = "Status do Caixa";
-            this.BtnAbrirCaixa.UseVisualStyleBackColor = true;
-            this.BtnAbrirCaixa.Click += new System.EventHandler(this.BtnAbrirCaixa_Click);
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
@@ -812,7 +800,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel7;

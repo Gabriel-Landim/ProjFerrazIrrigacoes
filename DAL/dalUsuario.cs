@@ -277,8 +277,8 @@ namespace DAL
                 cn.ConnectionString = Dados.StringDeConexao;
                 //Variavel do comando
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = " SELECT ID FROM USUARIO " +
-                                  " WHERE  EMAIL = @EMAIL AND SENHA = @SENHA ";
+                cmd.CommandText = " SELECT ID, NOME, CARGO FROM USUARIO " +
+                                  " WHERE EMAIL = @EMAIL AND SENHA = @SENHA ";
 
                 //Passsa os valores para o comando SQL pelos parametros @login e @senha
                 cmd.Parameters.AddWithValue("@EMAIL", email);

@@ -77,7 +77,6 @@ namespace ProjFerrazIrrigacoes
         {
             lbUsuario.Text = NomeUsuario;
             lbCargo.Text = CargoUsuario;
-            lbID.Text = IdUsuario;
         }
 
         private void BtnCadastro_Click_1(object sender, EventArgs e)

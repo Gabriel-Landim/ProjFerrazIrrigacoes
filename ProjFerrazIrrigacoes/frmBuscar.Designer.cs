@@ -38,6 +38,7 @@
             this.pProcurarCliente = new System.Windows.Forms.Panel();
             this.tbBuscaCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbCep = new System.Windows.Forms.MaskedTextBox();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.tbComplemento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,14 +57,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbNomeCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.tbCpf = new System.Windows.Forms.MaskedTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TextoVertical1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.TextoVertical2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tbCpf = new System.Windows.Forms.MaskedTextBox();
-            this.tbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.tbCep = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvBuscaNome)).BeginInit();
             this.pProcurarCliente.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,6 +143,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Limpar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // gvBuscaNome
             // 
@@ -195,6 +196,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 295);
             this.panel2.TabIndex = 22;
+            // 
+            // tbCep
+            // 
+            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbCep.Location = new System.Drawing.Point(27, 252);
+            this.tbCep.Mask = "00000-000";
+            this.tbCep.Name = "tbCep";
+            this.tbCep.Size = new System.Drawing.Size(232, 23);
+            this.tbCep.TabIndex = 28;
+            this.tbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // cbCidade
             // 
@@ -385,6 +396,26 @@
             this.panel1.Size = new System.Drawing.Size(292, 171);
             this.panel1.TabIndex = 31;
             // 
+            // tbTelefone
+            // 
+            this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbTelefone.Location = new System.Drawing.Point(29, 88);
+            this.tbTelefone.Mask = "(00)00000-0000";
+            this.tbTelefone.Name = "tbTelefone";
+            this.tbTelefone.Size = new System.Drawing.Size(232, 23);
+            this.tbTelefone.TabIndex = 28;
+            this.tbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // tbCpf
+            // 
+            this.tbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbCpf.Location = new System.Drawing.Point(29, 39);
+            this.tbCpf.Mask = "000.000.000-00";
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(232, 23);
+            this.tbCpf.TabIndex = 27;
+            this.tbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(53)))));
@@ -437,36 +468,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(22, 295);
             this.panel4.TabIndex = 34;
-            // 
-            // tbCpf
-            // 
-            this.tbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbCpf.Location = new System.Drawing.Point(29, 39);
-            this.tbCpf.Mask = "000.000.000-00";
-            this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(232, 23);
-            this.tbCpf.TabIndex = 27;
-            this.tbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // tbTelefone
-            // 
-            this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbTelefone.Location = new System.Drawing.Point(29, 88);
-            this.tbTelefone.Mask = "(00)00000-0000";
-            this.tbTelefone.Name = "tbTelefone";
-            this.tbTelefone.Size = new System.Drawing.Size(232, 23);
-            this.tbTelefone.TabIndex = 28;
-            this.tbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // tbCep
-            // 
-            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbCep.Location = new System.Drawing.Point(27, 252);
-            this.tbCep.Mask = "00000-000";
-            this.tbCep.Name = "tbCep";
-            this.tbCep.Size = new System.Drawing.Size(232, 23);
-            this.tbCep.TabIndex = 28;
-            this.tbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // frmBuscar
             // 
