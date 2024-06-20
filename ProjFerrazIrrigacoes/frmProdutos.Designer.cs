@@ -135,6 +135,7 @@
             // tbValor
             // 
             this.tbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbValor.Enabled = false;
             this.tbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbValor.Location = new System.Drawing.Point(28, 361);
             this.tbValor.Name = "tbValor";
@@ -144,6 +145,7 @@
             // tbEstoque
             // 
             this.tbEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEstoque.Enabled = false;
             this.tbEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbEstoque.Location = new System.Drawing.Point(168, 361);
             this.tbEstoque.Name = "tbEstoque";
@@ -177,6 +179,7 @@
             // 
             // tbProdutoNome
             // 
+            this.tbProdutoNome.Enabled = false;
             this.tbProdutoNome.Location = new System.Drawing.Point(29, 193);
             this.tbProdutoNome.Name = "tbProdutoNome";
             this.tbProdutoNome.Size = new System.Drawing.Size(232, 20);
@@ -184,6 +187,7 @@
             // 
             // cbUnidadeMedida
             // 
+            this.cbUnidadeMedida.Enabled = false;
             this.cbUnidadeMedida.FormattingEnabled = true;
             this.cbUnidadeMedida.Location = new System.Drawing.Point(29, 138);
             this.cbUnidadeMedida.Name = "cbUnidadeMedida";
@@ -194,6 +198,7 @@
             // 
             this.cbCategoria.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbCategoria.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCategoria.Enabled = false;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(30, 92);
             this.cbCategoria.Name = "cbCategoria";
@@ -202,6 +207,7 @@
             // 
             // cbMarca
             // 
+            this.cbMarca.Enabled = false;
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(29, 48);
             this.cbMarca.Name = "cbMarca";
@@ -211,6 +217,7 @@
             // tbId
             // 
             this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbId.Location = new System.Drawing.Point(64, 390);
             this.tbId.Name = "tbId";
@@ -219,6 +226,7 @@
             // 
             // tbDescricao
             // 
+            this.tbDescricao.Enabled = false;
             this.tbDescricao.Location = new System.Drawing.Point(29, 242);
             this.tbDescricao.Multiline = true;
             this.tbDescricao.Name = "tbDescricao";

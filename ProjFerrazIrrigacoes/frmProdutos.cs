@@ -89,9 +89,9 @@ namespace ProjFerrazIrrigacoes
         private void LimpaTela()
         {
             tbBuscaProduto.Clear();
-            cbCategoria.SelectedText = "";
-            cbMarca.SelectedText = "";
-            cbUnidadeMedida.SelectedText = "";
+            cbCategoria.SelectedValue = "";
+            cbMarca.SelectedValue = "";
+            cbUnidadeMedida.SelectedValue = "";
             tbEstoque.Clear();
             tbProdutoNome.Clear();
             tbValor.Clear();
@@ -199,6 +199,10 @@ namespace ProjFerrazIrrigacoes
             tbDescricao.Enabled = true;
             btnExcluir.Enabled = true;
             btnGravar.Enabled = true;
+            cbCategoria.Enabled =  true;
+            cbMarca.Enabled = true;
+            cbUnidadeMedida.Enabled = true;
+            tbProdutoNome.Enabled = true;
             btnEditar.Enabled = false;
         }
 

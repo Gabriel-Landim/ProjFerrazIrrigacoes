@@ -50,7 +50,7 @@ namespace ProjFerrazIrrigacoes
 
         private void btSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void tbCadastrar_Click(object sender, EventArgs e)
