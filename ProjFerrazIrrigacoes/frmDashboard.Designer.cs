@@ -40,8 +40,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lbVendas = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbTotalCaixa = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.lbAbertura = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cGraficoCaixas)).BeginInit();
             this.panel5.SuspendLayout();
@@ -139,7 +139,7 @@
             this.lbClientes.AutoSize = true;
             this.lbClientes.Font = new System.Drawing.Font("RBNo3.1 Bold", 100F, System.Drawing.FontStyle.Bold);
             this.lbClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
-            this.lbClientes.Location = new System.Drawing.Point(16, 57);
+            this.lbClientes.Location = new System.Drawing.Point(22, 57);
             this.lbClientes.Name = "lbClientes";
             this.lbClientes.Size = new System.Drawing.Size(230, 173);
             this.lbClientes.TabIndex = 2;
@@ -180,16 +180,6 @@
             this.panel4.Size = new System.Drawing.Size(258, 138);
             this.panel4.TabIndex = 8;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // lbTotalCaixa
             // 
             this.lbTotalCaixa.AutoSize = true;
@@ -200,6 +190,27 @@
             this.lbTotalCaixa.Size = new System.Drawing.Size(36, 36);
             this.lbTotalCaixa.TabIndex = 0;
             this.lbTotalCaixa.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("RBNo3.1 Bold", 21F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(64)))), ((int)(((byte)(10)))));
+            this.label4.Location = new System.Drawing.Point(76, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 36);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "R$";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.Money;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 41);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -321,17 +332,6 @@
             this.label12.Size = new System.Drawing.Size(178, 25);
             this.label12.TabIndex = 0;
             this.label12.Text = "Total de Abertura";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("RBNo3.1 Bold", 21F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(64)))), ((int)(((byte)(10)))));
-            this.label4.Location = new System.Drawing.Point(76, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 36);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "R$";
             // 
             // frmDashboard
             // 
