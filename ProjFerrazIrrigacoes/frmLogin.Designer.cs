@@ -63,11 +63,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("RBNo3.1 Light", 12.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 25);
+            this.label2.Size = new System.Drawing.Size(153, 22);
             this.label2.TabIndex = 16;
             this.label2.Text = "Ferraz Irrigações";
             // 
@@ -99,7 +99,7 @@
             this.tbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(234)))));
             this.tbEditar.FlatAppearance.BorderSize = 0;
             this.tbEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.tbEditar.Font = new System.Drawing.Font("RBNo3.1 Light", 12.75F, System.Drawing.FontStyle.Bold);
             this.tbEditar.ForeColor = System.Drawing.Color.White;
             this.tbEditar.Location = new System.Drawing.Point(87, 150);
             this.tbEditar.Name = "tbEditar";
@@ -113,11 +113,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("RBNo3.1 Light", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(47, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 22);
+            this.label1.Size = new System.Drawing.Size(62, 22);
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
             // 
@@ -169,7 +169,7 @@
             // 
             this.btnNovoUsuario.FlatAppearance.BorderSize = 0;
             this.btnNovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNovoUsuario.Font = new System.Drawing.Font("RBNo3.1 Light", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnNovoUsuario.ForeColor = System.Drawing.Color.White;
             this.btnNovoUsuario.Location = new System.Drawing.Point(96, 113);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
@@ -182,11 +182,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("RBNo3.1 Light", 12.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(49, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 22);
+            this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Senha";
             // 
@@ -194,7 +194,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::ProjFerrazIrrigacoes.Properties.Resources.logo2;
-            this.pictureBox3.Location = new System.Drawing.Point(266, 53);
+            this.pictureBox3.Location = new System.Drawing.Point(261, 53);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(269, 166);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

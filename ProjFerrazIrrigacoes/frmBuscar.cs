@@ -180,8 +180,8 @@ namespace ProjFerrazIrrigacoes
                     objgravar.Alterar(objdados);
                 }
                 MessageBox.Show("Alteração Efetuada!");
-            
-
+             pProcurarCliente.Visible = true;
+            CarregaDados();
             
 
         }

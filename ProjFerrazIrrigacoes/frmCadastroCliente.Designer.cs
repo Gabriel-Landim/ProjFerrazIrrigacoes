@@ -31,6 +31,7 @@
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbCep = new System.Windows.Forms.MaskedTextBox();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.tbComplemento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -48,13 +49,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.tbCpf = new System.Windows.Forms.MaskedTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbCpf = new System.Windows.Forms.MaskedTextBox();
-            this.tbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.tbCep = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -107,6 +107,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 334);
             this.panel1.TabIndex = 29;
+            // 
+            // tbCep
+            // 
+            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbCep.Location = new System.Drawing.Point(27, 272);
+            this.tbCep.Mask = "00000-000";
+            this.tbCep.Name = "tbCep";
+            this.tbCep.Size = new System.Drawing.Size(232, 23);
+            this.tbCep.TabIndex = 37;
+            this.tbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // cbCidade
             // 
@@ -173,7 +183,7 @@
             this.label9.CausesValidation = false;
             this.label9.Font = new System.Drawing.Font("RBNo3.1 Book", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(230, 85);
+            this.label9.Location = new System.Drawing.Point(226, 85);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 23);
             this.label9.TabIndex = 21;
@@ -288,6 +298,26 @@
             this.panel2.Size = new System.Drawing.Size(290, 266);
             this.panel2.TabIndex = 32;
             // 
+            // tbTelefone
+            // 
+            this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbTelefone.Location = new System.Drawing.Point(26, 163);
+            this.tbTelefone.Mask = "(00)00000-0000";
+            this.tbTelefone.Name = "tbTelefone";
+            this.tbTelefone.Size = new System.Drawing.Size(232, 23);
+            this.tbTelefone.TabIndex = 36;
+            this.tbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // tbCpf
+            // 
+            this.tbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbCpf.Location = new System.Drawing.Point(27, 111);
+            this.tbCpf.Mask = "000.000.000-00";
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(232, 23);
+            this.tbCpf.TabIndex = 35;
+            this.tbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -327,36 +357,6 @@
             this.label8.Size = new System.Drawing.Size(166, 28);
             this.label8.TabIndex = 11;
             this.label8.Text = "Dados Cliente";
-            // 
-            // tbCpf
-            // 
-            this.tbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbCpf.Location = new System.Drawing.Point(27, 111);
-            this.tbCpf.Mask = "000.000.000-00";
-            this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(232, 23);
-            this.tbCpf.TabIndex = 35;
-            this.tbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // tbTelefone
-            // 
-            this.tbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbTelefone.Location = new System.Drawing.Point(26, 163);
-            this.tbTelefone.Mask = "(00)00000-0000";
-            this.tbTelefone.Name = "tbTelefone";
-            this.tbTelefone.Size = new System.Drawing.Size(232, 23);
-            this.tbTelefone.TabIndex = 36;
-            this.tbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // tbCep
-            // 
-            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbCep.Location = new System.Drawing.Point(27, 272);
-            this.tbCep.Mask = "00000-000";
-            this.tbCep.Name = "tbCep";
-            this.tbCep.Size = new System.Drawing.Size(232, 23);
-            this.tbCep.TabIndex = 37;
-            this.tbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // frmCadastroCliente
             // 
